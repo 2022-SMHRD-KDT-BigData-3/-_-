@@ -6,7 +6,11 @@ public class Test1 {
 		System.out.println("첫번째 커밋");
 		System.out.println("두번째 커밋");
 		
-		System.out.println("서연");
+		System.out.println("모찌는 귀여워");
+		
+		int a = 18;
+		System.out.println(a);
+		
 	}
 
 }
