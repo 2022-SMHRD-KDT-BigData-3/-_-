@@ -7,6 +7,7 @@ public class Test1 {
 		System.out.println("두번째 커밋");
 		
 		System.out.println("서연");
+		System.out.println("성진");
 	}
 
 }
