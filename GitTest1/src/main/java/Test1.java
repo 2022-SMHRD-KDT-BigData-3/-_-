@@ -11,6 +11,8 @@ public class Test1 {
 		
 		int a = 18;
 		System.out.println(a);
+		 
+		// 바보들
 		
 	}
 
