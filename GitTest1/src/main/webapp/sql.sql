@@ -5,8 +5,8 @@ create table member(
 	dogName varchar2(200),
 	dogSize varchar2(200),
 	birth date,
-	gender number(30),
-	neutering number(30),
+	gender varchar2(30),
+	neutering varchar2(30),
 	health varchar2(200),
 	disease varchar2(200),
 	constraint mem_id_pk primary key(id)
