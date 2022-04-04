@@ -13,6 +13,7 @@ public class Test1 {
 		System.out.println(a);
 		 
 		// 바보들
+		//t성진아 왜안될까
 		
 	}
 
