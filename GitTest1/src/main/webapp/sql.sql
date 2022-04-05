@@ -25,7 +25,7 @@ create table dogfood(
 	grade varchar2(200),
 	url varchar2(200),
 	imgUrl varchar2(200),
-	ingName varchar2(200),
+	ingredient varchar2(2000),
 	constraint food_num_pk primary key(fdNum)
 )
 
