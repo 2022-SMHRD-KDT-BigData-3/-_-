@@ -408,15 +408,18 @@ ol {
 }
 
 .header__logo {
-	padding: 15px 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .header__logo a {
 	display: inline-block;
+	padding-left: 80px;padding-right: 80px;
 }
 
 .header__menu {
 	padding: 24px 0;
+
 }
 
 .header__menu ul li {

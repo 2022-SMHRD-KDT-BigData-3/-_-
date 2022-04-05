@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/templet/src/main/webapp/css/join.css">
+<link rel="stylesheet" href="css/join.css" type="text/css">
 </head>
 <body>
-
+<div id="header" class="join_membership" role="banner">
+    <h1><a href="http://www.naver.com" class="h_logo"><span class="blind">NAVER</span></a></h1>
+</div>
 	<form id="join_form" method="post" action="">
 		<input type="hidden" id="token_sjoin" name="token_sjoin"
 			value="D16IbzcI0GuKvWy2"> <input type="hidden" id="encPswd"
@@ -130,7 +132,7 @@
 								<label for="gender">중성화 여부</label>
 							</h3>
 							<div class="ps_box gender_code">
-								<select id="gender" name="gender" class="sel" aria-label="중성화">
+								<select id="neutering" name="gender" class="sel" aria-label="중성화">
 									<option value="" selected="">여부</option>
 									<option value="Y">네</option>
 									<option value="N">아니오</option>
