@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/join.css" type="text/css">
 </head>
 <body>
 <div id="header" class="join_membership" role="banner">
     <h1><a href="../img/logo5.png" class="h_logo"><span class="blind"></span></a></h1>
 </div>
-	<form id="join_form" method="post" action="">
-		<input type="hidden" id="token_sjoin" name="token_sjoin"
-			value="D16IbzcI0GuKvWy2"> <input type="hidden" id="encPswd"
-			name="encPswd" value=""> <input type="hidden" id="encKey"
-			name="encKey" value=""> <input type="hidden" id="birthday"
-			name="birthday" value=""> <input type="hidden" id="joinMode"
-			name="joinMode" value="unreal"> <input type="hidden"
-			id="pbirthday" name="pbirthday" value=""> <input
-			type="hidden" id="ipinFlag" name="ipinFlag" value=""> <input
-			type="hidden" id="nid_kb2" name="nid_kb2" value="">
+	<form id="join_form" method="post" action="JoinServiceCon">
+		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 
+			<input type="hidden" id="encPswd"	name="encPswd" value=""> 
+			<input type="hidden" id="encKey"	name="encKey" value=""> 
+			<input type="hidden" id="birthday"	name="birthday" value=""> 
+			<input type="hidden" id="joinMode"	name="joinMode" value="unreal"> 
+			<input type="hidden" id="pbirthday" name="pbirthday" value=""> 
+			<input type="hidden" id="ipinFlag" name="ipinFlag" value=""> 
+			<input type="hidden" id="nid_kb2" name="nid_kb2" value="">
 
 		<!-- container -->
 		<div id="container" role="main">
@@ -35,6 +35,42 @@
 								name="id" class="int" title="ID" maxlength="20"> <span
 								class="step_url"> </span></span> <span class="error_next_box"
 								id="idMsg" style="display: none" aria-live="assertive"></span>
+								
+							<!-- 아이디 체크 -->
+							<button type="button">아이디체크</button>
+	<p></p>
+	
+	<script type="text/javascript">
+
+		$("button").on("click",function(){		
+			
+			let inputData = $("#id").val();
+			
+			$.ajax({
+				url : "IdCheckServiceCon",
+				
+				// key, value 값으로 보내기
+				data : "id="+inputData,
+				
+				success : function(result){
+					alert("통신 성공")
+					console.log(inputData)
+
+					console.log(result)
+					if(result==1){
+						 $("p").text("이미사용중")
+					}else{
+						 $("p").text("사용가능")
+					}
+					
+				},
+				
+				error : function(){
+					alert("통신 실패")
+				}
+			})
+		})
+	</script>
 						</div>
 
 						<div class="join_row">
@@ -53,7 +89,7 @@
 								<label for="pswd2">비밀번호 재확인</label>
 							</h3>
 							<span class="ps_box int_pass_check" id="pswd2Img"> <input
-								type="password" id="pswd2" name="pswd2" class="int"
+								type="password" id="pswd2" name="pw2" class="int"
 								title="비밀번호 재확인 입력" aria-describedby="pswd2Blind" maxlength="20">
 							</span> <span class="error_next_box" id="pswd2Msg" style="display: none"
 								aria-live="assertive"></span>
@@ -67,7 +103,7 @@
 						<!-- lang = ko_KR -->
 						<div class="join_row">
 			 				 <div class="form-group">
-			 				 <h3> 강아지 사진 </h3><input type="file" name="dogimg" class="form-control-file">
+			 				 <h3> 강아지 사진 </h3><input type="file" name="dogImg" class="form-control-file">
                             </div>
 							<h3 class="join_title">
 								<label for="name">강아지 이름</label>
@@ -79,6 +115,20 @@
 						</div>
 						<!-- lang = ko_KR -->
 
+						<div class="join_row join_size">
+							<h3 class="join_title">
+								<label for="dogSize">강아지크기</label>
+							</h3>
+							<div class="ps_box gender_code">
+								<select id="size" name="dogSize" class="sel" aria-label="크기">
+									<option value="" selected="">강아지크기</option>
+									<option value="small">소형견 (10kg 미만)</option>
+									<option value="middle">중형견 (10kg 이상, 25kg 미만)</option>
+									<option value="big">대형견 (25kg 이상)</option>
+								</select>
+							</div>
+						</div>
+
 						<div class="join_row join_birthday">
 							<h3 class="join_title">
 								<label for="yy">생년월일</label>
@@ -87,11 +137,11 @@
 								<div class="bir_yy">
 									<span class="ps_box"> <input type="text" id="yy"
 										placeholder="년(4자)" aria-label="년(4자)" class="int"
-										maxlength="4">
+										maxlength="4" name="yy">
 									</span>
 								</div>
 								<div class="bir_mm">
-									<span class="ps_box"> <select id="mm" class="sel"
+									<span class="ps_box"> <select id="mm" class="sel" name="mm"
 										aria-label="월">
 											<option value="">월</option>
 											<option value="01">1</option>
@@ -110,7 +160,7 @@
 									</span>
 								</div>
 								<div class=" bir_dd">
-									<span class="ps_box"> <input type="text" id="dd"
+									<span class="ps_box"> <input type="text" id="dd" name="dd"
 										placeholder="일" aria-label="일" class="int" maxlength="2">
 										<label for="dd" class="lbl"></label>
 									</span>
@@ -146,14 +196,16 @@
 							<h3>
 								<label>건강상태</label>
 							</h3>
-							비만<input type="checkbox" name="health"> 임신<input
-								type="checkbox" name="health"> 노령견<input type="checkbox"
-								name="health">
+							없음<input type="checkbox" name="health" value="없음" checked>
+							비만<input type="checkbox" name="health" value="비만"> 임신<input
+								type="checkbox" name="health" value = "임신"> 노령견<input type="checkbox"
+								name="health" value="노령견">
 						</div>
 						<div>
 							<h3>
 								<label>건강고민</label>
 							</h3>
+							없음<input type="checkbox" name="disease" value="없음" checked>
 							관절질환<input type="checkbox" name="disease" value="관절질환"> 눈병<input
 								type="checkbox" name="disease" value="눈병"> 호흡계질환<input
 								type="checkbox" name="disease" value="호흡계질환"> 피부질환<input
@@ -168,7 +220,7 @@
 					</div>
 					<!-- // 이름, 생년월일 입력 -->
 					<div class="btn_area">
-						<button type="button" id="btnJoin" class="btn_type btn_primary">
+						<button type="submit" id="btnJoin" class="btn_type btn_primary">
 							<span>가입하기</span>
 						</button>
 					</div>
@@ -176,5 +228,8 @@
 			</div>
 		</div>
 	</form>
+	<script type="text/javascript">
+	
+	</script>
 </body>
 </html>
