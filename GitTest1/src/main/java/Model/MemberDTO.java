@@ -25,6 +25,10 @@ public class MemberDTO {
 		this.health = health;
 		this.disease = disease;
 	}
+	public MemberDTO(String id, String pw) {
+	      this.id = id;
+	      this.pw = pw;
+	   }
 	public String getId() {
 		return id;
 	}

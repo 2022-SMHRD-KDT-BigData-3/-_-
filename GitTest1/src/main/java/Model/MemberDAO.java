@@ -100,5 +100,45 @@ public class MemberDAO {
 			db_close();
 		} return cnt;
 		}
+		public MemberDTO login(MemberDTO dto) {
+		      try {
+		         db_conn();
+		         
+		         String sql = "select * from member where id =? and pw =?";
+		         
+		         psmt = conn.prepareStatement(sql);
+		         
+		         psmt.setString(1, dto.getId());
+		         psmt.setString(2, dto.getPw());
+		         
+		         rs = psmt.executeQuery();
+		         
+		         // 값이 있다 = 로그인 성공
+		         if(rs.next()) {
+		            String id = rs.getString(1);
+		            String pw = rs.getString(2);
+		            String dogimg = rs.getString(3);
+		            String name = rs.getString(4);
+		            String size = rs.getString(5);
+		            String birth = rs.getString(6);
+		            String gender = rs.getString(7);
+		            String neutering = rs.getString(8);
+		            String health = rs.getString(9);
+		            String disease = rs.getString(10);
+		            
+		            info = new MemberDTO(id, pw, dogimg, name, size, birth, gender, neutering, health, disease);
+		         }
+		         
+		      }
+		      catch(Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         db_close();
+		      }
+		      return info;
+		   }
+
 		
+		
+
 }
