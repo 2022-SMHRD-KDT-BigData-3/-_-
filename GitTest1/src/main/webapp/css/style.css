@@ -870,6 +870,14 @@ ol {
 	background-position: center center;
 }
 
+.featured__item__pic__Famina{
+	height: 270px;
+    width: 149px;
+    margin-left: 50px;
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+}
 .featured__item__pic__hover {
 	position: absolute;
 	left: 0;
