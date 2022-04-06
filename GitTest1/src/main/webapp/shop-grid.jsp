@@ -546,8 +546,8 @@
 							</div>
 						</div>
 						<div class="row">
+						
 						<% for(int i =0;i<15;i++){%>
-							
 							<div class="col-lg-4 col-md-6 col-sm-6">
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
@@ -569,7 +569,10 @@
 						<%}%>
 						
 						<div class="product__pagination">
-							<a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#"><i
+							<a href="shop_grid2.jsp?data=1">1</a> 
+							<a href="shop_grid2.jsp?data=2">2</a> 
+							<a href="shop_grid2.jsp?data=3">3</a> 
+							<a href="#"><i
 								class="fa fa-long-arrow-right"></i></a>
 						</div>
 					</div>
