@@ -51,6 +51,9 @@ text-align:center;
 width:60%;
 margin: 0 auto;
 }
+#test10{
+float : right;
+}
 .inner .date{
 width:10%;
 text-align:center;
@@ -296,7 +299,7 @@ text-align:right;
 		<div class="col-lg-12">
 			<div class="product__pagination blog__pagination">
 				<a href="#">1</a> <a href="#">2</a>
-				<a href="#" style ="width : 5%">글쓰기</a>
+				<a href="#" id="test10" style ="width : 5%">글쓰기</a>
 			</div>	
 			
 		</div>
