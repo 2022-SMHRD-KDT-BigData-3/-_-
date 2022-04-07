@@ -553,10 +553,7 @@
 						int cnt = 0;
                         if(data.equals("1")){
                         	cnt = 0;
-<<<<<<< HEAD
                         	for(int i =cnt;i<cnt+15;i++){%>
-=======
-							for(int i =cnt;i<15;i++){%>
 								<div class="col-lg-4 col-md-6 col-sm-6">
 									<div class="product__item">
 										<div class="product__item__pic set-bg"
@@ -624,27 +621,20 @@
 						<%}
                         }%>
                         
-						
-						
-                     
-=======
-                        <% }}%>
-                        
 
 
 							<div class="product__pagination">
 								<%for(int i = 0;i<(list.size()/15)+1;i++){ %>
 								<a href="shop_grid2.jsp?data=<%=i+1 %>"><%=i+1 %></a>
-								<%}data = request.getParameter("data"); %><a href="#"><i class="fa fa-long-arrow-right"></i></a>
+								<%}%><a href="#"><i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/HealthyDog.git
 					</div>
 					
 					<div class="product__pagination">
                         <%for(int i = 0;i<(list.size()/15)+1;i++){ %>
                         <a href="shop_grid2.jsp?data=<%=i+1 %>"><%=i+1 %></a>
-                        <%}data = request.getParameter("data"); %><a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                        <%}%><a href="#"><i class="fa fa-long-arrow-right"></i></a>
                      </div>
                      
 				</div>
