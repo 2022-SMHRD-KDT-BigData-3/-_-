@@ -598,12 +598,16 @@
                         }%>
                         
 						
-						<div class="product__pagination">
+						
+                     
+					</div>
+					
+					<div class="product__pagination">
                         <%for(int i = 0;i<(list.size()/15)+1;i++){ %>
                         <a href="shop_grid2.jsp?data=<%=i+1 %>"><%=i+1 %></a>
                         <%}data = request.getParameter("data"); %><a href="#"><i class="fa fa-long-arrow-right"></i></a>
                      </div>
-					</div>
+                     
 				</div>
 			</div>
 	</section>

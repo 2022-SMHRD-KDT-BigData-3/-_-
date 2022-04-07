@@ -27,6 +27,7 @@ create table dogfood(
 drop table dogfood
 select * from dogfood
 
+
 create table protein(
 	fdNum number(30),
 	protein varchar2(2000),
