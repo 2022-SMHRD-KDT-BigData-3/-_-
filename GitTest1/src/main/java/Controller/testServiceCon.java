@@ -15,16 +15,8 @@ import com.google.gson.Gson;
 import Model.DogFoodDAO;
 import Model.DogFoodDTO;
 
-/**
- * Servlet implementation class testServiceCon
- */
 @WebServlet("/testServiceCon")
 public class testServiceCon extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		  response.setContentType("text/plain; charset=UTF-8");
