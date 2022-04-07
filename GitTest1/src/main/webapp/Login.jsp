@@ -11,13 +11,31 @@
 <link rel="stylesheet" href="css/join.css" type="text/css">
 </head>
 <body>
+<<<<<<< HEAD
 <%
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
 
 %>
 
+=======
+
+<%String login = request.getParameter("login");
+	System.out.print(login);
+%>
+
+<script type="text/javascript">
+
+	let result = "<%=login%>";
+	console.log("test"+result);
+	
+	if(result === "fail"){
+		alert("로그인 실패!");
+	}
+
+
+</script>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/HealthyDog.git
 <div id="header" class="join_membership" role="banner">
-    <h1><a href="../img/logo5.png" class="h_logo"><span class="blind"></span></a></h1>
 </div>
 	<form id="join_form" method="post" action="LoginServiceCon">
 		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 
@@ -73,6 +91,28 @@
 			</div>
 		</div>
 	</form>
+<!-- 	<form id="join_form" method="post" action="Join.jsp">
+		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 
+			<input type="hidden" id="encPswd"	name="encPswd" value=""> 
+			<input type="hidden" id="encKey"	name="encKey" value=""> 
+			<input type="hidden" id="birthday"	name="birthday" value=""> 
+			<input type="hidden" id="joinMode"	name="joinMode" value="unreal"> 
+			<input type="hidden" id="pbirthday" name="pbirthday" value=""> 
+			<input type="hidden" id="ipinFlag" name="ipinFlag" value=""> 
+			<input type="hidden" id="nid_kb2" name="nid_kb2" value="">
+
+		container
+		<div id="container" role="main">
+			<div id="content">
+				tg-text=title
+				<div class="join_content">
+					아이디, 비밀번호 입력
+					// 이름, 생년월일 입력
+					<div class="btn_area">
+						<button type="submit" id="btnJoin2" class="btn_type btn_primary">
+							<span>회원가입</span>
+						</button>
+	</form> -->
 	<script type="text/javascript">
 	
 	</script>

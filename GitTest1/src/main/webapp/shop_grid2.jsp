@@ -2,7 +2,7 @@
 <%@page import="Model.DogFoodDAO"%>
 <%@page import="Model.DogFoodDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="js/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -40,9 +41,9 @@
 	DogFoodDAO dao = new DogFoodDAO();
 	
 	ArrayList<DogFoodDTO> list = new ArrayList<>();
-	list = dao.viewAllFood();
+	list = dao.viewAllFood("anf");
 	String data = request.getParameter("data");
-	
+	System.out.print(data);
 	%>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -246,22 +247,22 @@
 						<div class="sidebar__item">
 							<h4>Company</h4>
 							<ul>
-								<li><a href="#">Absolute</a></li>
-								<li><a href="#">Anf</a></li>
-								<li><a href="#">BellFor</a></li>
-								<li><a href="#">DogLine</a></li>
-								<li><a href="#">EagleVet</a></li>
-								<li><a href="#">Famina</a></li>
-								<li><a href="#">HomeAndDog</a></li>
-								<li><a href="#">Iskhan</a></li>
-								<li><a href="#">NaturalBalance</a></li>
-								<li><a href="#">NaturalCore</a></li>
-								<li><a href="#">NowFresh</a></li>
-								<li><a href="#">OriJen</a></li>
-								<li><a href="#">ProBest</a></li>
-								<li><a href="#">RoyalCanin</a></li>
-								<li><a href="#">Wealtz</a></li>
-								<li><a href="#">Ziwipets</a></li>
+								<li><button value="absolute" class="btnNavi">Absolute</button></li>
+								<li><button value="anf" class="btnNavi">Anf</button></li>
+								<li><button value="Belifor" class="btnNavi">BellFor</button></li>
+								<li><button value="dogline" class="btnNavi">DogLine</button></li>
+								<li><button value="FaminaAncestralGrain" class="btnNavi">EagleVet</button></li>
+								<li><button value="FaminaOcean" class="btnNavi">Famina</button></li>
+								<li><button value="homeanddog" class="btnNavi">HomeAndDog</button></li>
+								<li><button value="iskhan" class="btnNavi">Iskhan</button></li>
+								<li><button value="" class="btnNavi">NaturalBalance</button></li>
+								<li><button value="" class="btnNavi">NaturalCore</button></li>
+								<li><button value="nowfresh" class="btnNavi">NowFresh</button></li>
+								<li><button value="orijen" class="btnNavi">OriJen</button></li>
+								<li><button value="probest" class="btnNavi">ProBest</button></li>
+								<li><button value="royaladult" class="btnNavi">RoyalCanin</button></li>
+								<li><button value="" class="btnNavi">Wealtz</button></li>
+								<li><button value="" class="btnNavi">Ziwipets</button></li>
 							</ul>
 						</div>
 						<!--<div class="sidebar__item">
@@ -284,11 +285,11 @@
 						<div class="sidebar__item sidebar__item__color--option">
 							<h4>Materials</h4>
 							<div class="sidebar__item__color sidebar__item__color--green">
-								<label for="white"> White <input type="radio" >
+								<label for="white"> White <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--white">
-								<label for="gray"> Gray <input type="radio" >
+								<label for="gray"> Gray <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--white">
@@ -300,11 +301,11 @@
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--green">
-								<label for="blue"> Blue <input type="radio" >
+								<label for="blue"> Blue <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--white">
-								<label for="green"> Green <input type="radio" >
+								<label for="green"> Green <input type="radio">
 								</label>
 							</div>
 						</div>
@@ -546,13 +547,38 @@
                             </div>-->
 							</div>
 						</div>
-						<div class="row">
-						
+						<div id="pagingView" class="row">
+
 						<% 
 						int cnt = 0;
                         if(data.equals("1")){
                         	cnt = 0;
+<<<<<<< HEAD
                         	for(int i =cnt;i<cnt+15;i++){%>
+=======
+							for(int i =cnt;i<15;i++){%>
+								<div class="col-lg-4 col-md-6 col-sm-6">
+									<div class="product__item">
+										<div class="product__item__pic set-bg"
+											data-setbg="<%=list.get(i).getImgUrl()%>">
+											<ul class="product__item__pic__hover">
+												<li><a href="#"><i class="fa fa-heart"></i></a></li>
+												<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+												<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+											</ul>
+										</div>
+										<div class="product__item__text">
+											<h6>
+												<a href="#"><%= list.get(i).getFdName() %></a>
+											</h6>
+										</div>
+									</div>
+								</div>
+							<%}}%>
+                        <% if(data.equals("2")){
+                        	cnt = 14;
+                        	for(int i =cnt;i<list.size();i++){%>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/HealthyDog.git
 							<div class="col-lg-4 col-md-6 col-sm-6">
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
@@ -570,6 +596,7 @@
 									</div>
 								</div>
 							</div>
+<<<<<<< HEAD
 							
 						<%}
                         }
@@ -600,6 +627,18 @@
 						
 						
                      
+=======
+                        <% }}%>
+                        
+
+
+							<div class="product__pagination">
+								<%for(int i = 0;i<(list.size()/15)+1;i++){ %>
+								<a href="shop_grid2.jsp?data=<%=i+1 %>"><%=i+1 %></a>
+								<%}data = request.getParameter("data"); %><a href="#"><i class="fa fa-long-arrow-right"></i></a>
+							</div>
+						</div>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/HealthyDog.git
 					</div>
 					
 					<div class="product__pagination">
@@ -609,7 +648,8 @@
                      </div>
                      
 				</div>
-			</div>
+				
+				
 	</section>
 	<!-- Product Section End -->
 
@@ -682,7 +722,7 @@
 	<!-- Footer Section End -->
 
 	<!-- Js Plugins -->
-	<script src="js/jquery-3.3.1.min.js"></script>
+	
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
@@ -690,6 +730,8 @@
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/shop_grid2.js"></script>
+
 
 
 

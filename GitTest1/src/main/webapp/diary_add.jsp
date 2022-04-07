@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -7,7 +9,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title> Ogani | Template</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -33,7 +35,7 @@
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="#"><img src="img/logo5.png" alt=""></a>
+            <a href="#"><img src="img/logo.png" alt=""></a>
         </div>
         <div class="humberger__menu__cart">
             <ul>
@@ -53,26 +55,26 @@
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="Login.html"><i class="fa fa-user"></i> Login</a>
+                <a href="Login.html"><i class="fa fa-user"></i> Login 수정 -태완- </a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./main.html">Home</a></li>
-                <li><a href="./shop-grid.html">Shop</a></li>
-                <li><a href="#">Pages</a>
+                <li class="active"><a href="./main.jsp">Home</a></li>
+                <li><a href="./shop-grid.jsp">DOG FOOD</a></li>
+               <!-- <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                         <li><a href="./shop-details.html">Shop Details</a></li>
                         <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                         <li><a href="./checkout.html">Check Out</a></li>
                         <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>
+                    </ul>-->
                 </li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./product.html"> HEALTH PRODUCTS </a></li>
+                <li><a href="./blog.html"> Health Q&A </a></li>
             </ul>
         </nav>
-        <div id="mobile-menu-wrap"></div>
+       <!--  <div id="mobile-menu-wrap"></div>
         <div class="header__top__right__social">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -84,7 +86,7 @@
                 <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
                 <li>Free Shipping for all Order of $99</li>
             </ul>
-        </div>
+        </div> -->
     </div>
     <!-- Humberger End -->
 
@@ -96,8 +98,8 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                                <li>Free Shipping for all Order of $99</li>
+                                <li><i class="fa fa-envelope"></i> 입력한 이메일로 수정 -태완- </li>
+                                <li> 쓸말 없으면 삭제 -태완- </li>
                             </ul>
                         </div>
                     </div>
@@ -110,7 +112,7 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="Login.html"><i class="fa fa-user"></i> Login</a>
+                                <a href="Login.html"><i class="fa fa-user"></i> Login 수정? -태완- </a>
                             </div>
                         </div>
                     </div>
@@ -119,26 +121,26 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-2 container" style="display: inline-block;text-align: center;">
+                <div class="col-lg-3">
                     <div class="header__logo">
                         <a href="./main.html"><img src="img/logo5.png" alt=""></a>
                     </div>
                 </div>
-                <div class="container"  style="display: inline-block;text-align: center;">
+                <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-                            <li class="active"><a href="./product.html">Health Products</a></li>
-                            <li><a href="./blog1.html">Health Q&A</a></li>
+                           <li class="active"><a href="./main.html">Home</a></li>
+                            <li><a href="./shop-grid.html">DOG FOOD</a></li>
+               <!-- <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>-->
+                </li>
+                <li><a href="./product.html"> HEALTH PRODUCTS </a></li>
+                <li><a href="./blog.html"> Health Q&A </a></li>
                         </ul>
                     </nav>
                 </div>
@@ -154,32 +156,48 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <!--<section class="hero hero-normal">
+   <!-- 
+  
+  <section class="hero hero-normal">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>All departments</span>
+                            <span> 사료 회사 </span>
                         </div>
                         <ul>
-                            <li><a href="#">Fresh Meat</a></li>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Ocean Foods</a></li>
-                            <li><a href="#">Butter & Eggs</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
-                            <li><a href="#">Fresh Bananas</a></li>
+                            <li><a href="#"> absolute </a></li>
+                            <li><a href="#"> anf </a></li>
+                            <li><a href="#"> Belifor </a></li>
+                            <li><a href="#"> dogline </a></li>
+                            <li><a href="#"> FaminaAncestralGrain </a></li>
+                            <li><a href="#"> FaminaOcean </a></li>
+                            <li><a href="#"> FaminaPrime </a></li>
+                            <li><a href="#"> FaminaQuinoa </a></li>
+                            <li><a href="#"> FaminaVetLife </a></li>
+                            <li><a href="#"> homeanddog </a></li>
+                            <li><a href="#"> iskhan </a></li>
+                            <li><a href="#"> nowfresh </a></li>
+                            <li><a href="#"> orjien </a></li>
+                            <li><a href="#"> probest </a></li>
+                            <li><a href="#"> royalAdult </a></li>
+                            <li><a href="#"> royalMature </a></li>
+                            <li><a href="#"> royalPuppy </a></li>
+                            <li><a href="#"> wealtz </a></li>
+                            <li><a href="#"> 내츄럴밸런스 </a></li>
+                            <li><a href="#"> 네츄럴코어 </a></li>
+                            <li><a href="#"> 아카나 </a></li>
+                            <li><a href="#"> 이글벳 </a></li>
+                            <li><a href="#"> 지위펫 </a></li>
+                            
+                            
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <div class="hero__search">
+                   <!--  <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
@@ -199,146 +217,47 @@
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
-                    </div> 
+                    </div> -->
                 </div>
             </div>
         </div>
-    </section> -->
-    <!-- Hero Section End -->
+    </section>  
+ 
+    <!-- Product Details Section Begin -->
+    <div style="height: 25px"></div>
+    <!-- Product Details Section End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <!--<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+    <!-- Related Product Section Begin -->
+    <section class="related-product">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Blog</h2>
-                        <div class="breadcrumb__option">
-                            <a href="./main.html">Home</a>
-                            <span>Blog</span>
-                        </div>
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2> 건강일지 작성 </h2>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>  -->
-    <!-- Breadcrumb Section End -->
-
-    <!-- Blog Section Begin -->
-    <section class="blog spad">
-        <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-5">
-                    <div class="blog__sidebar">
-                        <!--<div class="blog__sidebar__search">
-                            <form action="#">
-                                <input type="text" placeholder="Search...">
-                                <button type="submit"><span class="icon_search"></span></button>
-                            </form>
-                        </div>  -->
-                        <div class="blog__sidebar__item">
-                            <h4>Categories</h4>
-                            <ul>                           
-                                <li><a href="product.html">관절/구강 관리</a></li>
-                                <li><a href="product1.html"><h5 style="color:green"><b>귀/눈 관리</b></h5></a></li>              
-                                <li><a href="product2.html">의약품</a></li>
-                            </ul>
-                        </div>
-                        <!--<div class="blog__sidebar__item">
-                            <h4>Recent News</h4>
-                            <div class="blog__sidebar__recent">
-                                <a href="#" class="blog__sidebar__recent__item">
-                                    <div class="blog__sidebar__recent__item__pic">
-                                        <img src="img/blog/sidebar/sr-1.jpg" alt="">
-                                    </div>
-                                    <div class="blog__sidebar__recent__item__text">
-                                        <h6>09 Kinds Of Vegetables<br /> Protect The Liver</h6>
-                                        <span>MAR 05, 2019</span>
-                                    </div>
-                                </a>
-                                <a href="#" class="blog__sidebar__recent__item">
-                                    <div class="blog__sidebar__recent__item__pic">
-                                        <img src="img/blog/sidebar/sr-2.jpg" alt="">
-                                    </div>
-                                    <div class="blog__sidebar__recent__item__text">
-                                        <h6>Tips You To Balance<br /> Nutrition Meal Day</h6>
-                                        <span>MAR 05, 2019</span>
-                                    </div>
-                                </a>
-                                <a href="#" class="blog__sidebar__recent__item">
-                                    <div class="blog__sidebar__recent__item__pic">
-                                        <img src="img/blog/sidebar/sr-3.jpg" alt="">
-                                    </div>
-                                    <div class="blog__sidebar__recent__item__text">
-                                        <h6>4 Principles Help You Lose <br />Weight With Vegetables</h6>
-                                        <span>MAR 05, 2019</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>  -->
-                        <!--<div class="blog__sidebar__item">
-                            <h4>Search By</h4>
-                            <div class="blog__sidebar__item__tags">
-                                <a href="#">Apple</a>
-                                <a href="#">Beauty</a>
-                                <a href="#">Vegetables</a>
-                                <a href="#">Fruit</a>
-                                <a href="#">Healthy Food</a>
-                                <a href="#">Lifestyle</a>
-                            </div>
-                        </div>  -->
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-7">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item">
-                                <div class="blog__item__pic">
-                                    <img src="img/product/product3.jpg" alt="">
-                                </div>
-                                <div class="blog__item__text">
-                                    <ul>
-                                        <li>귀 관리</li>
-                                    </ul>
-                                    <h5><b>강아지 귀 세정제</b></h5>
-                                    <p>강아지 귀의 구조는 사람과 다르게 'ㄴ'자로 되어 있어 귓속에 통풍이 잘 안되는 경우가 많다.
-또한 사람처럼 귀안에 먼지, 노폐물이 쌓여 귀지가 생기기때문에 청소를 꼭 해줘야 한다. </p>
-                                    <a href="https://www.coupang.com/vp/products/1251708598?itemId=2251159979&vendorItemId=70248536180&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=0aa54c85-758d-46fd-be46-f4d8da63117c&korePlacement=15&koreSubPlacement=1&q=%EB%B8%8C%EB%A6%AC%EC%A7%80%ED%85%8C%EC%9D%BC+%ED%8E%98%ED%86%A0%EC%84%B8%EB%9D%BC+%ED%81%B4%EC%9D%B4%EC%96%B4+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EA%B7%80%EC%84%B8%EC%A0%95%EC%A0%9C&itemsCount=36&searchId=1f84e92d2fe04af895f19196e91ae428&rank=0&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
-                                </div>
-                            </div>
-                        </div>    
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item">
-                                <div class="blog__item__pic">
-                                    <img src="img/product/product4.jpg" alt="">
-                                </div>
-                                <div class="blog__item__text">
-                                    <ul>
-                                        <li>눈 관리</li>
-                                    </ul>
-                                    <h5><b>강아지 눈물제거</b></h5>
-                                    <p>강아지들은 눈물 속 '포르피린'이라는 성분 때문에 눈 주변에 붉은 자국이 쉽게 생긴다.
-이를 방치하면 질병으로 이어질 수 있기 때문에 평소에 관리를 잘 해주어야 한다. </p>
-                                    <a href="https://www.coupang.com/vp/products/1624448080?itemId=12964905933&vendorItemId=80228999586&q=%EB%B2%84%EC%B8%A0%EB%B9%84+%ED%8B%B0%EC%96%B4+%EC%8A%A4%ED%85%8C%EC%9D%B8+%EA%B0%95%EC%95%84%EC%A7%80+%EB%A6%AC%EB%AC%B4%EB%B2%84&itemsCount=28&searchId=e17ef9e50e2e453f85c7666539a2f67b&rank=2&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        
-                        <!--<div class="col-lg-12">
-                            <div class="product__pagination blog__pagination">
-                                <a href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#"><i class="fa fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>  -->
-                </div>
             </div>
         </div>
     </section>
-    <!-- Blog Section End -->
+    
+    <section class="featured spad">
+    
+    <table>
+    	<tbody>
+    		<th>
+    			<tr>
+					<textarea placeholder="제목을 입력해주세요">
+						
+					</textarea>
+    			</tr>
+    		</th>
+    	</tbody>
+    </table>
+    
+    </section>
+    <!-- Related Product Section End -->
 
     <!-- Footer Section Begin -->
 <!--     <footer class="footer spad">
@@ -347,7 +266,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a href="./main.html"><img src="img/logo5.png" alt=""></a>
+                            <a href="./main.html"><img src="img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Address: 60-49 Road 11378 New York</li>
@@ -417,7 +336,6 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
 
 
 </body>

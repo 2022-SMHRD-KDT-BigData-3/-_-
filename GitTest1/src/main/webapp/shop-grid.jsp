@@ -40,7 +40,7 @@
 	DogFoodDAO dao = new DogFoodDAO();
 	
 	ArrayList<DogFoodDTO> list = new ArrayList<>();
-	list = dao.viewAllFood();
+	list = dao.viewAllFood("anf");
 	
 	%>
 	<!-- Page Preloder -->
@@ -569,9 +569,10 @@
 						<%}%>
 						
 						<div class="product__pagination">
-							<a href="shop_grid2.jsp?data=1">1</a> 
-							<a href="shop_grid2.jsp?data=2">2</a> 
-							<a href="shop_grid2.jsp?data=3">3</a> 
+						<%for(int i = 0;i<(list.size()/15)+1;i++){ %>
+							<a href="shop_grid2.jsp?data=<%=i+1 %>"><%=i+1 %></a>  
+							
+						<%} %>
 							<a href="#"><i
 								class="fa fa-long-arrow-right"></i></a>
 						</div>

@@ -1,6 +1,8 @@
 package Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,6 +47,8 @@ System.out.println("[LoginServiceCon]");
 		}
 		else {
 			System.out.println("로그인 실패!!!");
+			response.sendRedirect("./Login.jsp?login=fail");
+			// PrintWriter out = new PrintWriter();
 		}
 		
 		

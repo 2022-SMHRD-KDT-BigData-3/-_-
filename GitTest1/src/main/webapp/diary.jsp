@@ -1,7 +1,7 @@
-<<<<<<< HEAD
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="zxx">
-
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="Ogani Template">
@@ -14,6 +14,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
 	rel="stylesheet">
+	
 
 <!-- Css Styles -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -24,9 +25,44 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+
+<!-- Css Inners -->
+<style>
+.inner {
+width:60%;
+margin: 0 auto;
+border: solid 1px #7fad39;
+}
+
+.inner .number{
+width:6%;
+text-align:left;
+}
+
+.inner .title{
+text-align:left;
+}
+
+.inner .fdName{
+width:9%;
+text-align:center;
+}
+.col-lg-12{
+width:60%;
+margin: 0 auto;
+}
+.inner .date{
+width:10%;
+text-align:center;
+}
+.write{
+text-align:right;
+
+}
+</style>
+
 </head>
-<script type="text/javascript">
-</script>
+
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -49,7 +85,7 @@
 			</div>
 		</div>
 		<div class="humberger__menu__widget">
-			<!--<div class="header__top__right__language">
+			<div class="header__top__right__language">
 				<img src="img/language.png" alt="">
 				<div>English</div>
 				<span class="arrow_carrot-down"></span>
@@ -57,7 +93,7 @@
 					<li><a href="#">Spanis</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
-			</div>-->
+			</div>
 			<div class="header__top__right__auth">
 				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
 			</div>
@@ -113,15 +149,6 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
 							<div class="header__top__right__auth">
 								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
 							</div>
@@ -132,12 +159,14 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-5 col-md-2 container"
+					style="display: inline-block; text-align: center;">
 					<div class="header__logo">
 						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="container"
+					style="display: inline-block; text-align: center;">
 					<nav class="header__menu">
 						<ul>
 							<li><a href="./main.jsp">Home</a></li>
@@ -167,31 +196,32 @@
 	<!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
-	<section class="hero hero-normal">
-		<div class="container">
-			<div class="row">
-				<!--<div class="col-lg-3">
-					<div class="hero__categories">
-						<div class="hero__categories__all">
-							<i class="fa fa-bars"></i> <span>All departments</span>
-						</div>
-						<ul>
-							<li><a href="#">Fresh Meat</a></li>
-							<li><a href="#">Vegetables</a></li>
-							<li><a href="#">Fruit & Nut Gifts</a></li>
-							<li><a href="#">Fresh Berries</a></li>
-							<li><a href="#">Ocean Foods</a></li>
-							<li><a href="#">Butter & Eggs</a></li>
-							<li><a href="#">Fastfood</a></li>
-							<li><a href="#">Fresh Onion</a></li>
-							<li><a href="#">Papayaya & Crisps</a></li>
-							<li><a href="#">Oatmeal</a></li>
-							<li><a href="#">Fresh Bananas</a></li>
-						</ul>
-					</div>
-				</div>-->
-				<div class="col-lg-9">
-					<!-- <div class="hero__search">
+	<!--<section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>All departments</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Fresh Meat</a></li>
+                            <li><a href="#">Vegetables</a></li>
+                            <li><a href="#">Fruit & Nut Gifts</a></li>
+                            <li><a href="#">Fresh Berries</a></li>
+                            <li><a href="#">Ocean Foods</a></li>
+                            <li><a href="#">Butter & Eggs</a></li>
+                            <li><a href="#">Fastfood</a></li>
+                            <li><a href="#">Fresh Onion</a></li>
+                            <li><a href="#">Papayaya & Crisps</a></li>
+                            <li><a href="#">Oatmeal</a></li>
+                            <li><a href="#">Fresh Bananas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
@@ -211,71 +241,67 @@
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
-                    </div> -->
-				</div>
-			</div>
-		</div>
-	</section>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section> -->
 	<!-- Hero Section End -->
 
-	<!-- Blog Details Hero Begin -->
-	<section class="blog-details-hero set-bg"
-		data-setbg="img/blog/details/details-hero.jpg">
+	<!-- Breadcrumb Section Begin -->
+	<!--<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Blog</h2>
+                        <div class="breadcrumb__option">
+                            <a href="./main.html">Home</a>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+	<!-- Breadcrumb Section End -->
+
+	<!-- Blog Section Begin -->
+	<section class="blog spad">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="blog__details__hero__text">
-						<br>
-						<h2>Health Q&A</h2>
-					</div>
-				</div>
-			</div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2> 건강일지 작성 </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+		<div>
+			<table border="1"  class="inner">
+				<tbody>
+					<tr>
+					<td class = "number"><b>글번호</b></td>
+					<td class = "title"><b>제목</b></td>
+					<td class = "fdName"><b>강아지이름</b></td>
+					<td class = "date"><b>작성일</b></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br>
+		<br>
+		<div class="col-lg-12">
+			<div class="product__pagination blog__pagination">
+				<a href="#">1</a> <a href="#">2</a>
+				<a href="#" style ="width : 5%">글쓰기</a>
+			</div>	
+			
 		</div>
 	</section>
-	<!-- Blog Details Hero End -->
-
-	<!-- Blog Details Section Begin -->
-	<section class="blog-details spad">
-		<div class="container">
-			<div class="row">
-				<div class="d-flex justify-content-center">
-					<div class="blog__details__text">
-						<img src="img/blog/vaccination-1.jpg"
-							class="rounded mx-auto d-block" alt="">
-						<h3>예방접종</h3>
-						<p>태어난 지 얼마 만 된 아기 강아지는 어미의 초유에서 비롯된 항체에 의해 수동면역을 가지고 있다.<br> 이
-							수동면역은 6-8주가 되는 시기부터 감소하여 9-12주가 되면 없어진다.<br> 모체로부터 받은 면역력이 감소하는 시기인
-							생후 45일부터 최소 3회 이상은 접종을 실시해야 한다.<br> 이는 가능한 한 바른 시간에 면역력을 활성화시키기 위한
-							것이다. 동물 병원이나 보호자가 추가로 선택하기도 하지만<br> 가장 보편적인 백신은 다음의 5가지를 6희에 나누어서
-							진행한다. (종합백신, 코로나 장염, 켄넬코프기관지염, 개 인플루엔자, 광견병)</p><br><hr>
-						<h3>종합백신 : 5종 또는 4종</h3>
-						<p>국내에서는 쥐로 인해 전염되는 렙토스피로시스를 포함한 5종백신보다는 4종백신을 많이 진행.<br> 해외로 출국해야
-							하는 경우 나라에 따라서 립토스피로시스 백신 예방을 요구한다.</p><br><hr>
-						<p><h4>홍역</h4> - 홍역은 구토와 설사, 콧물, 재채기, 호흡곤란, 점액 화농성 눈물 등이 나타난다, 때로는
-							신경계에 침투하여 운동 실조나 사경, 안구진탕(눈동자 펄림), 열과 식욕부진을 동반하고 탈수 증상. 홍역 바이러스
-							감염 시 림프절, 중추신경계, 상피세포에 8-11일 내 퍼진다. <br><hr><h4>전염성 간염</h4> - 아데노바이러스라고 불리며 간,
-							신장, 상피세포에 침입하여 간세포를 손상시키고 신장의 사구체상피를 파괴하여 사구체신염을 유발. 각막부종과 혈관내피
-							손상. 열, 구토, 설사, 복부통증, 편도염, 인두염, 경부림프절의 부종, 기침, 출혈, 신경계 이상을 보이며 급성의
-							경우 몇 시간 내 사망. <br><hr><h4>파보장염</h4> - 3개월 미만의 아기 강아지들에게 치명적이며 열과 구토, 혈변, 설사, 탈수,
-							저체온증, 패혈증, 백혈구감소증, 빈혈을 일으킨다. <br><hr><h4>파라인플루엔자</h4> - 전염성 같기로 켄넬코프의 원인이 되며
-							세계적으로 확산되어 있는 전염성이 강한 호흡기 질병의 원인균. 2주간 바이러스 배출하면서 기침과 열, 못물,
-							기력저하, 식욕부진의 증상 <br><hr><h4>렙토스피로시스</h4> - 럽토스피라균에 의해 감염된 쥐나 동물의 배설물(오줌)을 통해 전가.
-							세균은 오염된 물, 음식 등에 있다가 피부 상처 혹은 점막을 통해 내부 장기로 이동. 신장과 간장에 주로 이동하여
-							빈혈과 황달, 폐렴, 발열, 근육통, 식욕 저하, 설사, 구토 등을 유발. 증상에 따라 급성과 만성, 출혈형,
-							황달형, 신부전형 등으로 나눈다,</p>
-					</div>
-
-				</div>
-			</div>
-			<div class="blog__item__text">
-				<a href="blog2.html" class="blog__btn">Back <span class="arrow_right"></span></a>
-			</div>
-		</div>
-	</section>
-	<!-- Blog Details Section End -->
-
-
-	<!-- Related Blog Section End -->
+	<!-- Blog Section End -->
 
 	<!-- Footer Section Begin -->
 	<!--     <footer class="footer spad">
@@ -355,7 +381,8 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
 
-</body>
 
+
+</body>
 
 </html>
