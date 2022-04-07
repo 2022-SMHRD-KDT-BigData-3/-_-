@@ -56,13 +56,14 @@ public class DogFoodDAO {
 	}
 
 	// 사료 목록
-	public ArrayList<DogFoodDTO> viewAllFood() {
-		String sql="select * from dogfood order by fdnum";
+	public ArrayList<DogFoodDTO> viewAllFood(String company) {
+		String sql="select * from dogfood where fdcom = ? order by fdnum";
 		ArrayList<DogFoodDTO> list = new ArrayList<>();
 		
 		db_conn();
 		try {
 			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, company);
 			// 실행
 			rs = psmt.executeQuery();
 			
