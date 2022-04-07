@@ -1,3 +1,6 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -13,6 +16,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
 	rel="stylesheet">
+	
 
 <!-- Css Styles -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -24,9 +28,17 @@
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-<script type="text/javascript">
-</script>
+
 <body>
+
+<!-- 시원이가 바꿔야할 세션 부분 -->
+	<% 
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+	%>
+	<!-- 여기까지 -->
+
+
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -48,7 +60,7 @@
 			</div>
 		</div>
 		<div class="humberger__menu__widget">
-			<!--<div class="header__top__right__language">
+			<div class="header__top__right__language">
 				<img src="img/language.png" alt="">
 				<div>English</div>
 				<span class="arrow_carrot-down"></span>
@@ -56,7 +68,7 @@
 					<li><a href="#">Spanis</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
-			</div>  -->
+			</div>
 			<div class="header__top__right__auth">
 				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
 			</div>
@@ -91,106 +103,103 @@
 	</div>
 	<!-- Humberger End -->
 
-	<!-- Header Section Begin -->
-	<header class="header">
-		<div class="header__top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="header__top__left">
-							<ul>
-								<li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-								<li>Free Shipping for all Order of $99</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="header__top__right">
-							<div class="header__top__right__social">
-								<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
-									class="fa fa-twitter"></i></a> <a href="#"><i
-									class="fa fa-linkedin"></i></a> <a href="#"><i
-									class="fa fa-pinterest-p"></i></a>
-							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
-							<div class="header__top__right__auth">
-								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
-							<!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
-	</header>
-	<!-- Header Section End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                            
+                            <!-- 시원이가 바꿔야할 세션 부분 -->
+                            <%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
+                                
+                            <!-- 여기까지 -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__auth">
+                            	
+                            	<!-- 시원이가 바꿔야할 세션 부분 -->
+								<% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                                <!-- 여기까지 -->
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
+                        <ul>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.html">Health Products</a></li>
+                            <li class="active"><a href="./blog.html">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
-	<section class="hero hero-normal">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<!--<div class="hero__categories">
-						<div class="hero__categories__all">
-							<i class="fa fa-bars"></i> <span>All departments</span>
-						</div>
-						<ul>
-							<li><a href="#">Fresh Meat</a></li>
-							<li><a href="#">Vegetables</a></li>
-							<li><a href="#">Fruit & Nut Gifts</a></li>
-							<li><a href="#">Fresh Berries</a></li>
-							<li><a href="#">Ocean Foods</a></li>
-							<li><a href="#">Butter & Eggs</a></li>
-							<li><a href="#">Fastfood</a></li>
-							<li><a href="#">Fresh Onion</a></li>
-							<li><a href="#">Papayaya & Crisps</a></li>
-							<li><a href="#">Oatmeal</a></li>
-							<li><a href="#">Fresh Bananas</a></li>
-						</ul>
-					</div>  -->
-				</div>
-				<div class="col-lg-9">
-					<!-- <div class="hero__search">
+	<!--<section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>All departments</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Fresh Meat</a></li>
+                            <li><a href="#">Vegetables</a></li>
+                            <li><a href="#">Fruit & Nut Gifts</a></li>
+                            <li><a href="#">Fresh Berries</a></li>
+                            <li><a href="#">Ocean Foods</a></li>
+                            <li><a href="#">Butter & Eggs</a></li>
+                            <li><a href="#">Fastfood</a></li>
+                            <li><a href="#">Fresh Onion</a></li>
+                            <li><a href="#">Papayaya & Crisps</a></li>
+                            <li><a href="#">Oatmeal</a></li>
+                            <li><a href="#">Fresh Bananas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
@@ -210,54 +219,88 @@
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
-                    </div> -->
-				</div>
-			</div>
-		</div>
-	</section>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section> -->
 	<!-- Hero Section End -->
 
-	<!-- Blog Details Hero Begin -->
-	<section class="blog-details-hero set-bg"
-		data-setbg="img/blog/details/details-hero.jpg">
+	<!-- Breadcrumb Section Begin -->
+	<!--<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Blog</h2>
+                        <div class="breadcrumb__option">
+                            <a href="./main.html">Home</a>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+	<!-- Breadcrumb Section End -->
+
+	<!-- Blog Section Begin -->
+	<section class="blog spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="blog__details__hero__text">
-						<br>
-						<h2>Health Q&A</h2>
+				<div class="col-lg-4 col-md-5">
+					<div class="blog__sidebar">
+						<div class="blog__sidebar__item">
+							<h4>Categories</h4>
+							<ul>
+								<li><a href="#"><h5 style="color:green"><b>주의가 필요한 식재료</b></h5></a></li>
+								<li><a href="blog2.html">예방접종</a></li>
+								<li><a href="blog-details_emergency.html">응급상황 대처법</a></li>
+								<li><a href="blog-details_disease.html">가장 흔하게 발생하는 반려견 질병</a></li>
+								<li><a href="blog-details_care.html">일반적인 피부질환 관리 및 치료법</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-7">
+					<div class="row">						
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="blog__item">
+								<div class="blog__item__pic">
+									<img src="img/blog/blog-9.jpg" alt="">
+								</div>
+								<div class="blog__item__text">
+									<h5>
+										<b>녹차/커피</b>
+									</h5>
+									<p>카페인이 들어 있는 식재료는 급여 시 구토, 설사, 호흡 곤란 등을 일으키는 원인이 됩니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="blog__item">
+								<div class="blog__item__pic">
+									<img src="img/blog/blog-10.jpg" alt="">
+								</div>
+								<div class="blog__item__text">
+									<h5>
+										<b>오징어/문어/새우/게</b>
+									</h5>
+									<p>연체동물이나 갑각류는 강아지가 소화하기 힘든 식재료에 속합니다.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="product__pagination blog__pagination">
+								<a href="blog1.html">1</a> <a href="blog1_2page.html">2</a> <a href="blog1_3page.html">3</a> 
+							</div> 
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Blog Details Hero End -->
-
-	<!-- Blog Details Section Begin -->
-	<section class="blog-details spad">
-		<div class="container">
-			<div class="row">
-				<div class="d-flex justify-content-center">
-					<div class="blog__details__text">
-						<img src="img/blog/details/vaccination.png"
-							class="rounded mx-auto d-block" alt="">
-						<h3>광견병</h3>
-						<p>인수공통감염병으로 국가에서 관리하는 질병. 우리나라는 광견병 발생 국가로 해외 출입국 시 광견병 항체검사는
-							필수. 광견병 바이러스는 증상이 나타난 숙주의 타액에 많이 존재하며, 감염된 동물의 증상은 크게 침울형(또는
-							마비형)과 광폭형으로 나눌 수 있으며 두 가지 증상 모두가 나타나기도 한다.</p>
-					</div>
-
-				</div>
-			</div>
-			<div class="blog__item__text">
-				<a href="blog2_2page.html" class="blog__btn">Back <span class="arrow_right"></span></a>
-			</div>
-		</div>
-	</section>
-	<!-- Blog Details Section End -->
-
-
-	<!-- Related Blog Section End -->
+	<!-- Blog Section End -->
 
 	<!-- Footer Section Begin -->
 	<!--     <footer class="footer spad">

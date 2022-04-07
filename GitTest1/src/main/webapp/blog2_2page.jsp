@@ -1,3 +1,6 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -11,7 +14,7 @@
 
 <!-- Google Font -->
 <link
-	href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
+	href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400%22%20rel=%22stylesheet"
 	rel="stylesheet">
 
 <!-- Css Styles -->
@@ -24,9 +27,16 @@
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-<script type="text/javascript">
-</script>
+
 <body>
+	<% 
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+	%>
+
+
+
+
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -48,7 +58,7 @@
 			</div>
 		</div>
 		<div class="humberger__menu__widget">
-			<!--<div class="header__top__right__language">
+			<div class="header__top__right__language">
 				<img src="img/language.png" alt="">
 				<div>English</div>
 				<span class="arrow_carrot-down"></span>
@@ -56,7 +66,7 @@
 					<li><a href="#">Spanis</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
-			</div>  -->
+			</div>
 			<div class="header__top__right__auth">
 				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
 			</div>
@@ -99,8 +109,12 @@
 					<div class="col-lg-6">
 						<div class="header__top__left">
 							<ul>
-								<li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-								<li>Free Shipping for all Order of $99</li>
+								<!-- 시원이가 바꿔야할 세션 부분 -->
+                            <%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
+                                
+                            <!-- 여기까지 -->
 							</ul>
 						</div>
 					</div>
@@ -112,17 +126,12 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
 							<div class="header__top__right__auth">
-								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+								<!-- 시원이가 바꿔야할 세션 부분 -->
+								<% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                                <!-- 여기까지 -->
 							</div>
 						</div>
 					</div>
@@ -131,16 +140,18 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-5 col-md-2 container"
+					style="display: inline-block; text-align: center;">
 					<div class="header__logo">
 						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="container"
+					style="display: inline-block; text-align: center;">
 					<nav class="header__menu">
 						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
+							<li><a href="./main.html">Home</a></li>
+							<li><a href="./shop-grid.html">DogFood</a></li>
 							<!--<li><a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
@@ -150,7 +161,7 @@
                                 </ul>
                             </li>  -->
 							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
+							<li class="active"><a href="./blog.html">Health Q&A</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -166,31 +177,32 @@
 	<!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
-	<section class="hero hero-normal">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<!--<div class="hero__categories">
-						<div class="hero__categories__all">
-							<i class="fa fa-bars"></i> <span>All departments</span>
-						</div>
-						<ul>
-							<li><a href="#">Fresh Meat</a></li>
-							<li><a href="#">Vegetables</a></li>
-							<li><a href="#">Fruit & Nut Gifts</a></li>
-							<li><a href="#">Fresh Berries</a></li>
-							<li><a href="#">Ocean Foods</a></li>
-							<li><a href="#">Butter & Eggs</a></li>
-							<li><a href="#">Fastfood</a></li>
-							<li><a href="#">Fresh Onion</a></li>
-							<li><a href="#">Papayaya & Crisps</a></li>
-							<li><a href="#">Oatmeal</a></li>
-							<li><a href="#">Fresh Bananas</a></li>
-						</ul>
-					</div>  -->
-				</div>
-				<div class="col-lg-9">
-					<!-- <div class="hero__search">
+	<!--<section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>All departments</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Fresh Meat</a></li>
+                            <li><a href="#">Vegetables</a></li>
+                            <li><a href="#">Fruit & Nut Gifts</a></li>
+                            <li><a href="#">Fresh Berries</a></li>
+                            <li><a href="#">Ocean Foods</a></li>
+                            <li><a href="#">Butter & Eggs</a></li>
+                            <li><a href="#">Fastfood</a></li>
+                            <li><a href="#">Fresh Onion</a></li>
+                            <li><a href="#">Papayaya & Crisps</a></li>
+                            <li><a href="#">Oatmeal</a></li>
+                            <li><a href="#">Fresh Bananas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
@@ -210,54 +222,86 @@
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
-                    </div> -->
-				</div>
-			</div>
-		</div>
-	</section>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section> -->
 	<!-- Hero Section End -->
 
-	<!-- Blog Details Hero Begin -->
-	<section class="blog-details-hero set-bg"
-		data-setbg="img/blog/details/details-hero.jpg">
+	<!-- Breadcrumb Section Begin -->
+	<!--<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Blog</h2>
+                        <div class="breadcrumb__option">
+                            <a href="./main.html">Home</a>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+	<!-- Breadcrumb Section End -->
+
+	<!-- Blog Section Begin -->
+	<section class="blog spad">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<div class="blog__details__hero__text">
-						<br>
-						<h2>Health Q&A</h2>
+				<div class="col-lg-4 col-md-5">
+					<div class="blog__sidebar">
+						<div class="blog__sidebar__item">
+							<h4>Categories</h4>
+							<ul>
+								<li><a href="blog1.html">주의가 필요한 식재료</a></li>
+								<li><a href="#"><h5 style="color:green"><b>예방접종</b></h5></a></li>
+								<li><a href="blog-details_emergency.html">응급상황 대처법</a></li>
+								<li><a href="blog-details_disease.html">가장 흔하게 발생하는 반려견 질병</a></li>
+								<li><a href="blog-details_care.html">일반적인 피부질환 관리 및 치료법</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-7">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="blog__item">
+								<div class="blog__item__pic">
+									<a href="blog-details5.html"><img src="img/blog/vaccination-5.jpg" alt=""></a>
+								</div>
+								<div class="blog__item__text">
+									<h5>
+										<b>광견병</b>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<div class="blog__item">
+								<div class="blog__item__pic">
+									<a href="blog-details6.html"><img src="img/blog/vaccination-6.jpg" alt=""></a>
+								</div>
+								<div class="blog__item__text">
+									<h5>
+										<b>내외부기생충</b>
+									</h5>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-12">
+							<div class="product__pagination blog__pagination">
+								<a href="blog2.html">1</a> <a href="blog2_2page.html">2</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Blog Details Hero End -->
-
-	<!-- Blog Details Section Begin -->
-	<section class="blog-details spad">
-		<div class="container">
-			<div class="row">
-				<div class="d-flex justify-content-center">
-					<div class="blog__details__text">
-						<img src="img/blog/details/vaccination.png"
-							class="rounded mx-auto d-block" alt="">
-						<h3>광견병</h3>
-						<p>인수공통감염병으로 국가에서 관리하는 질병. 우리나라는 광견병 발생 국가로 해외 출입국 시 광견병 항체검사는
-							필수. 광견병 바이러스는 증상이 나타난 숙주의 타액에 많이 존재하며, 감염된 동물의 증상은 크게 침울형(또는
-							마비형)과 광폭형으로 나눌 수 있으며 두 가지 증상 모두가 나타나기도 한다.</p>
-					</div>
-
-				</div>
-			</div>
-			<div class="blog__item__text">
-				<a href="blog2_2page.html" class="blog__btn">Back <span class="arrow_right"></span></a>
-			</div>
-		</div>
-	</section>
-	<!-- Blog Details Section End -->
-
-
-	<!-- Related Blog Section End -->
+	<!-- Blog Section End -->
 
 	<!-- Footer Section Begin -->
 	<!--     <footer class="footer spad">
