@@ -87,19 +87,15 @@ public class MemberDAO {
 			psmt.setString(9, dto.getHealth());
 			psmt.setString(10, dto.getDisease());
 			
-			// 5. sql문 실행
-			// insert -> DB에 변화생기기 때문에 Update
-			// int 형태로 반환 : 몇개의 행에 변화가 생겼는지
 			cnt = psmt.executeUpdate();
-			
 			
 		} catch(Exception e) {
 			
 		} finally {
-			//6. DB문 역순으로 닫기
 			db_close();
 		} return cnt;
 		}
+		
 		public MemberDTO login(MemberDTO dto) {
 		      try {
 		         db_conn();
