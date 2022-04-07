@@ -190,14 +190,14 @@
 	</tr>
 	 </table> 
 	 <form method="post" action="DiaryAddServiceCon">
-	<table width="1200">
-	
-	<tr> 
+	<table width="800">
+	<!-- 
+		<tr> 
 	<td width="0">&nbsp;</td> 
 	<td align="center" width="76">제목</td> 
-	<td width="100"> <input type="text" class="form-control" id="title"
-       placeholder="제목 입력" name="title"
-       maxlength="100"> </td> 
+	<td width="100"> <div width=800 align="center"> <input type="text" class="form-control" id="title"
+       placeholder="제목을 입력해주세요" name="title"
+       maxlength="800"> </div> </td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
 	
@@ -251,8 +251,91 @@
 		<td colspan="2" width="399">
 			<input type="submit" value="확인"> 	
 		<td width="0">&nbsp;</td> 
-	</tr> 
+	</tr> -->
 </table> 
+
+<div width=800 align="center"> <input type="text" class="form-control" id="title"
+       placeholder="제목을 입력해주세요" name="title"
+       maxlength="800"> </div>
+       <table>
+       <tr>
+       <td width=20%><p>닉네임</p></td>
+       <td width=80%><p><%if(info==null){ %>로그인을 해주세요<%}else{%> <%=info.getId() %><%} %></p></td>
+       </tr>
+       <tr>
+       <td><textarea width="800" rows="50" id="content" name="content" placeholder="내용을 작성해주세요"></textarea></td>
+       </tr>
+       </table>
+       <div width=800 align="center">
+       
+       
+       </div>
+<!-- 테이블 태그 시작-->
+	<table width="800">
+	<!-- 
+		<tr> 
+	<td width="0">&nbsp;</td> 
+	<td align="center" width="76">제목</td> 
+	<td width="100"> <div width=800 align="center"> <input type="text" class="form-control" id="title"
+       placeholder="제목을 입력해주세요" name="title"
+       maxlength="800"> </div> </td> 
+	<td width="0">&nbsp;</td> 
+	</tr> 
+	
+	<tr height="1" bgcolor="#7fad39"><td colspan="4" width="1200"></td>
+	</tr> 
+	
+	<tr> 
+		<td width="0">&nbsp;</td> 
+		<td align="center" width="76">닉네임</td> 
+		<td width="319">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getId() %><%} %></td> 
+		<td width="0">&nbsp;</td> 
+	</tr> 
+	<tr height="1" bgcolor="#7fad39">
+		<td colspan="4" width="407"></td>
+	</tr> 
+	
+	<tr> 
+	<td width="0">&nbsp;</td> 
+	<td align="center" width="76">건강 상태</td> 
+	<td width="319"><%if(info!=null){%><%=info.getHealth() %><%} %></td> 
+	<td width="0">&nbsp;</td> 
+	</tr> 
+	
+	<tr height="0.5" bgcolor="#7fad39">
+		<td colspan="4" width="407"></td>
+	</tr> 
+	
+	<tr> 
+	<td width="0">&nbsp;</td> 
+	<td align="center" width="76">질병 상태</td> 
+	<td width="319"><%if(info!=null){%><%=info.getDisease() %><%} %></td> 
+	<td width="0">&nbsp;</td> 
+	</tr> 
+	
+	<tr height="1" bgcolor="#7fad39">
+		<td colspan="4" width="407"></td>
+	</tr> 
+	<tr> 
+	<td width="0">&nbsp;</td> 
+	<td width="399" colspan="2" height="200"> <textarea class="form-control" rows="5" id="content"
+    name="content" placeholder="내용 작성"></textarea> </td> 
+	</tr> 
+	<tr height="1" bgcolor="#7fad39">
+	<td colspan="4" width="407"></td>
+	</tr> 
+	<tr height="1" bgcolor="#7fad39">
+		<td colspan="4" width="407"></td>
+	</tr> 
+	<tr align="center"> 
+		<td width="0">&nbsp;</td> 
+		<td colspan="2" width="399">
+			<input type="submit" value="확인"> 	
+		<td width="0">&nbsp;</td> 
+	</tr> -->
+</table> 
+
+
 <%if (info!=null){ %>
 <input type="text" style="display: none;" name="id"><%=info.getId() %></input>
 <%} %>
