@@ -1,6 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="zxx">
-
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="description" content="Ogani Template">
@@ -13,6 +14,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
 	rel="stylesheet">
+	
 
 <!-- Css Styles -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -23,10 +25,36 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+
+<!-- Css Inners -->
+<style>
+.inner {
+width:60%;
+margin: 0 auto;
+border: solid 1px #7fad39;
+}
+
+.inner .number{
+width:6%;
+text-align:left;
+}
+
+.inner .title{
+text-align:left;
+}
+
+.inner .fdName{
+width:9%;
+text-align:center;
+}
+.col-lg-12{
+width:60%;
+margin: 0 auto;
+}
+</style>
+
 </head>
-<script type="text/javascript">
-	fdsafdsafdsafdsa
-</script>
+
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -49,7 +77,7 @@
 			</div>
 		</div>
 		<div class="humberger__menu__widget">
-			<!--<div class="header__top__right__language">
+			<div class="header__top__right__language">
 				<img src="img/language.png" alt="">
 				<div>English</div>
 				<span class="arrow_carrot-down"></span>
@@ -57,7 +85,7 @@
 					<li><a href="#">Spanis</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
-			</div>  -->
+			</div>
 			<div class="header__top__right__auth">
 				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
 			</div>
@@ -113,15 +141,6 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
 							<div class="header__top__right__auth">
 								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
 							</div>
@@ -132,12 +151,14 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-5 col-md-2 container"
+					style="display: inline-block; text-align: center;">
 					<div class="header__logo">
 						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
 					</div>
 				</div>
-				<div class="col-lg-6">
+				<div class="container"
+					style="display: inline-block; text-align: center;">
 					<nav class="header__menu">
 						<ul>
 							<li><a href="./main.jsp">Home</a></li>
@@ -167,31 +188,32 @@
 	<!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
-	<section class="hero hero-normal">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<!--<div class="hero__categories">
-						<div class="hero__categories__all">
-							<i class="fa fa-bars"></i> <span>All departments</span>
-						</div>
-						<ul>
-							<li><a href="#">Fresh Meat</a></li>
-							<li><a href="#">Vegetables</a></li>
-							<li><a href="#">Fruit & Nut Gifts</a></li>
-							<li><a href="#">Fresh Berries</a></li>
-							<li><a href="#">Ocean Foods</a></li>
-							<li><a href="#">Butter & Eggs</a></li>
-							<li><a href="#">Fastfood</a></li>
-							<li><a href="#">Fresh Onion</a></li>
-							<li><a href="#">Papayaya & Crisps</a></li>
-							<li><a href="#">Oatmeal</a></li>
-							<li><a href="#">Fresh Bananas</a></li>
-						</ul>
-					</div>  -->
-				</div>
-				<div class="col-lg-9">
-					<!-- <div class="hero__search">
+	<!--<section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>All departments</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">Fresh Meat</a></li>
+                            <li><a href="#">Vegetables</a></li>
+                            <li><a href="#">Fruit & Nut Gifts</a></li>
+                            <li><a href="#">Fresh Berries</a></li>
+                            <li><a href="#">Ocean Foods</a></li>
+                            <li><a href="#">Butter & Eggs</a></li>
+                            <li><a href="#">Fastfood</a></li>
+                            <li><a href="#">Fresh Onion</a></li>
+                            <li><a href="#">Papayaya & Crisps</a></li>
+                            <li><a href="#">Oatmeal</a></li>
+                            <li><a href="#">Fresh Bananas</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
@@ -211,53 +233,69 @@
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
-                    </div> -->
-				</div>
-			</div>
-		</div>
-	</section>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section> -->
 	<!-- Hero Section End -->
 
-	<!-- Blog Details Hero Begin -->
-	<section class="blog-details-hero set-bg"
-		data-setbg="img/blog/details/details-hero.jpg">
+	<!-- Breadcrumb Section Begin -->
+	<!--<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Blog</h2>
+                        <div class="breadcrumb__option">
+                            <a href="./main.html">Home</a>
+                            <span>Blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  -->
+	<!-- Breadcrumb Section End -->
+
+	<!-- Blog Section Begin -->
+	<section class="blog spad">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="blog__details__hero__text">
-						<br>
-						<h2>Health Q&A</h2>
-					</div>
-				</div>
-			</div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2> 건강일지 작성 </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+		<div>
+			<table border="1"  class="inner">
+				<tbody>
+					<tr>
+					<td class = "number"><b>글번호</b></td>
+					<td class = "title"><b>제목</b></td>
+					<td class = "fdName"><b>강아지이름</b></td>
+					<td class = "date"><b>작성일</b></td>
+					</tr>
+					
+					
+				
+				</tbody>
+			</table>
+		
+		</div>
+		<br>
+		<br>
+		<div class="col-lg-12">
+							<div class="product__pagination blog__pagination">
+								<a href="blog2.html">1</a> <a href="blog2_2page.html">2</a>
+							</div>
 		</div>
 	</section>
-	<!-- Blog Details Hero End -->
-
-	<!-- Blog Details Section Begin -->
-	<section class="blog-details spad">
-		<div class="container">
-			<div class="row">
-				<div class="d-flex justify-content-center">
-					<div class="blog__details__text">
-						<img src="img/blog/details/vaccination.png"
-							class="rounded mx-auto d-block" alt="">
-						<h3>코로나장염</h3>
-						<p>장융모세포에 침입하여 급성 설사를 유발. 구토와 혈변 증상을 보이며 파보 장염과 함께 감염되는 경우도
-							있다.</p>
-					</div>
-
-				</div>
-			</div>
-			<div class="blog__item__text">
-				<a href="blog2.html" class="blog__btn">Back <span class="arrow_right"></span></a>
-			</div>
-		</div>
-	</section>
-	<!-- Blog Details Section End -->
-
-
-	<!-- Related Blog Section End -->
+	<!-- Blog Section End -->
 
 	<!-- Footer Section Begin -->
 	<!--     <footer class="footer spad">

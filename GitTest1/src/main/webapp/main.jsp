@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>건강하개 지켜줄게</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -26,6 +27,17 @@
 </head>
 
 <body>
+
+	<% 
+	// 로그인 정보를 담은 session 불러오기 (내장객체)
+	// session : Object타입 -> 강제형변환(다운캐스팅)
+	// 로그인 성공시 : info에 값 담겨있음
+	// 로그인 실패시 : info = null
+	
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+	
+
+	%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -65,7 +77,7 @@
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                         <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./shoping-cart.html">Shopping Cart</a></li>
                         <li><a href="./checkout.html">Check Out</a></li>
                         <li><a href="./blog-details.html">Blog Details</a></li>
                     </ul>
@@ -99,8 +111,9 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                                <li>Free Shipping for all Order of $99</li>
+                            <%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
                             </ul>
                         </div>
                     </div>
@@ -113,7 +126,12 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="Join2.html"><i class="fa fa-user"></i> Login</a>
+                            	
+								<% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                                
+                                
                             </div>
                         </div>
                     </div>
@@ -128,20 +146,13 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <nav class="header__menu">
+                    <nav class="header__menu" style="width:120%">
                         <ul>
                             <li class="active"><a href="./main.jsp">Home</a></li>
                             <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <!--<li><a href="#">아라라라라</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
                             <li><a href="./product.html">Health Products</a></li>
                             <li><a href="./blog.html">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
                         </ul>
                     </nav>
                 </div>

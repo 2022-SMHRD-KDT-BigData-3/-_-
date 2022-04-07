@@ -217,7 +217,7 @@
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
-                    </div> --> -->
+                    </div> -->
                 </div>
             </div>
         </div>

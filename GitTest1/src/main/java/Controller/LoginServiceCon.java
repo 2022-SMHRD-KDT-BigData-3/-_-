@@ -1,6 +1,8 @@
 package Controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,10 +43,12 @@ System.out.println("[LoginServiceCon]");
 			// 2. 로그인 정보를 담은 session만들기("저장이름","값")
 			session.setAttribute("info", info);
 			
-			response.sendRedirect("./main.html");
+			response.sendRedirect("./main.jsp");
 		}
 		else {
 			System.out.println("로그인 실패!!!");
+			response.sendRedirect("./Login.jsp?login=fail");
+			// PrintWriter out = new PrintWriter();
 		}
 		
 		
