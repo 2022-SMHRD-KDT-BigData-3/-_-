@@ -31,8 +31,26 @@
 .inner {
 width:60%;
 margin: 0 auto;
+border: solid 1px #7fad39;
+}
 
-				}
+.inner .number{
+width:6%;
+text-align:left;
+}
+
+.inner .title{
+text-align:left;
+}
+
+.inner .fdName{
+width:9%;
+text-align:center;
+}
+.col-lg-12{
+width:60%;
+margin: 0 auto;
+}
 </style>
 
 </head>
@@ -243,23 +261,38 @@ margin: 0 auto;
 	<!-- Blog Section Begin -->
 	<section class="blog spad">
 		<div class="container">
-			<h3 style = "text-align : center">건강일지</h3>					
-
-
-		</div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2> 건강일지 작성 </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
 		<div>
 			<table border="1"  class="inner">
 				<tbody>
 					<tr>
-					<td>글번호</td>
-					<td>제목</td>
-					<td>강아지이름</td>
-					
+					<td class = "number"><b>글번호</b></td>
+					<td class = "title"><b>제목</b></td>
+					<td class = "fdName"><b>강아지이름</b></td>
+					<td class = "date"><b>작성일</b></td>
 					</tr>
+					
+					
 				
 				</tbody>
 			</table>
 		
+		</div>
+		<br>
+		<br>
+		<div class="col-lg-12">
+							<div class="product__pagination blog__pagination">
+								<a href="blog2.html">1</a> <a href="blog2_2page.html">2</a>
+							</div>
 		</div>
 	</section>
 	<!-- Blog Section End -->
