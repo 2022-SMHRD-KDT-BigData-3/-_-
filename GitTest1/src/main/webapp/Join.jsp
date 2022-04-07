@@ -12,7 +12,7 @@
 <div id="header" class="join_membership" role="banner">
     <h1><a href="../img/logo5.png" class="h_logo"><span class="blind"></span></a></h1>
 </div>
-	<form id="join_form" method="post" action="JoinServiceCon">
+	<form id="join_form" method="post" action="fileUploadServiceCon"  enctype="multipart/form-data" target="repacatFrame">
 		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 
 			<input type="hidden" id="encPswd"	name="encPswd" value=""> 
 			<input type="hidden" id="encKey"	name="encKey" value=""> 
@@ -147,7 +147,7 @@
 						<!-- lang = ko_KR -->
 						<div class="join_row">
 			 				 <div class="form-group">
-			 				 <h3> 강아지 사진 </h3><input type="file" name="dogImg" class="form-control-file">
+			 				 <h3> 강아지 사진 </h3><input type="file" name="dogImg" class="form-control-file" multiple="multiple">
                             </div>
 							<h3 class="join_title">
 								<label for="name">강아지 이름</label>
