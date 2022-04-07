@@ -11,21 +11,28 @@ import javax.servlet.http.HttpServletResponse;
 
 import Model.MemberDAO;
 
-@WebServlet("/IdCheckServiceCon")
-public class IdCheckServiceCon extends HttpServlet {
+@WebServlet("/PwCheckServiceCon")
+public class PwCheckServiceCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("[IdCheckServiceCon]");
+		System.out.println("[PwCheckServiceCon]");
 		
 		request.setCharacterEncoding("UTF-8");
 		
-		String id = request.getParameter("id");
-		System.out.println("입력한 아이디는 : " +id);
+		String pw = request.getParameter("pw");
+		String pw2 = request.getParameter("pw2");
+		System.out.println("입력한 비번은 : " +pw);
+		System.out.println("재확인 : " +pw2);
 		
-		MemberDAO dao = new MemberDAO();
-		
+		int cnt=0;
+		//다르면 1
+		//같으면 0
+		if(pw.equals(pw2)) {
+			cnt=0;
+		}else{
+			cnt=1;
+		}
 		PrintWriter out = response.getWriter();
-		out.print(dao.checkId(id)); // 출력이 아니라 html 파일로 데이터 다시 전송
-		// id가 이미 있으면 1
+		out.print(cnt); // 출력이 아니라 html 파일로 데이터 다시 전송
 	}
 
 }

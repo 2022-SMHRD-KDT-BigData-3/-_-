@@ -73,12 +73,12 @@ public class JoinServiceCon extends HttpServlet {
 		int cnt = dao.join(dto);
 		if (cnt>0) {
 			
-			response.sendRedirect("./Login.html?join=success");
+			response.sendRedirect("./Login.jsp");
 			// 로그인 html 에 join=success가 넘어오면 alert 성공했습니다 
 		}else {
 			
 			// join.html에 실패했다고 뜨면 alert 실패했습니다
-			response.sendRedirect("./join.html?join=fail");
+			response.sendRedirect("./Join.jsp?join=fail");
 			
 		}
 	

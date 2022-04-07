@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,6 +27,17 @@
 </head>
 
 <body>
+
+	<% 
+	// 로그인 정보를 담은 session 불러오기 (내장객체)
+	// session : Object타입 -> 강제형변환(다운캐스팅)
+	// 로그인 성공시 : info에 값 담겨있음
+	// 로그인 실패시 : info = null
+	
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+	
+
+	%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -99,8 +111,9 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                                <li>Free Shipping for all Order of $99</li>
+                            <%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
                             </ul>
                         </div>
                     </div>
@@ -113,7 +126,12 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="Join2.html"><i class="fa fa-user"></i> Login</a>
+                            	
+								<% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                                
+                                
                             </div>
                         </div>
                     </div>
