@@ -60,8 +60,8 @@
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li class="active"><a href="./main.html">Home</a></li>
-                <li><a href="./shop-grid.html">DOG FOOD</a></li>
+                <li class="active"><a href="./main.jsp">Home</a></li>
+                <li><a href="./shop-grid.jsp">DOG FOOD</a></li>
                <!-- <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                         <li><a href="./shop-details.html">Shop Details</a></li>

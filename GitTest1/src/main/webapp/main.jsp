@@ -124,14 +124,14 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./main.html"><img src="img/logo5.png" > </a>
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="./shop-grid.html">DogFood</a></li>
+                            <li class="active"><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
                             <!--<li><a href="#">아라라라라</a>
                                 <ul class="header__menu__dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
