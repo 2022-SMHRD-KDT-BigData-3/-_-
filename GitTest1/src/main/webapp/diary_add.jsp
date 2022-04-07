@@ -251,16 +251,21 @@
 	<td width="5"><img src="img/table_right.gif" width="5" height="30" /></td> 
 	</tr>
 	 </table> 
-<table width="413">
+	 
+	<table width="413">
 	
 	<tr> 
 	<td width="0">&nbsp;</td> 
 	<td align="center" width="76">제목</td> 
-	<td width="319"></td> 
+	<td width="100"> <input type="text" class="form-control" id="title"
+       placeholder="제목 입력" name="title"
+       maxlength="100"> </td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
+	
 	<tr height="1" bgcolor="#7fad39"><td colspan="4" width="407"></td>
 	</tr> 
+	
 	<tr> 
 		<td width="0">&nbsp;</td> 
 		<td align="center" width="76">닉네임</td> 
@@ -281,7 +286,8 @@
 	</tr> 
 	<tr> 
 	<td width="0">&nbsp;</td> 
-	<td width="399" colspan="2" height="200"> 
+	<td width="399" colspan="2" height="200"> <textarea class="form-control" rows="5" id="content"
+    name="content" placeholder="내용 작성"></textarea> </td> 
 	</tr> 
 	<tr height="1" bgcolor="#7fad39">
 	<td colspan="4" width="407"></td>
@@ -296,16 +302,19 @@
 		<td width="0">&nbsp;</td> 
 	</tr> 
 </table> 
-</td> 
-</tr> 
-</table>
+
+</form>
+
     </section>
+    
+    
     
     <section class="featured spad">
     
     
-    
     </section>
+    
+    
     <!-- Related Product Section End -->
 
     <!-- Footer Section Begin -->

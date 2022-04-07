@@ -240,6 +240,34 @@
             <div class="row">
             </div>
         </div>
+        
+    
+			<table style="text-align: center; border: 1px solid #7fad39">
+				<thead>
+					<tr>
+						<th colspan="2" style="background-color: #7fad39; text-align: center;">게시판 글 보기</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="width: 20%;">글 제목</td>
+						<td colspan="2"></td>
+					</tr>
+					<tr>
+						<td>닉네임</td>
+						<td colspan="2"></td>
+					</tr>
+					
+					<tr>
+						<td>내용</td>
+						<td colspan="2" style="height: 200px; text-align: left;"></td>
+					</tr>
+				</tbody>
+			</table>
+			<a href="">목록</a>
+    
+        
+      
     </section>
     
     <section class="featured spad">
