@@ -14,7 +14,7 @@
 <div id="header" class="join_membership" role="banner">
     <h1><a href="../img/logo5.png" class="h_logo"><span class="blind"></span></a></h1>
 </div>
-	<form id="join_form" method="post" action="JoinServiceCon">
+	<form id="join_form" method="post" action="LoginServiceCon">
 		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 
 			<input type="hidden" id="encPswd"	name="encPswd" value=""> 
 			<input type="hidden" id="encKey"	name="encKey" value=""> 
