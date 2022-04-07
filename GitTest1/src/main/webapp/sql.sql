@@ -12,6 +12,9 @@ create table member(
 	constraint mem_id_pk primary key(id)
 )
 
+select * from dogfood where fdcom = 'Absolute' order by fdnum;
+
+
 drop table member
 select * from member;
 
@@ -26,6 +29,7 @@ create table dogfood(
 )
 drop table dogfood
 select * from dogfood
+
 
 create table protein(
 	fdNum number(30),

@@ -10,7 +10,18 @@
 <script src="jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/join.css" type="text/css">
 </head>
+<<<<<<< HEAD
 <body style="margin-top:10%">
+=======
+<body>
+<<<<<<< HEAD
+<%
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+%>
+
+=======
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/HealthyDog.git
 
 <%String login = request.getParameter("login");
 	System.out.print(login);
@@ -27,6 +38,7 @@
 
 
 </script>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BigData-3/HealthyDog.git
 <div id="header" class="join_membership" role="banner">
 </div>
 	<form id="join_form" method="post" action="LoginServiceCon">

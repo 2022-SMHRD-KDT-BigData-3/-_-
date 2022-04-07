@@ -51,6 +51,14 @@ text-align:center;
 width:60%;
 margin: 0 auto;
 }
+.inner .date{
+width:10%;
+text-align:center;
+}
+.write{
+text-align:right;
+
+}
 </style>
 
 </head>
@@ -280,19 +288,17 @@ margin: 0 auto;
 					<td class = "fdName"><b>강아지이름</b></td>
 					<td class = "date"><b>작성일</b></td>
 					</tr>
-					
-					
-				
 				</tbody>
 			</table>
-		
 		</div>
 		<br>
 		<br>
 		<div class="col-lg-12">
-							<div class="product__pagination blog__pagination">
-								<a href="blog2.html">1</a> <a href="blog2_2page.html">2</a>
-							</div>
+			<div class="product__pagination blog__pagination">
+				<a href="#">1</a> <a href="#">2</a>
+				<a href="#" style ="width : 5%">글쓰기</a>
+			</div>	
+			
 		</div>
 	</section>
 	<!-- Blog Section End -->
