@@ -113,7 +113,7 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="Login.html"><i class="fa fa-user"></i> Login</a>
+                                <a href="Join2.html"><i class="fa fa-user"></i> Login</a>
                             </div>
                         </div>
                     </div>
