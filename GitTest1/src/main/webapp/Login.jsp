@@ -1,3 +1,6 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <!doctype html>
 <html lang="ko">
@@ -46,6 +49,9 @@
     <link href="css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
+  <%
+  	MemberDTO info = (MemberDTO)session.getAttribute("info");
+  %>
 	
 <main class="form-signin">
   <form action = "LoginServiceCon" method = "post">
@@ -53,11 +59,11 @@
     <h1 class="h3 mb-3 fw-normal">로그인해주세요</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" name = "id" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">아이디</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" name = "pw" class="form-control" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">비밀번호</label>
     </div>
 
