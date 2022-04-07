@@ -187,9 +187,6 @@
 		<td> 
 		<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
 	<tr style="background:url('img/table_mid.gif') repeat-x; text-align:center;"> 
-	<td width="5"><img src="img/table_left.gif" width="5" height="30" /></td> 
-	<td> 내   용 </td> 
-	<td width="5"><img src="img/table_right.gif" width="5" height="30" /></td> 
 	</tr>
 	 </table> 
 	 <form method="post" action="DiaryAddServiceCon">
@@ -219,8 +216,8 @@
 	
 	<tr> 
 	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">질병 상태</td> 
-	<td width="319"><%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getDisease() %><%} %></td> 
+	<td align="center" width="76">건강 상태</td> 
+	<td width="319"><%if(info!=null){%><%=info.getHealth() %><%} %></td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
 	
@@ -230,8 +227,8 @@
 	
 	<tr> 
 	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">건강 상태</td> 
-	<td width="319"><%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getHealth() %><%} %></td> 
+	<td align="center" width="76">질병 상태</td> 
+	<td width="319"><%if(info!=null){%><%=info.getDisease() %><%} %></td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
 	
@@ -311,7 +308,9 @@
                 <div class="col-lg-4 col-md-12">
                     <div class="footer__widget">
                         <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <p>Get E-mail updates about our la
+
+ shop and special offers.</p>
                         <form action="#">
                             <input type="text" placeholder="Enter your mail">
                             <button type="submit" class="site-btn">Subscribe</button>
