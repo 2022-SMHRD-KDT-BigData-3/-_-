@@ -10,7 +10,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>건강하개 지켜줄게</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -77,7 +77,7 @@
                 <li><a href="#">Pages</a>
                     <ul class="header__menu__dropdown">
                         <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./shoping-cart.html">Shopping Cart</a></li>
                         <li><a href="./checkout.html">Check Out</a></li>
                         <li><a href="./blog-details.html">Blog Details</a></li>
                     </ul>
@@ -146,20 +146,13 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <nav class="header__menu">
+                    <nav class="header__menu" style="width:120%">
                         <ul>
                             <li class="active"><a href="./main.jsp">Home</a></li>
                             <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <!--<li><a href="#">아라라라라</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
                             <li><a href="./product.html">Health Products</a></li>
                             <li><a href="./blog.html">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
                         </ul>
                     </nav>
                 </div>
