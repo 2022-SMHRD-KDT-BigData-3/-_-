@@ -2,85 +2,74 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<!doctype html>
-<html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Signin Template · Bootstrap v5.1</title>
-
-    <link rel="canonical" href="https://getbootstrap.kr/docs/5.1/examples/sign-in/">
-
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="https://getbootstrap.kr/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="https://getbootstrap.kr/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://getbootstrap.kr/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="https://getbootstrap.kr/docs/5.1/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="https://getbootstrap.kr/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="https://getbootstrap.kr/docs/5.1/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="css/signin.css" rel="stylesheet">
-  </head>
-  <body class="text-center">
-  <%
-  	MemberDTO info = (MemberDTO)session.getAttribute("info");
-  %>
-	
-<main class="form-signin">
-  <form action = "LoginServiceCon" method = "post">
-    <img class="mb-4" src="img/logo5.png" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">로그인해주세요</h1>
-
-    <div class="form-floating">
-      <input type="email" name = "id" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">아이디</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" name = "pw" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">비밀번호</label>
-    </div>
-
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <div class="d-grid gap-2 col-6 mx-auto">
-  <button class="btn btn-primary" type="submit">로그인</button>
-  <a class="btn btn-primary" type="button" href = "Join.html">회원가입</a>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="css/join.css" type="text/css">
+</head>
+<body>
+<div id="header" class="join_membership" role="banner">
+    <h1><a href="../img/logo5.png" class="h_logo"><span class="blind"></span></a></h1>
 </div>
-    <p class="mt-3 mb-3 text-muted">&copy; 2017–2022</p>
-  </form>
-</main>
+	<form id="join_form" method="post" action="JoinServiceCon">
+		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 
+			<input type="hidden" id="encPswd"	name="encPswd" value=""> 
+			<input type="hidden" id="encKey"	name="encKey" value=""> 
+			<input type="hidden" id="birthday"	name="birthday" value=""> 
+			<input type="hidden" id="joinMode"	name="joinMode" value="unreal"> 
+			<input type="hidden" id="pbirthday" name="pbirthday" value=""> 
+			<input type="hidden" id="ipinFlag" name="ipinFlag" value=""> 
+			<input type="hidden" id="nid_kb2" name="nid_kb2" value="">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-  </body>
+		<!-- container -->
+		<div id="container" role="main">
+			<div id="content">
+				<!-- tg-text=title -->
+				<div class="join_content">
+					<!-- 아이디, 비밀번호 입력 -->
+					<div class="row_group">
+						<div class="join_row">
+							<h3 class="join_title">
+								<label for="id">아이디</label>
+							</h3>
+							<span class="ps_box int_id"> <input type="text" id="id"
+								name="id" class="int" title="ID" maxlength="20"> <span
+								class="step_url"> </span></span> <span class="error_next_box"
+								id="idMsg" style="display: none" aria-live="assertive"></span>
+								
+							<!-- 아이디 체크 -->
+						</div>
+
+						<div class="join_row">
+							<h3 class="join_title">
+								<label for="pw">비밀번호</label>
+							</h3>
+							<span class="ps_box int_pass" id="pwImg"> <input
+								type="password" id="pw" name="pw" class="int"
+								title="비밀번호 입력" aria-describedby="pwMsg" maxlength="20">
+								<span class="lbl"><span id="pwSpan" class="step_txt"></span></span>
+							</span> <span class="error_next_box" id="pwMsg" style="display: none"
+								aria-live="assertive">5~12자의 영문 소문자, 숫자와 특수기호(_)만 사용
+								가능합니다.</span>
+						</div>
+					</div>
+					<!-- // 아이디, 비밀번호 입력 -->
+
+					<!-- // 이름, 생년월일 입력 -->
+					<div class="btn_area">
+						<button type="submit" id="btnJoin" class="btn_type btn_primary">
+							<span>로그인</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+	
+	</script>
+</body>
 </html>
