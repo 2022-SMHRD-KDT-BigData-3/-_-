@@ -1,3 +1,6 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -27,6 +30,15 @@
 <script type="text/javascript">
 </script>
 <body>
+
+<!-- 시원이가 바꿔야할 세션 부분 -->
+	<% 
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+	%>
+	<!-- 여기까지 -->
+
+
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -99,8 +111,12 @@
 					<div class="col-lg-6">
 						<div class="header__top__left">
 							<ul>
-								<li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-								<li>Free Shipping for all Order of $99</li>
+								<!-- 시원이가 바꿔야할 세션 부분 -->
+                            <%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
+                                
+                            <!-- 여기까지 -->
 							</ul>
 						</div>
 					</div>
@@ -122,7 +138,11 @@
 								</ul>
 							</div>  -->
 							<div class="header__top__right__auth">
-								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+								<!-- 시원이가 바꿔야할 세션 부분 -->
+								<% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                                <!-- 여기까지 -->
 							</div>
 						</div>
 					</div>
@@ -241,16 +261,15 @@
 					<div class="blog__details__text">
 						<img src="img/blog/details/vaccination.png"
 							class="rounded mx-auto d-block" alt="">
-						<h3>광견병</h3>
-						<p>인수공통감염병으로 국가에서 관리하는 질병. 우리나라는 광견병 발생 국가로 해외 출입국 시 광견병 항체검사는
-							필수. 광견병 바이러스는 증상이 나타난 숙주의 타액에 많이 존재하며, 감염된 동물의 증상은 크게 침울형(또는
-							마비형)과 광폭형으로 나눌 수 있으며 두 가지 증상 모두가 나타나기도 한다.</p>
+						<h3>코로나장염</h3>
+						<p>장융모세포에 침입하여 급성 설사를 유발. 구토와 혈변 증상을 보이며 파보 장염과 함께 감염되는 경우도
+							있다.</p>
 					</div>
 
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2_2page.html" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog2.html" class="blog__btn">Back <span class="arrow_right"></span></a>
 			</div>
 		</div>
 	</section>

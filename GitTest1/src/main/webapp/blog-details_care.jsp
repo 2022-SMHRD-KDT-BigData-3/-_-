@@ -1,3 +1,6 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -25,8 +28,18 @@
 <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <script type="text/javascript">
+	fdsafdsafdsafdsa
 </script>
 <body>
+
+<!-- 시원이가 바꿔야할 세션 부분 -->
+	<% 
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+	%>
+	<!-- 여기까지 -->
+
+
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -48,7 +61,7 @@
 			</div>
 		</div>
 		<div class="humberger__menu__widget">
-			<!--<div class="header__top__right__language">
+			<div class="header__top__right__language">
 				<img src="img/language.png" alt="">
 				<div>English</div>
 				<span class="arrow_carrot-down"></span>
@@ -56,7 +69,7 @@
 					<li><a href="#">Spanis</a></li>
 					<li><a href="#">English</a></li>
 				</ul>
-			</div>  -->
+			</div>
 			<div class="header__top__right__auth">
 				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
 			</div>
@@ -99,8 +112,12 @@
 					<div class="col-lg-6">
 						<div class="header__top__left">
 							<ul>
-								<li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-								<li>Free Shipping for all Order of $99</li>
+								<!-- 시원이가 바꿔야할 세션 부분 -->
+                            <%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
+                                
+                            <!-- 여기까지 -->
 							</ul>
 						</div>
 					</div>
@@ -112,7 +129,7 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
+							<div class="header__top__right__language">
 								<img src="img/language.png" alt="">
 								<div>English</div>
 								<span class="arrow_carrot-down"></span>
@@ -120,9 +137,13 @@
 									<li><a href="#">Spanis</a></li>
 									<li><a href="#">English</a></li>
 								</ul>
-							</div>  -->
+							</div>
 							<div class="header__top__right__auth">
-								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+								<!-- 시원이가 바꿔야할 세션 부분 -->
+								<% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                                <!-- 여기까지 -->
 							</div>
 						</div>
 					</div>
@@ -139,18 +160,17 @@
 				<div class="col-lg-6">
 					<nav class="header__menu">
 						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
-							<!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
+							<li><a href="./main.html">Home</a></li>
+							<li><a href="./shop-grid.html">Shop</a></li>
+							<li><a href="#">Pages</a>
+								<ul class="header__menu__dropdown">
+									<li><a href="./shop-details.html">Shop Details</a></li>
+									<li><a href="./shoping-cart.html">Shoping Cart</a></li>
+									<li><a href="./checkout.html">Check Out</a></li>
+									<li><a href="./blog-details.html">Blog Details</a></li>
+								</ul></li>
+							<li class="active"><a href="./blog.html">Blog</a></li>
+							<li><a href="./contact.html">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -170,7 +190,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3">
-					<!--<div class="hero__categories">
+					<div class="hero__categories">
 						<div class="hero__categories__all">
 							<i class="fa fa-bars"></i> <span>All departments</span>
 						</div>
@@ -187,7 +207,7 @@
 							<li><a href="#">Oatmeal</a></li>
 							<li><a href="#">Fresh Bananas</a></li>
 						</ul>
-					</div>  -->
+					</div>
 				</div>
 				<div class="col-lg-9">
 					<!-- <div class="hero__search">
@@ -224,8 +244,12 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="blog__details__hero__text">
-						<br>
-						<h2>Health Q&A</h2>
+						<h2>The Moment You Need To Remove Garlic From The Menu</h2>
+						<ul>
+							<li>By Michael Scofield</li>
+							<li>January 14, 2019</li>
+							<li>8 Comments</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -239,18 +263,20 @@
 			<div class="row">
 				<div class="d-flex justify-content-center">
 					<div class="blog__details__text">
-						<img src="img/blog/details/vaccination.png"
+						<img src="img/blog/details/parasite.png"
 							class="rounded mx-auto d-block" alt="">
-						<h3>광견병</h3>
-						<p>인수공통감염병으로 국가에서 관리하는 질병. 우리나라는 광견병 발생 국가로 해외 출입국 시 광견병 항체검사는
-							필수. 광견병 바이러스는 증상이 나타난 숙주의 타액에 많이 존재하며, 감염된 동물의 증상은 크게 침울형(또는
-							마비형)과 광폭형으로 나눌 수 있으며 두 가지 증상 모두가 나타나기도 한다.</p>
+						<h3>일반적인 피부질환 관리 및 치료법</h3>
+						<p>
+							1. 피부와 털의 청결이 매우 중요하다. <br>2. 반려견이 환부를 혀로 핥는 것은 일반적으로 괜찮다. <br>3.
+							피부염 종류에 따라 원인을 제거, 진드기 증식 억제로 하기 위해 향진균 스프레이, 항생제와 항히스타민 주사 및 소양증
+							개선약 등 꾸준하게 처치를 해준다. <br>4. 강아지의 침에는 다양한 균이 존재하기 때문에 환부에 침이
+							들어가면 2차 감염으로 이어질 가능성이 있습니다. 그렇기 때문에 되도록 환부를 핥지 못하게 하는 것이 좋습니다.
+						</p>
 					</div>
-
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2_2page.html" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog1.html" class="blog__btn">뒤로가기 <span class="arrow_right"></span></a>
 			</div>
 		</div>
 	</section>

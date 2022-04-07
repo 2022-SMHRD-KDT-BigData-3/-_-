@@ -1,3 +1,6 @@
+<%@page import="Model.MemberDTO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -27,6 +30,15 @@
 <script type="text/javascript">
 </script>
 <body>
+
+<!-- 시원이가 바꿔야할 세션 부분 -->
+	<% 
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+	%>
+	<!-- 여기까지 -->
+
+
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -99,8 +111,12 @@
 					<div class="col-lg-6">
 						<div class="header__top__left">
 							<ul>
-								<li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-								<li>Free Shipping for all Order of $99</li>
+							<!-- 시원이가 바꿔야할 세션 부분 -->
+                            <%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
+                                
+                            <!-- 여기까지 -->
 							</ul>
 						</div>
 					</div>
@@ -122,7 +138,11 @@
 								</ul>
 							</div>  -->
 							<div class="header__top__right__auth">
-								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+								<!-- 시원이가 바꿔야할 세션 부분 -->
+								<% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                                <!-- 여기까지 -->
 							</div>
 						</div>
 					</div>
