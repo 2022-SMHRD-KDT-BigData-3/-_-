@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,7 +27,13 @@
 </head>
 
 <body>
-    <!-- Page Preloder -->
+	<%
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
+	if (info != null) {
+		String id = info.getId();
+	}
+	%>
+	<!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -98,8 +105,9 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> 입력한 이메일로 수정 -태완- </li>
-                                <li> 쓸말 없으면 삭제 -태완- </li>
+                            	<%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +120,9 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="Login.html"><i class="fa fa-user"></i> Login 수정? -태완- </a>
+                                <% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
                             </div>
                         </div>
                     </div>
@@ -153,76 +163,7 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
 
-    <!-- Hero Section Begin -->
-   <!-- 
-  
-  <section class="hero hero-normal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span> 사료 회사 </span>
-                        </div>
-                        <ul>
-                            <li><a href="#"> absolute </a></li>
-                            <li><a href="#"> anf </a></li>
-                            <li><a href="#"> Belifor </a></li>
-                            <li><a href="#"> dogline </a></li>
-                            <li><a href="#"> FaminaAncestralGrain </a></li>
-                            <li><a href="#"> FaminaOcean </a></li>
-                            <li><a href="#"> FaminaPrime </a></li>
-                            <li><a href="#"> FaminaQuinoa </a></li>
-                            <li><a href="#"> FaminaVetLife </a></li>
-                            <li><a href="#"> homeanddog </a></li>
-                            <li><a href="#"> iskhan </a></li>
-                            <li><a href="#"> nowfresh </a></li>
-                            <li><a href="#"> orjien </a></li>
-                            <li><a href="#"> probest </a></li>
-                            <li><a href="#"> royalAdult </a></li>
-                            <li><a href="#"> royalMature </a></li>
-                            <li><a href="#"> royalPuppy </a></li>
-                            <li><a href="#"> wealtz </a></li>
-                            <li><a href="#"> 내츄럴밸런스 </a></li>
-                            <li><a href="#"> 네츄럴코어 </a></li>
-                            <li><a href="#"> 아카나 </a></li>
-                            <li><a href="#"> 이글벳 </a></li>
-                            <li><a href="#"> 지위펫 </a></li>
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                   <!--  <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
-                                <span>support 24/7 time</span>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>  
- 
     <!-- Product Details Section Begin -->
     <div style="height: 25px"></div>
     <!-- Product Details Section End -->
@@ -251,8 +192,8 @@
 	<td width="5"><img src="img/table_right.gif" width="5" height="30" /></td> 
 	</tr>
 	 </table> 
-	 
-	<table width="413">
+	 <form method="post" action="DiaryAddServiceCon">
+	<table width="1200">
 	
 	<tr> 
 	<td width="0">&nbsp;</td> 
@@ -263,24 +204,37 @@
 	<td width="0">&nbsp;</td> 
 	</tr> 
 	
-	<tr height="1" bgcolor="#7fad39"><td colspan="4" width="407"></td>
+	<tr height="1" bgcolor="#7fad39"><td colspan="4" width="1200"></td>
 	</tr> 
 	
 	<tr> 
 		<td width="0">&nbsp;</td> 
 		<td align="center" width="76">닉네임</td> 
-		<td width="319"></td> 
+		<td width="319">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getId() %><%} %></td> 
 		<td width="0">&nbsp;</td> 
 	</tr> 
 	<tr height="1" bgcolor="#7fad39">
 		<td colspan="4" width="407"></td>
 	</tr> 
+	
 	<tr> 
 	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">질병, <br> 건강상태</td> 
-	<td width="319"></td> 
+	<td align="center" width="76">질병 상태</td> 
+	<td width="319"><%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getDisease() %><%} %></td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
+	
+	<tr height="0.5" bgcolor="#7fad39">
+		<td colspan="4" width="407"></td>
+	</tr> 
+	
+	<tr> 
+	<td width="0">&nbsp;</td> 
+	<td align="center" width="76">건강 상태</td> 
+	<td width="319"><%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getHealth() %><%} %></td> 
+	<td width="0">&nbsp;</td> 
+	</tr> 
+	
 	<tr height="1" bgcolor="#7fad39">
 		<td colspan="4" width="407"></td>
 	</tr> 
@@ -298,14 +252,14 @@
 	<tr align="center"> 
 		<td width="0">&nbsp;</td> 
 		<td colspan="2" width="399">
-			<input type=button value="확인"> 	
+			<input type="submit" value="확인"> 	
 		<td width="0">&nbsp;</td> 
 	</tr> 
 </table> 
-
+<%if (info!=null){ %>
+<input type="text" style="display: none;" name="id"><%=info.getId() %></input>
+<%} %>
 </form>
-
-    </section>
     
     
     
