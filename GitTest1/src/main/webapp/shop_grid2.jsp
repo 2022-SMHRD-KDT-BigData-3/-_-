@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.DogFoodDAO"%>
 <%@page import="Model.DogFoodDTO"%>
@@ -554,12 +552,7 @@
 						int cnt = 0;
                         if(data.equals("1")){
                         	cnt = 0;
-                        }
-                        else if(data.equals("2")){
-                        	cnt = 14;
-                        }
-                        
-						for(int i =cnt;i<cnt+15;i++){%>
+                        	for(int i =cnt;i<cnt+15;i++){%>
 							<div class="col-lg-4 col-md-6 col-sm-6">
 								<div class="product__item">
 									<div class="product__item__pic set-bg"
@@ -578,14 +571,38 @@
 								</div>
 							</div>
 							
-						<%}%>
+						<%}
+                        }
+                        else if(data.equals("2")){
+                        	cnt = 14;
+						for(int i =cnt;i<list.size();i++){%>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="product__item">
+									<div class="product__item__pic set-bg"
+										data-setbg="<%=list.get(i).getImgUrl()%>">
+										<ul class="product__item__pic__hover">
+											<li><a href="#"><i class="fa fa-heart"></i></a></li>
+											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+									<div class="product__item__text">
+										<h6>
+											<a href="#"><%= list.get(i).getFdName() %></a>
+										</h6>
+									</div>
+								</div>
+							</div>
+							
+						<%}
+                        }%>
+                        
 						
 						<div class="product__pagination">
-							<a href="#">1</a> 
-							<a href="#">2</a> 
-							<a href="#">3</a> <a href="#"><i
-								class="fa fa-long-arrow-right"></i></a>
-						</div>
+                        <%for(int i = 0;i<(list.size()/15)+1;i++){ %>
+                        <a href="shop_grid2.jsp?data=<%=i+1 %>"><%=i+1 %></a>
+                        <%}data = request.getParameter("data"); %><a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                     </div>
 					</div>
 				</div>
 			</div>

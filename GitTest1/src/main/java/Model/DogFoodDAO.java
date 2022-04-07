@@ -57,7 +57,7 @@ public class DogFoodDAO {
 
 	// 사료 목록
 	public ArrayList<DogFoodDTO> viewAllFood() {
-		String sql="select * from dogfood order by fdnum";
+		String sql="select * from dogfood where fdcom='anf' order by fdnum";
 		ArrayList<DogFoodDTO> list = new ArrayList<>();
 		
 		db_conn();
