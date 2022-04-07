@@ -17,18 +17,14 @@ select * from member;
 
 create table dogfood(
 	fdNum number(30),
-	fdCom varchar2(200),
-	fdName varchar2(200),
-	sizeCla varchar2(200),
-	age varchar2(200),
-	fdIng varchar2(200),
-	grade varchar2(200),
-	url varchar2(200),
-	imgUrl varchar2(200),
+	fdCom varchar2(500),
+	fdName varchar2(500),
+	material varchar2(2000),
+	imgUrl varchar2(2000),
 	ingredient varchar2(2000),
 	constraint food_num_pk primary key(fdNum)
 )
-
+drop table dogfood
 select * from dogfood
 
 create table protein(
@@ -36,7 +32,7 @@ create table protein(
 	protein varchar2(2000),
 	constraint food_num_fk foreign key(fdNum) references dogfood(fdNum)
 )
-
+drop table protein
 create sequence food_num_seq
 	start with 1
 	increment by 1
