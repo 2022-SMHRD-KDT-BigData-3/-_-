@@ -96,6 +96,36 @@ public class MemberDAO {
 		} return cnt;
 		}
 		
+		
+		public int checkId(String id) {
+			int result = 0;
+			try {
+				System.out.println("[dao.checkId]");
+		         db_conn();
+		         
+		         String sql = "select * from member where id =?";
+		         
+		         psmt = conn.prepareStatement(sql);
+		         
+		         psmt.setString(1, id);
+		         
+		         rs = psmt.executeQuery();
+		         
+		         // 값이 있다 1을 출력
+		         if(rs.next()) {
+		        	 result = 1;
+		            }
+		         System.out.println(result);
+		         
+		      }
+		      catch(Exception e) {
+		         e.printStackTrace();
+		      } finally {
+		         db_close();
+		      }
+			return result;
+		}
+		// 로그인 메소드
 		public MemberDTO login(MemberDTO dto) {
 		      try {
 		         db_conn();

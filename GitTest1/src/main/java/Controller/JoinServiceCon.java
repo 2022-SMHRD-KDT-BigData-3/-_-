@@ -22,7 +22,7 @@ public class JoinServiceCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		// 2. request객체에서 보낸 데이터 4가지 받아오기
-		String id = request.getParameter("id")+"@naver.com";
+		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String pw2 = request.getParameter("pw2");
 		String dogImg = request.getParameter("dogImg");
@@ -76,7 +76,9 @@ public class JoinServiceCon extends HttpServlet {
 			response.sendRedirect("./Login.html?join=success");
 			// 로그인 html 에 join=success가 넘어오면 alert 성공했습니다 
 		}else {
-			response.sendRedirect("./join.html");
+			
+			// join.html에 실패했다고 뜨면 alert 실패했습니다
+			response.sendRedirect("./join.html?join=fail");
 			
 		}
 	
