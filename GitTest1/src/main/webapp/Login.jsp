@@ -11,6 +11,11 @@
 <link rel="stylesheet" href="css/join.css" type="text/css">
 </head>
 <body>
+<%
+	MemberDTO info = (MemberDTO)session.getAttribute("info");
+
+%>
+
 <div id="header" class="join_membership" role="banner">
     <h1><a href="../img/logo5.png" class="h_logo"><span class="blind"></span></a></h1>
 </div>
