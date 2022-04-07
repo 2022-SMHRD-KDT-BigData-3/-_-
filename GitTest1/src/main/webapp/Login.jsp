@@ -10,7 +10,7 @@
 <script src="jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/join.css" type="text/css">
 </head>
-<body>
+<body style="margin-top:10%">
 
 <%String login = request.getParameter("login");
 	System.out.print(login);
@@ -83,30 +83,28 @@
 			</div>
 		</div>
 	</form>
-<!-- 	<form id="join_form" method="post" action="Join.jsp">
-		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 
-			<input type="hidden" id="encPswd"	name="encPswd" value=""> 
-			<input type="hidden" id="encKey"	name="encKey" value=""> 
-			<input type="hidden" id="birthday"	name="birthday" value=""> 
-			<input type="hidden" id="joinMode"	name="joinMode" value="unreal"> 
-			<input type="hidden" id="pbirthday" name="pbirthday" value=""> 
-			<input type="hidden" id="ipinFlag" name="ipinFlag" value=""> 
-			<input type="hidden" id="nid_kb2" name="nid_kb2" value="">
-
-		container
-		<div id="container" role="main">
+	
+	<form id="join_form" method="post" action="Join.jsp">
+	
+		<div id="container" role="main" style="margin-top: 230px">
 			<div id="content">
-				tg-text=title
+				<!-- tg-text=title -->
 				<div class="join_content">
-					아이디, 비밀번호 입력
-					// 이름, 생년월일 입력
+					<!-- 아이디, 비밀번호 입력 -->
+					<div class="row_group">
+
+					</div>
+					<!-- // 아이디, 비밀번호 입력 -->
+
+					<!-- // 이름, 생년월일 입력 -->
 					<div class="btn_area">
-						<button type="submit" id="btnJoin2" class="btn_type btn_primary">
+						<button type="submit" id="btnJoin" class="btn_type btn_primary">
 							<span>회원가입</span>
 						</button>
-	</form> -->
-	<script type="text/javascript">
-	
-	</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
 </body>
 </html>
