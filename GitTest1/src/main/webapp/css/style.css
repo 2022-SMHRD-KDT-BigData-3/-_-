@@ -2346,6 +2346,7 @@ ol {
 	border: 1px solid #b2b2b2;
 	padding: 14px 20px 12px;
 	border-radius: 25px;
+	float: left;
 }
 
 .blog__item__text .blog__btn span {
@@ -2547,10 +2548,12 @@ ol {
 .blog-details {
 	padding-bottom: 75px;
 	border-bottom: 1px solid #e1e1e1;
+	padding-left: 23%;
 }
 
 .blog__details__text {
 	margin-bottom: 45px;
+	width: 740px;
 }
 
 .blog__details__text img {
@@ -2561,7 +2564,6 @@ ol {
 .blog__details__text p {
 	font-size: 18px;
 	line-height: 30px;
-	text-align : center;
 }
 
 .blog__details__text h3 {
@@ -2569,7 +2571,6 @@ ol {
 	font-weight: 700;
 	line-height: 30px;
 	margin-bottom: 30px;
-	text-align : center;
 }
 
 .blog__details__author__pic {
