@@ -104,7 +104,7 @@ public class DiaryDAO_tw {
 				String id1  = rs.getString(2);
 				String cotent = rs.getString(3);
 				
-				DiaryDTO dto = new DiaryDTO(title, id1, cotent);
+				DiaryDTO dto = new DiaryDTO(cnt, title, id1, cotent);
 				
 				mlist.add(dto);				
 			}
