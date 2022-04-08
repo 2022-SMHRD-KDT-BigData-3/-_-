@@ -187,21 +187,15 @@
 		<td> 
 		<table width="100%" cellpadding="0" cellspacing="0" border="0"> 
 	<tr style="background:url('img/table_mid.gif') repeat-x; text-align:center;"> 
-	<td width="5"><img src="img/table_left.gif" width="5" height="30" /></td> 
-	<td> 내   용 </td> 
-	<td width="5"><img src="img/table_right.gif" width="5" height="30" /></td> 
 	</tr>
 	 </table> 
 	 <form method="post" action="DiaryAddServiceCon">
-	<table width="1200">
-	
-	<tr> 
-	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">제목</td> 
-	<td width="100"> <input type="text" class="form-control" id="title"
-       placeholder="제목 입력" name="title"
-       maxlength="100"> </td> 
-	<td width="0">&nbsp;</td> 
+	<table width="800" align="center">
+	 
+		<tr> 
+	<td width="1200" colspan="4"> <div width="100%" align="center"> <input type="text" class="form-control" id="title"
+       placeholder="제목을 입력해주세요" name="title"
+       maxlength="800"> </div> </td> 
 	</tr> 
 	
 	<tr height="1" bgcolor="#7fad39"><td colspan="4" width="1200"></td>
@@ -209,8 +203,8 @@
 	
 	<tr> 
 		<td width="0">&nbsp;</td> 
-		<td align="center" width="76">닉네임</td> 
-		<td width="319">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getId() %><%} %></td> 
+		<td align="center" width="30%">닉네임</td> 
+		<td width="70%">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getId() %><%} %></td> 
 		<td width="0">&nbsp;</td> 
 	</tr> 
 	<tr height="1" bgcolor="#7fad39">
@@ -219,8 +213,8 @@
 	
 	<tr> 
 	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">질병 상태</td> 
-	<td width="319"><%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getDisease() %><%} %></td> 
+	<td align="center" width="76">건강 상태</td> 
+	<td width="319"><%if(info!=null){%><%=info.getHealth() %><%} %></td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
 	
@@ -230,8 +224,8 @@
 	
 	<tr> 
 	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">건강 상태</td> 
-	<td width="319"><%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getHealth() %><%} %></td> 
+	<td align="center" width="76">질병 상태</td> 
+	<td width="319"><%if(info!=null){%><%=info.getDisease() %><%} %></td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
 	
@@ -240,8 +234,8 @@
 	</tr> 
 	<tr> 
 	<td width="0">&nbsp;</td> 
-	<td width="399" colspan="2" height="200"> <textarea class="form-control" rows="5" id="content"
-    name="content" placeholder="내용 작성"></textarea> </td> 
+	<td width="399" colspan="2" height="200"> <textarea class="form-control" rows="17" id="content"
+    name="content" placeholder="내용을 작성해주세요"></textarea> </td> 
 	</tr> 
 	<tr height="1" bgcolor="#7fad39">
 	<td colspan="4" width="407"></td>
@@ -256,8 +250,11 @@
 		<td width="0">&nbsp;</td> 
 	</tr> 
 </table> 
+<!-- 테이블 태그 시작-->
+
+
 <%if (info!=null){ %>
-<input type="text" style="display: none;" name="id"><%=info.getId() %></input>
+<input type="text" style="display: none" name="id" value="<%=info.getId() %>"></input>
 <%} %>
 </form>
     
@@ -267,78 +264,6 @@
     
     
     </section>
-    
-    
-    <!-- Related Product Section End -->
-
-    <!-- Footer Section Begin -->
-<!--     <footer class="footer spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="./main.html"><img src="img/logo.png" alt=""></a>
-                        </div>
-                        <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello@colorlib.com</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
-                    <div class="footer__widget">
-                        <h6>Useful Links</h6>
-                        <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Delivery infomation</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Our Sitemap</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Who We Are</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Innovation</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="footer__widget">
-                        <h6>Join Our Newsletter Now</h6>
-                        <p>Get E-mail updates about our latest shop and special offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your mail">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
-                        <div class="footer__widget__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer__copyright">
-                        <div class="footer__copyright__text"><p>Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.</p></div>
-                        <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> -->
-    <!-- Footer Section End -->
-
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

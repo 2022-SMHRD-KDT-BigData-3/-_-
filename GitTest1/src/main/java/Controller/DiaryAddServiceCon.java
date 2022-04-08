@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Model.DiaryDAO_sy;
+import Model.DiaryDTO;
+
 @WebServlet("/DiaryAddServiceCon")
 public class DiaryAddServiceCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,15 +25,18 @@ public class DiaryAddServiceCon extends HttpServlet {
 		System.out.println("content : " + content);
 		System.out.println("id : " + id);
 		
-		int cnt = 0;
+		DiaryDTO dto = new DiaryDTO(title, content);
 		
-		if (cnt == 0) {
-
+		DiaryDAO_sy dao = new DiaryDAO_sy();
+		int cnt = dao.diary_add(dto, id);
+		if (cnt>0) {
 			response.sendRedirect("./diary.jsp");
-			// 로그인 html 에 join=success가 넘어오면 alert 성공했습니다
+		}else {
+			
+			// join.html에 실패했다고 뜨면 alert 실패했습니다
+			response.sendRedirect("./diary.jsp?add=fail");
+			
 		}
-		
-		
 		
 	}
 

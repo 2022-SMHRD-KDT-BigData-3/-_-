@@ -168,32 +168,38 @@ text-align:right;
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-md-2 container"
-					style="display: inline-block; text-align: center;">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="container"
-					style="display: inline-block; text-align: center;">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.html"><img src="img/logo5.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                           <li class="active"><a href="./main.html">Home</a></li>
+                            <li><a href="./shop-grid.html">DOG FOOD</a></li>
+               <!-- <li><a href="#">Pages</a>
+                    <ul class="header__menu__dropdown">
+                        <li><a href="./shop-details.html">Shop Details</a></li>
+                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
+                        <li><a href="./checkout.html">Check Out</a></li>
+                        <li><a href="./blog-details.html">Blog Details</a></li>
+                    </ul>-->
+                </li>
+                <li><a href="./product.html"> HEALTH PRODUCTS </a></li>
+                <li><a href="./blog.html"> Health Q&A </a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
 	</header>
 
 	<!-- Blog Section Begin -->

@@ -139,42 +139,33 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-md-2 container"
-					style="display: inline-block; text-align: center;">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="container"
-					style="display: inline-block; text-align: center;">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.html">Home</a></li>
-							<li><a href="./shop-grid.html">DogFood</a></li>
-							<!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
-	</header>
-	<!-- Header Section End -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
+                        <ul>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
 	<!--<section class="hero hero-normal">
@@ -256,11 +247,11 @@
 						<div class="blog__sidebar__item">
 							<h4>Categories</h4>
 							<ul>
-								<li><a href="blog1.html">주의가 필요한 식재료</a></li>
+								<li><a href="blog1.jsp">주의가 필요한 식재료</a></li>
 								<li><a href="#"><h5 style="color:green"><b>예방접종</b></h5></a></li>
-								<li><a href="blog-details_emergency.html">응급상황 대처법</a></li>
-								<li><a href="blog-details_disease.html">가장 흔하게 발생하는 반려견 질병</a></li>
-								<li><a href="blog-details_care.html">일반적인 피부질환 관리 및 치료법</a></li>
+								<li><a href="blog-details_emergency.jsp">응급상황 대처법</a></li>
+								<li><a href="blog-details_disease.jsp">가장 흔하게 발생하는 반려견 질병</a></li>
+								<li><a href="blog-details_care.jsp">일반적인 피부질환 관리 및 치료법</a></li>
 							</ul>
 						</div>
 					</div>
@@ -270,7 +261,7 @@
 						<div class="col-lg-6 col-md-6 col-sm-6">
 							<div class="blog__item">
 								<div class="blog__item__pic">
-									<a href="blog-details5.html"><img src="img/blog/vaccination-5.jpg" alt=""></a>
+									<a href="blog-details5.jsp"><img src="img/blog/vaccination-5.jpg" alt=""></a>
 								</div>
 								<div class="blog__item__text">
 									<h5>
@@ -282,7 +273,7 @@
 						<div class="col-lg-6 col-md-6 col-sm-6">
 							<div class="blog__item">
 								<div class="blog__item__pic">
-									<a href="blog-details6.html"><img src="img/blog/vaccination-6.jpg" alt=""></a>
+									<a href="blog-details6.jsp"><img src="img/blog/vaccination-6.jpg" alt=""></a>
 								</div>
 								<div class="blog__item__text">
 									<h5>
@@ -293,7 +284,7 @@
 						</div>
 						<div class="col-lg-12">
 							<div class="product__pagination blog__pagination">
-								<a href="blog2.html">1</a> <a href="blog2_2page.html">2</a>
+								<a href="blog2.jsp">1</a> <a href="blog2_2page.jsp">2</a>
 							</div>
 						</div>
 					</div>
