@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Ogani | Template</title>
+    <title> 건강일지 보기</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -23,9 +24,29 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    <style>
+    #go {
+    width: 100%;
+    padding: 21px 0 17px;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: #7fad39;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+}
+    </style>
 </head>
 
 <body>
+	<%
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
+	if (info != null) {
+		String id = info.getId();
+	}
+	%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -62,31 +83,11 @@
             <ul>
                 <li class="active"><a href="./main.jsp">Home</a></li>
                 <li><a href="./shop-grid.jsp">DOG FOOD</a></li>
-               <!-- <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>-->
                 </li>
                 <li><a href="./product.html"> HEALTH PRODUCTS </a></li>
                 <li><a href="./blog.html"> Health Q&A </a></li>
             </ul>
         </nav>
-       <!--  <div id="mobile-menu-wrap"></div>
-        <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-        </div>
-        <div class="humberger__menu__contact">
-            <ul>
-                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                <li>Free Shipping for all Order of $99</li>
-            </ul>
-        </div> -->
     </div>
     <!-- Humberger End -->
 
@@ -98,8 +99,9 @@
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> 입력한 이메일로 수정 -태완- </li>
-                                <li> 쓸말 없으면 삭제 -태완- </li>
+                            	<%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +114,9 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="Login.html"><i class="fa fa-user"></i> Login 수정? -태완- </a>
+                                <% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
                             </div>
                         </div>
                     </div>
@@ -123,24 +127,17 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./main.html"><img src="img/logo5.png" alt=""></a>
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <nav class="header__menu">
+                    <nav class="header__menu" style="width:120%">
                         <ul>
-                           <li class="active"><a href="./main.html">Home</a></li>
-                            <li><a href="./shop-grid.html">DOG FOOD</a></li>
-               <!-- <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>-->
-                </li>
-                <li><a href="./product.html"> HEALTH PRODUCTS </a></li>
-                <li><a href="./blog.html"> Health Q&A </a></li>
+                            <li class="active"><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
                         </ul>
                     </nav>
                 </div>
@@ -153,75 +150,6 @@
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
-
-    <!-- Hero Section Begin -->
-   <!-- 
-  
-  <section class="hero hero-normal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span> 사료 회사 </span>
-                        </div>
-                        <ul>
-                            <li><a href="#"> absolute </a></li>
-                            <li><a href="#"> anf </a></li>
-                            <li><a href="#"> Belifor </a></li>
-                            <li><a href="#"> dogline </a></li>
-                            <li><a href="#"> FaminaAncestralGrain </a></li>
-                            <li><a href="#"> FaminaOcean </a></li>
-                            <li><a href="#"> FaminaPrime </a></li>
-                            <li><a href="#"> FaminaQuinoa </a></li>
-                            <li><a href="#"> FaminaVetLife </a></li>
-                            <li><a href="#"> homeanddog </a></li>
-                            <li><a href="#"> iskhan </a></li>
-                            <li><a href="#"> nowfresh </a></li>
-                            <li><a href="#"> orjien </a></li>
-                            <li><a href="#"> probest </a></li>
-                            <li><a href="#"> royalAdult </a></li>
-                            <li><a href="#"> royalMature </a></li>
-                            <li><a href="#"> royalPuppy </a></li>
-                            <li><a href="#"> wealtz </a></li>
-                            <li><a href="#"> 내츄럴밸런스 </a></li>
-                            <li><a href="#"> 네츄럴코어 </a></li>
-                            <li><a href="#"> 아카나 </a></li>
-                            <li><a href="#"> 이글벳 </a></li>
-                            <li><a href="#"> 지위펫 </a></li>
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                   <!--  <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
-                                <span>support 24/7 time</span>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>  
  
     <!-- Product Details Section Begin -->
     <div style="height: 25px"></div>
@@ -233,56 +161,76 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title related__product__title">
-                        <h2> 건강일지 작성 </h2>
+                        <h2> 건강일지 보기</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
             </div>
         </div>
-        
+
+		<table align="center" width="800">
+			<thead>
+				<tr height="1" bgcolor="#7fad39">
+					<td colspan="4" width="1200"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="width: 20%;">글 제목</td>
+					<td colspan="2"><!-- 여기에 출력 --></td>
+				</tr>
+				<tr height="1" bgcolor="#7fad39">
+					<td colspan="4" width="1200"></td>
+				</tr>				
+				<tr>
+					<td rowspan="7">강아지사진</td>
+					<td style="width: 20%;">사용자 ID</td>
+					<td colspan="2"><!-- 여기에 출력 --></td>
+				</tr>
+				<tr height="1" bgcolor="#7fad39">
+					<td colspan="4" width="1200"></td>
+				</tr>				
+				<tr>
+					<td style="width: 20%;">강아지 이름</td>
+					<td colspan="2"><!-- 여기에 출력 --></td>
+				</tr>
+				<tr height="1" bgcolor="#7fad39">
+					<td colspan="4" width="1200"></td>
+				</tr>				
+				<tr>
+					<td style="width: 20%;">건강상태</td>
+					<td colspan="2"><!-- 여기에 출력 --></td>
+				</tr>
+				<tr height="1" bgcolor="#7fad39">
+					<td colspan="4" width="1200"></td>
+				</tr>				
+				<tr>
+					<td style="width: 20%;">질병</td>
+					<td colspan="2"><!-- 여기에 출력 --></td>
+				</tr>
+				<tr height="1" bgcolor="#7fad39">
+					<td colspan="4" width="1200"></td>
+				</tr>				
+				<tr>
+					<td colspan="4" style="height: 400px; text-align: left;"><!-- 여기에 content 출력 --></td>
+				</tr>
+				<tr height="1" bgcolor="#7fad39">
+					<td colspan="4" width="1200"></td>
+				</tr>				
+			</tbody>
+	<tr align="center"> 
+		<td colspan="4" width="100%">
+			<button type="submit" id="go"  value="확인"class="btn_type btn_primary">
+							<span>목록 보기</span>
+						</button>	
+	</tr> 
+		</table>
     
-			<table style="text-align: center; border: 1px solid #7fad39">
-				<thead>
-					<tr>
-						<th colspan="2" style="background-color: #7fad39; text-align: center;">게시판 글 보기</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td style="width: 20%;">글 제목</td>
-						<td colspan="2"></td>
-					</tr>
-					<tr>
-						<td>닉네임</td>
-						<td colspan="2"></td>
-					</tr>
-					
-					<tr>
-						<td>내용</td>
-						<td colspan="2" style="height: 200px; text-align: left;"></td>
-					</tr>
-				</tbody>
-			</table>
-			<a href="">목록</a>
-    
-        
-      
     </section>
     
     <section class="featured spad">
-    
-    <table>
-    	<tbody>
-    		<th>
-    			<tr>
-					<textarea placeholder="제목을 입력해주세요">
-						
-					</textarea>
-    			</tr>
-    		</th>
-    	</tbody>
-    </table>
+
     
     </section>
     <!-- Related Product Section End -->
