@@ -10,7 +10,8 @@
 	         ,contentType : "application/json;charset=UTF-8"
 	         ,success : function(data) {
 	           	$("#pagingView").text("");
-	           	$("#comName").text(data.fdCom);
+	           	$("#comName").text(data[0].fdCom);
+	           	$("#listSize").text(data.length);
 	           	for(let i = 0; i < data.length; i++){
 	           		
 					/*let tag = `<div class="col-lg-4 col-md-6 col-sm-6">

@@ -254,7 +254,7 @@
 								<div class="col-lg-4 col-md-4 ">
 									<div class="filter__found">
 										<h6>
-											<span><%=list.size() %></span> Products found
+											<span id="listSize">0</span> Products found
 										</h6>
 									</div>
 								</div>
@@ -267,75 +267,6 @@
 							</div>
 						</div>
 						<div id="pagingView" class="row">
-
-						<% 
-						int cnt = 0;
-                        if(data.equals("1")){
-                        	cnt = 0;
-                        	for(int i =cnt;i<cnt+15;i++){%>
-								<div class="col-lg-4 col-md-6 col-sm-6">
-									<div class="product__item">
-										<div class="product__item__pic set-bg"
-											data-setbg="<%=list.get(i).getImgUrl()%>">
-											<ul class="product__item__pic__hover">
-												<li><a href="#"><i class="fa fa-heart"></i></a></li>
-												<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-												<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-											</ul>
-										</div>
-										<div class="product__item__text">
-											<h6>
-												<a href="#"><%= list.get(i).getFdName() %></a>
-											</h6>
-										</div>
-									</div>
-								</div>
-							<%}}%>
-                        <% if(data.equals("2")){
-                        	cnt = 14;
-                        	for(int i =cnt;i<list.size();i++){%>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="<%=list.get(i).getImgUrl()%>">
-										<ul class="product__item__pic__hover">
-											<li><a href="#"><i class="fa fa-heart"></i></a></li>
-											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-										</ul>
-									</div>
-									<div class="product__item__text">
-										<h6>
-											<a href="#"><%= list.get(i).getFdName() %></a>
-										</h6>
-									</div>
-								</div>
-							</div>
-						<%}
-                        }
-                        else if(data.equals("2")){
-                        	cnt = 14;
-						for(int i =cnt;i<list.size();i++){%>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="<%=list.get(i).getImgUrl()%>">
-										<ul class="product__item__pic__hover">
-											<li><a href="#"><i class="fa fa-heart"></i></a></li>
-											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-										</ul>
-									</div>
-									<div class="product__item__text">
-										<h6>
-											<a href="#"><%= list.get(i).getFdName() %></a>
-										</h6>
-									</div>
-								</div>
-							</div>
-							
-						<%}
-                        }%>
 						</div>
 					</div>
 					
