@@ -10,7 +10,7 @@
 <script src="jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/join.css" type="text/css">
 </head>
-<body style="margin-top:10%">
+<body style="margin-top:10%;height: auto;">
 <body>
 <%
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
@@ -56,7 +56,7 @@
 							<h3 class="join_title">
 								<label for="id">아이디</label>
 							</h3>
-							<span class="ps_box int_id"> <input type="text" id="id"
+							<span class="ps_box int_id"> <input type="text" id="id" style="height: 50px"
 								name="id" class="int" title="ID" maxlength="20"> <span
 								class="step_url"> </span></span> <span class="error_next_box"
 								id="idMsg" style="display: none" aria-live="assertive"></span>
@@ -68,7 +68,7 @@
 							<h3 class="join_title">
 								<label for="pw">비밀번호</label>
 							</h3>
-							<span class="ps_box int_pass" id="pwImg"> <input
+							<span class="ps_box int_pass" id="pwImg"> <input style="height: 50px"
 								type="password" id="pw" name="pw" class="int"
 								title="비밀번호 입력" aria-describedby="pwMsg" maxlength="20">
 								<span class="lbl"><span id="pwSpan" class="step_txt"></span></span>
@@ -93,7 +93,7 @@
 	<form id="join_form" method="post" action="Join.jsp">
 	
 		<div id="container" role="main" style="margin-top: 230px">
-			<div id="content">
+			<div id="content" style="margin-top: 40px;">
 				<!-- tg-text=title -->
 				<div class="join_content">
 					<!-- 아이디, 비밀번호 입력 -->
