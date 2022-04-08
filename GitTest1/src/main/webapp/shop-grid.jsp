@@ -40,7 +40,7 @@
 	DogFoodDAO dao = new DogFoodDAO();
 	
 	ArrayList<DogFoodDTO> list = new ArrayList<>();
-	list = dao.viewAllFood("anf");
+	list = dao.viewAllFood("Anf");
 	
 	%>
 	<!-- Page Preloder -->
