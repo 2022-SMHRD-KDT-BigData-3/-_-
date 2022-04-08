@@ -1,3 +1,8 @@
+<%@page import="Model.DiaryDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.DiaryDAO_tw"%>
+<%@page import="Model.MemberDTO"%>
+<%@page import="Model.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,6 +31,20 @@
 </head>
 
 <body>
+
+<%
+	MemberDTO info = (MemberDTO)session.getAttribute("info"); // session info값을 가져오는코드
+
+	DiaryDAO_tw mDia = new DiaryDAO_tw(); // DiaryDAO_tw 객체 생성하는부분
+	ArrayList<DiaryDTO> mlist = new ArrayList<DiaryDTO>(); // DiaryDto 타입 어레이리스트 생성
+	if(info != null){ // i네nfo가 null이 아닐때가 true 36번째 줄에 session info값이 들어왔을때 조건문 실행
+	out.print(mlist.size()); // 이부분 코드는 갑자기 넣어진게 어색함 맨마지막에 들어가야할듯 
+	mlist = mDia.diary_load("id"); // 여기는 왜 에러가 날까요?
+	}
+	//요부분을 따라썻는데 뭔말인지 이해가 안되용 ㅈ
+%>
+
+
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -33,7 +52,7 @@
 
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
-    <div class="humberger__menu__wrapper">
+    <div class="humberger__menu__wrapper">아
         <div class="humberger__menu__logo">
             <a href="#"><img src="img/logo.png" alt=""></a>
         </div>
