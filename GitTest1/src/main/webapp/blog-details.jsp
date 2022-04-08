@@ -69,7 +69,7 @@
 				</ul>
 			</div>-->
 			<div class="header__top__right__auth">
-				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+				<a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
 			</div>
 		</div>
 		<nav class="humberger__menu__nav mobile-menu">
@@ -127,15 +127,6 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
 							<div class="header__top__right__auth">
 								<!-- 시원이가 바꿔야할 세션 부분 -->
 								<% if(info==null){ %>
@@ -149,40 +140,33 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
-							<!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
-	</header>
-	<!-- Header Section End -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
+                        <ul>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
 	<section class="hero hero-normal">
@@ -244,7 +228,7 @@
 				<div class="col-lg-12">
 					<div class="blog__details__hero__text">
 						<br>
-						<h2>Health Q&A</h2>
+						<h2>종합백신</h2>
 					</div>
 				</div>
 			</div>
@@ -260,33 +244,32 @@
 					<div class="blog__details__text">
 						<img src="img/blog/vaccination-1.jpg"
 							class="rounded mx-auto d-block" alt="">
-						<h3>예방접종</h3>
+						<!--<h3>예방접종</h3>
 						<p>태어난 지 얼마 만 된 아기 강아지는 어미의 초유에서 비롯된 항체에 의해 수동면역을 가지고 있다.<br> 이
 							수동면역은 6-8주가 되는 시기부터 감소하여 9-12주가 되면 없어진다.<br> 모체로부터 받은 면역력이 감소하는 시기인
 							생후 45일부터 최소 3회 이상은 접종을 실시해야 한다.<br> 이는 가능한 한 바른 시간에 면역력을 활성화시키기 위한
 							것이다. 동물 병원이나 보호자가 추가로 선택하기도 하지만<br> 가장 보편적인 백신은 다음의 5가지를 6희에 나누어서
-							진행한다. (종합백신, 코로나 장염, 켄넬코프기관지염, 개 인플루엔자, 광견병)</p><br><hr>
-						<h3>종합백신 : 5종 또는 4종</h3>
-						<p>국내에서는 쥐로 인해 전염되는 렙토스피로시스를 포함한 5종백신보다는 4종백신을 많이 진행.<br> 해외로 출국해야
-							하는 경우 나라에 따라서 립토스피로시스 백신 예방을 요구한다.</p><br><hr>
-						<p><h4>홍역</h4> - 홍역은 구토와 설사, 콧물, 재채기, 호흡곤란, 점액 화농성 눈물 등이 나타난다, 때로는
+							진행한다. (종합백신, 코로나 장염, 켄넬코프기관지염, 개 인플루엔자, 광견병)</p><br>  --><hr>
+						<p>국내에서는 쥐로 인해 전염되는 렙토스피로시스를 포함한 5종백신보다는<br> 4종백신을 많이 진행. 해외로 출국해야
+							하는 경우 나라에 따라서<br> 립토스피로시스 백신 예방을 요구한다.</p><hr>
+						<p><h3 style = "color : #7fad39">5종백신</h3> <h4>1. 홍역</h4>홍역은 구토와 설사, 콧물, 재채기, 호흡곤란, 점액 화농성 눈물 등이 나타난다.<br> 때로는
 							신경계에 침투하여 운동 실조나 사경, 안구진탕(눈동자 펄림), 열과 식욕부진을 동반하고 탈수 증상. 홍역 바이러스
-							감염 시 림프절, 중추신경계, 상피세포에 8-11일 내 퍼진다. <br><hr><h4>전염성 간염</h4> - 아데노바이러스라고 불리며 간,
-							신장, 상피세포에 침입하여 간세포를 손상시키고 신장의 사구체상피를 파괴하여 사구체신염을 유발. 각막부종과 혈관내피
-							손상. 열, 구토, 설사, 복부통증, 편도염, 인두염, 경부림프절의 부종, 기침, 출혈, 신경계 이상을 보이며 급성의
-							경우 몇 시간 내 사망. <br><hr><h4>파보장염</h4> - 3개월 미만의 아기 강아지들에게 치명적이며 열과 구토, 혈변, 설사, 탈수,
-							저체온증, 패혈증, 백혈구감소증, 빈혈을 일으킨다. <br><hr><h4>파라인플루엔자</h4> - 전염성 같기로 켄넬코프의 원인이 되며
-							세계적으로 확산되어 있는 전염성이 강한 호흡기 질병의 원인균. 2주간 바이러스 배출하면서 기침과 열, 못물,
-							기력저하, 식욕부진의 증상 <br><hr><h4>렙토스피로시스</h4> - 럽토스피라균에 의해 감염된 쥐나 동물의 배설물(오줌)을 통해 전가.
-							세균은 오염된 물, 음식 등에 있다가 피부 상처 혹은 점막을 통해 내부 장기로 이동. 신장과 간장에 주로 이동하여
-							빈혈과 황달, 폐렴, 발열, 근육통, 식욕 저하, 설사, 구토 등을 유발. 증상에 따라 급성과 만성, 출혈형,
-							황달형, 신부전형 등으로 나눈다,</p>
+							감염 시 림프절, 중추신경계, 상피세포에 8-11일 내 퍼진다. <br><br><h4>2. 전염성 간염</h4>아데노바이러스라고 불리며 간,
+							신장, 상피세포에 침입하여 간세포를 손상시키고<br> 신장의 사구체상피를 파괴하여 사구체신염을 유발. 각막부종과 혈관내피
+							손상. 열, 구토, 설사, 복부통증,<br> 편도염, 인두염, 경부림프절의 부종, 기침, 출혈, 신경계 이상을 보이며 급성의
+							경우 몇 시간 내 사망. <br><br><h4>3. 파보장염</h4>3개월 미만의 아기 강아지들에게 치명적이며 열과 구토, 혈변, 설사, 탈수,
+							저체온증, 패혈증, 백혈구감소증, 빈혈을 일으킨다. <br><br><h4>4. 파라인플루엔자</h4>전염성 같기로 켄넬코프의 원인이 되며
+							세계적으로 확산되어 있는 전염성이 강한 호흡기 질병의 원인균.<br> 2주간 바이러스 배출하면서 기침과 열, 못물,
+							기력저하, 식욕부진의 증상 <br><br><h4>5. 렙토스피로시스</h4>럽토스피라균에 의해 감염된 쥐나 동물의 배설물(오줌)을 통해 전가.
+							세균은 오염된 물, 음식 등에 있다가<br> 피부 상처 혹은 점막을 통해 내부 장기로 이동. 신장과 간장에 주로 이동하여
+							빈혈과 황달, 폐렴, 발열,<br> 근육통, 식욕 저하, 설사, 구토 등을 유발. 증상에 따라 급성과 만성, 출혈형,
+							황달형, 신부전형 등으로 나눈다.</p>
 					</div>
 
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2.html" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog2.jsp" class="blog__btn">Back <span class="arrow_right"></span></a>
 			</div>
 		</div>
 	</section>

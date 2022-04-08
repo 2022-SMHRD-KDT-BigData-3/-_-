@@ -34,7 +34,6 @@
 <!-- 시원이가 바꿔야할 세션 부분 -->
 	<% 
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
-
 	%>
 	<!-- 여기까지 -->
 
@@ -70,7 +69,7 @@
 				</ul>
 			</div>  -->
 			<div class="header__top__right__auth">
-				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+				<a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
 			</div>
 		</div>
 		<nav class="humberger__menu__nav mobile-menu">
@@ -111,7 +110,7 @@
 					<div class="col-lg-6">
 						<div class="header__top__left">
 							<ul>
-								<!-- 시원이가 바꿔야할 세션 부분 -->
+								 <!-- 시원이가 바꿔야할 세션 부분 -->
                             <%if (info!=null){ %>
                                 <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
                                 <%} %>
@@ -128,15 +127,6 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
 							<div class="header__top__right__auth">
 								<!-- 시원이가 바꿔야할 세션 부분 -->
 								<% if(info==null){ %>
@@ -150,40 +140,33 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
-							<!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
-	</header>
-	<!-- Header Section End -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
+                        <ul>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
 	<section class="hero hero-normal">
@@ -245,7 +228,7 @@
 				<div class="col-lg-12">
 					<div class="blog__details__hero__text">
 						<br>
-						<h2>Health Q&A</h2>
+						<h2>코로나장염</h2>
 					</div>
 				</div>
 			</div>
@@ -259,17 +242,23 @@
 			<div class="row">
 				<div class="d-flex justify-content-center">
 					<div class="blog__details__text">
-						<img src="img/blog/details/vaccination.png"
+						<img src="img/blog/vaccination-2.jpg"
 							class="rounded mx-auto d-block" alt="">
-						<h3>코로나장염</h3>
-						<p>장융모세포에 침입하여 급성 설사를 유발. 구토와 혈변 증상을 보이며 파보 장염과 함께 감염되는 경우도
-							있다.</p>
+						<hr>
+						<h3 style = "color : #7fad39">질병정의</h3>
+						<p>코로나 바이러스에 의한 구토, 설사, 탈수 증상을 나타내는 급성 바이러스성 소화기 전염병으로 자견과 성견에서도 감염되지만 특히 자견에서 많이 발생합니다. 또 품종, 연령 등에 관계없이 감수성이 있으며 급속한 전파와 높은 이환율을 보이고 특히 집단 사육견에서 짧은 기간 내에 발병합니다. 
+						이 질병은 개 파보바이러스 감염증과 혼합 감염되어 더욱 증상을 악화시키므로 중요한 개의 바이러스성 설사증의 하나로서 인식되고 있습니다.</p>
+						<hr>
+						<h3 style = "color : #7fad39">질병증상</h3>
+						<p>증상은 설사와 탈수, 기력감퇴, 구토, 식욕부진을 일으키며, 강아지나 성견에서 일반적으로<br> 다발합니다. 그러나 임상 증상이 불현성 감염이 많고 증상이 있다 하더라도 미약하게<br> 
+						나타나므로, 임상 진단으로 확진하기가 매우 어렵습니다. 잠복기는 실험감염 후 24-36시간에 나타나고 자연 감염의 예에서는 1-5일 정도입니다. 설사와 구토를 동반할 때에는 초기에 구토를 보이다가 1-2일 경과하여 원기소실, 식욕감퇴가 있으며 일반적으로 체온은 정상입니다.<br> 설사는 감염 후 1-3일째에 나타나고 원기, 식욕의 감퇴, 구토와 가트상의 연변(軟便)에서 수양성 점액이나 혈액을 혼합한 혈액성 설사와 탈수가 보입니다. 일반적으로 발열이나 백혈구 감소는 보이지 않지만, 환축의 대부분은 7-1 0일에서 회복합니다. 백혈구 감소증은 자연 감염에서는 <br>발생치 않음. 2차 감염 세균, 기생충, 다른 바이러스들이 종종 감염되고 단독 감염시는 치사율이 <br>매우 낮습니다. 열은 없고 이병율은 다양하나 치사율은 매우 낮습니다. 바이러스 배출은 2주간 <br>지속되며 중화항체를 동반합니다..</p>
+						<hr>
 					</div>
 
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2.html" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog2.jsp" class="blog__btn">Back <span class="arrow_right"></span></a>
 			</div>
 		</div>
 	</section>

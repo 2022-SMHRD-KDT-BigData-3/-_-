@@ -31,7 +31,6 @@
 <!-- 시원이가 바꿔야할 세션 부분 -->
 	<% 
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
-
 	%>
 	<!-- 여기까지 -->
 
@@ -101,64 +100,57 @@
     <!-- Humberger End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="header__top__left">
-                            <ul>
-                                 <!-- 시원이가 바꿔야할 세션 부분 -->
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="header__top__left">
+							<ul>
+								 <!-- 시원이가 바꿔야할 세션 부분 -->
                             <%if (info!=null){ %>
                                 <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
                                 <%} %>
                                 
                             <!-- 여기까지 -->
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="header__top__right">
-                            <div class="header__top__right__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
-                            </div>
-                            <div class="header__top__right__auth">
-                                <!-- 시원이가 바꿔야할 세션 부분 -->
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="header__top__right">
+							<div class="header__top__right__social">
+								<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
+									class="fa fa-twitter"></i></a> <a href="#"><i
+									class="fa fa-linkedin"></i></a> <a href="#"><i
+									class="fa fa-pinterest-p"></i></a>
+							</div>
+							<div class="header__top__right__auth">
+								<!-- 시원이가 바꿔야할 세션 부분 -->
 								<% if(info==null){ %>
                                 <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
                                 <%    } %>
                                 <!-- 여기까지 -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-2 container" style="display: inline-block;text-align: center;">
+                <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./main.html"><img src="img/logo5.png" alt=""></a>
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
                     </div>
                 </div>
-                <div class="container"  style="display: inline-block;text-align: center;">
-                    <nav class="header__menu">
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
                         <ul>
                             <li><a href="./main.jsp">Home</a></li>
                             <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-                            <li class="active"><a href="./product.html">Health Products</a></li>
-                            <li><a href="./blog1.html">Health Q&A</a></li>
+                            <li class="active"><a href="./product.jsp">Health Products</a></li>
+                            <li><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
                         </ul>
                     </nav>
                 </div>
@@ -169,6 +161,15 @@
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2> 강아지 건강용품 </h2>
+                    </div>
         </div>
     </header>
     <!-- Header Section End -->
@@ -259,9 +260,9 @@
                         <div class="blog__sidebar__item">
                             <h4>Categories</h4>
                             <ul>                           
-                                <li><a href="product.html"><h5 style="color:green"><b>관절/구강 관리</b></h5></a></li>
-                                <li><a href="product1.html">귀/눈 관리</a></li>
-                                <li><a href="product2.html">의약품</a></li>
+                                <li><a href="product.jsp"><h5 style="color:green"><b>관절/구강 관리</b></h5></a></li>
+                                <li><a href="product1.jsp">귀/눈 관리</a></li>
+                                <li><a href="product2.jsp">의약품</a></li>
                             </ul>
                         </div>
                         <!--<div class="blog__sidebar__item">
