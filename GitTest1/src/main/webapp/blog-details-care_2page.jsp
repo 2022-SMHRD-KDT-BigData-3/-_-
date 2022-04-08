@@ -14,7 +14,7 @@
 
 <!-- Google Font -->
 <link
-	href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400%22%20rel=%22stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
 	rel="stylesheet">
 
 <!-- Css Styles -->
@@ -27,7 +27,8 @@
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-
+<script type="text/javascript">
+</script>
 <body>
 
 <!-- 시원이가 바꿔야할 세션 부분 -->
@@ -69,7 +70,7 @@
 				</ul>
 			</div>
 			<div class="header__top__right__auth">
-				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+				<a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
 			</div>
 		</div>
 		<nav class="humberger__menu__nav mobile-menu">
@@ -165,45 +166,32 @@
                 <i class="fa fa-bars"></i>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="col-lg-12">
-                    <div class="section-title related__product__title">
-                        <h2> 강아지 건강정보 </h2>
-                    </div>
-        </div>
     </header>
     <!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
-	<!--<section class="hero hero-normal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span>All departments</span>
-                        </div>
-                        <ul>
-                            <li><a href="#">Fresh Meat</a></li>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Ocean Foods</a></li>
-                            <li><a href="#">Butter & Eggs</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
-                            <li><a href="#">Fresh Bananas</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="hero__search">
+	<section class="hero hero-normal">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="hero__categories">
+						<ul>
+							<li><a href="#">Fresh Meat</a></li>
+							<li><a href="#">Vegetables</a></li>
+							<li><a href="#">Fruit & Nut Gifts</a></li>
+							<li><a href="#">Fresh Berries</a></li>
+							<li><a href="#">Ocean Foods</a></li>
+							<li><a href="#">Butter & Eggs</a></li>
+							<li><a href="#">Fastfood</a></li>
+							<li><a href="#">Fresh Onion</a></li>
+							<li><a href="#">Papayaya & Crisps</a></li>
+							<li><a href="#">Oatmeal</a></li>
+							<li><a href="#">Fresh Bananas</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-9">
+					<!-- <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
@@ -223,110 +211,69 @@
                                 <span>support 24/7 time</span>
                             </div>
                         </div>
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </section> -->
+                    </div> -->
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- Hero Section End -->
 
-	<!-- Breadcrumb Section Begin -->
-	<!--<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Blog</h2>
-                        <div class="breadcrumb__option">
-                            <a href="./main.html">Home</a>
-                            <span>Blog</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>  -->
-	<!-- Breadcrumb Section End -->
-
-	<!-- Blog Section Begin -->
-	<section class="blog spad">
+	<!-- Blog Details Hero Begin -->
+	<section class="blog-details-hero set-bg"
+		data-setbg="img/blog/details/details-hero.jpg">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 col-md-5">
-					<div class="blog__sidebar">
-						<div class="blog__sidebar__item">
-							<h4>Categories</h4>
-							<ul>
-								<li><a href="blog1.jsp">주의가 필요한 식재료</a></li>
-								<li><a href="#"><h5 style="color:green"><b>예방접종</b></h5></a></li>
-								<li><a href="blog-details_emergency.jsp">응급상황 대처법</a></li>
-								<li><a href="blog-details_disease.jsp">가장 흔하게 발생하는 반려견 질병</a></li>
-								<li><a href="blog-details_care.jsp">강아지 피부병 예방·치료를 위한 수칙</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-8 col-md-7">
-					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="blog__item">
-								<div class="blog__item__pic">
-									<a href="blog-details.jsp"><img src="img/blog/vaccination-1.jpg" alt=""></a>
-								</div>
-								<div class="blog__item__text">
-									<h5>
-										<b>종합백신</b>
-									</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="blog__item">
-								<div class="blog__item__pic">
-									<a href="blog-details2.jsp"><img src="img/blog/vaccination-2.jpg" alt=""></a>
-								</div>
-								<div class="blog__item__text">
-									<h5>
-										<b>코로나장염</b>
-									</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="blog__item">
-								<div class="blog__item__pic">
-									<a href="blog-details3.jsp"><img src="img/blog/vaccination-3.jpg" alt=""></a>
-								</div>
-								<div class="blog__item__text">
-									<h5>
-										<b>켄넬코프기관지염</b>
-									</h5>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6">
-							<div class="blog__item">
-								<div class="blog__item__pic">
-									<a href="blog-details4.jsp"><img src="img/blog/vaccination-4.jpg" alt=""></a>
-								</div>
-								<div class="blog__item__text">
-									<h5>
-										<b>개 인플루엔자</b>
-									</h5>
-								</div>
-							</div>
-						</div>						
-						<div class="col-lg-12">
-							<div class="product__pagination blog__pagination">
-								<a href="blog2.jsp">1</a> <a href="blog2_2page.jsp">2</a>
-							</div>
-						</div>
+				<div class="col-lg-12">
+					<div class="blog__details__hero__text">
+						<h2>강아지 피부병 치료를 위한 수칙</h2>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- Blog Section End -->
+	<!-- Blog Details Hero End -->
+
+	<!-- Blog Details Section Begin -->
+	<section class="blog-details spad">
+		<div class="container">
+			<div class="row">
+				<div class="d-flex justify-content-center">
+					<div class="blog__details__text">
+						<img src="img/blog/vaccination-10.jpg"
+							class="rounded mx-auto d-block" alt="">
+							<h3 style = "color : #7fad39">피부와 털의 청결 유지</h3>
+							<hr>
+							<p>청결은 질병 예방을 위한 기본이니만큼, 굉장히 중요한 부분이다. 
+							진피 속 모낭, 피지선, 분비선 등 구조가 정상적으로 유지되어야 피부염이 안 생긴다.</p>
+							<br>
+							<br>
+							<h3 style = "color : #7fad39">상처는 건드리지 마!</h3>
+							<hr>
+							<p>동물들은 본능적으로 상처나 환부를 혀로 핥고, 발로 긁고는 한다. 바로 이것을 막아야 한다.</p>
+							<br>
+							<br>
+							<h3 style = "color : #7fad39">약물 사용</h3>
+							<hr>
+							<p>피부염 종류에 따라 원인을 제거, 세균, 진드기의 증식 억제를 위한 약물을 찾는 것이 좋다. 
+							일반적으로는 항진균 스프레이, 항생제와 항히스타민 주사 및 소양증 개선약이 대표적인 약물이다. 
+							이 외에도 약용샴푸, 소독 등 처방대로 꾸준하게 처치를 해주는 반려인의 노력이 필요하다.</p>
+							<br>
+							<br>
+							<h3 style = "color : #7fad39">근본적 원인을 찾자</h3>
+							<hr>
+							<p>또한 위와 같은 관리를 해줘도, 피부병의 원인이 여전히 존재하는 환경에서는 위험하다.</p>				
+					</div>
+				</div>
+			</div>
+			<div class="blog__item__text">
+				<a href="blog-details_care.jsp" class="blog__btn"><span class="arrow_left"></span> Back</a>
+			</div>
+		</div>
+	</section>
+	<!-- Blog Details Section End -->
+
+
+	<!-- Related Blog Section End -->
 
 	<!-- Footer Section Begin -->
 	<!--     <footer class="footer spad">
