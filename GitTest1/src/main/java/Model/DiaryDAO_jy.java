@@ -64,16 +64,15 @@ public class DiaryDAO_jy {
 	
 
 	// 다이어리 조회 메소드
-	public ArrayList<DiaryDTO> selectDiary(String id){
+	public ArrayList<DiaryDTO> selectDiary(){
 		ArrayList<DiaryDTO> list = new ArrayList();
 		
 		db_conn();
 		
-		String sql = "select * from diary where id=?";
+		String sql = "select * from diary";
 		
 		try {
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, id);
 			rs = psmt.executeQuery();
 			while(rs.next()) {
 				int num = rs.getInt(1);
