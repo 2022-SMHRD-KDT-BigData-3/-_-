@@ -185,21 +185,21 @@
 						<div class="sidebar__item">
 							<h4>Company</h4>
 							<ul>
-								<li><button value="앱솔루트" class="btnNavi">Absolute</button></li>
-								<li><button value="Anf" class="btnNavi">Anf</button></li>
-								<li><button value="벨포아" class="btnNavi">BeliFor</button></li>
-								<li><button value="도그라인" class="btnNavi">DogLine</button></li>
+								<li><button value="absolute" class="btnNavi">Absolute</button></li>
+								<li><button value="anf" class="btnNavi">Anf</button></li>
+								<li><button value="belifor" class="btnNavi">BeliFor</button></li>
+								<li><button value="dogline" class="btnNavi">DogLine</button></li>
 								<li><button value="이글벳" class="btnNavi">EagleVet</button></li>
-								<li><button value="파미나" class="btnNavi">Famina</button></li>
-								<li><button value="홈앤독" class="btnNavi">HomeAndDog</button></li>
-								<li><button value="이즈칸" class="btnNavi">Iskhan</button></li>
+								<li><button value="farmina" class="btnNavi">Famina</button></li>
+								<li><button value="homeanddog" class="btnNavi">HomeAndDog</button></li>
+								<li><button value="iskhan" class="btnNavi">Iskhan</button></li>
 								<li><button value="내츄럴밸런스" class="btnNavi">NaturalBalance</button></li>
 								<li><button value="네츄럴코어" class="btnNavi">NaturalCore</button></li>
-								<li><button value="나우프레쉬" class="btnNavi">NowFresh</button></li>
-								<li><button value="오리젠" class="btnNavi">OriJen</button></li>
-								<li><button value="프로베스트" class="btnNavi">ProBest</button></li>
-								<li><button value="로얄캐닌" class="btnNavi">RoyalCanin</button></li>
-								<li><button value="웰츠" class="btnNavi">Wealtz</button></li>
+								<li><button value="nowfresh" class="btnNavi">NowFresh</button></li>
+								<li><button value="orijen" class="btnNavi">OriJen</button></li>
+								<li><button value="probest" class="btnNavi">ProBest</button></li>
+								<li><button value="royalcanin" class="btnNavi">RoyalCanin</button></li>
+								<li><button value="wealtz" class="btnNavi">Wealtz</button></li>
 								<li><button value="지위펫" class="btnNavi">Ziwipets</button></li>
 								<li><button value="아카나" class="btnNavi">Acana</button></li>
 							</ul>
@@ -254,7 +254,7 @@
 								<div class="col-lg-4 col-md-4 ">
 									<div class="filter__found">
 										<h6>
-											<span id="listSize">0</span> Products found
+											<span><%=list.size() %></span> Products found
 										</h6>
 									</div>
 								</div>
@@ -267,6 +267,75 @@
 							</div>
 						</div>
 						<div id="pagingView" class="row">
+
+						<% 
+						int cnt = 0;
+                        if(data.equals("1")){
+                        	cnt = 0;
+                        	for(int i =cnt;i<cnt+15;i++){%>
+								<div class="col-lg-4 col-md-6 col-sm-6">
+									<div class="product__item">
+										<div class="product__item__pic set-bg"
+											data-setbg="<%=list.get(i).getImgUrl()%>">
+											<ul class="product__item__pic__hover">
+												<li><a href="#"><i class="fa fa-heart"></i></a></li>
+												<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+												<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+											</ul>
+										</div>
+										<div class="product__item__text">
+											<h6>
+												<a href="#"><%= list.get(i).getFdName() %></a>
+											</h6>
+										</div>
+									</div>
+								</div>
+							<%}}%>
+                        <% if(data.equals("2")){
+                        	cnt = 14;
+                        	for(int i =cnt;i<list.size();i++){%>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="product__item">
+									<div class="product__item__pic set-bg"
+										data-setbg="<%=list.get(i).getImgUrl()%>">
+										<ul class="product__item__pic__hover">
+											<li><a href="#"><i class="fa fa-heart"></i></a></li>
+											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+									<div class="product__item__text">
+										<h6>
+											<a href="#"><%= list.get(i).getFdName() %></a>
+										</h6>
+									</div>
+								</div>
+							</div>
+						<%}
+                        }
+                        else if(data.equals("2")){
+                        	cnt = 14;
+						for(int i =cnt;i<list.size();i++){%>
+							<div class="col-lg-4 col-md-6 col-sm-6">
+								<div class="product__item">
+									<div class="product__item__pic set-bg"
+										data-setbg="<%=list.get(i).getImgUrl()%>">
+										<ul class="product__item__pic__hover">
+											<li><a href="#"><i class="fa fa-heart"></i></a></li>
+											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
+											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+										</ul>
+									</div>
+									<div class="product__item__text">
+										<h6>
+											<a href="#"><%= list.get(i).getFdName() %></a>
+										</h6>
+									</div>
+								</div>
+							</div>
+							
+						<%}
+                        }%>
 						</div>
 					</div>
 					
