@@ -277,7 +277,7 @@
 								</div>
 								<div class="blog__item__text">
 									<h5>
-										<b>내외부기생충</b>
+										<b>심장사상충</b>
 									</h5>
 								</div>
 							</div>

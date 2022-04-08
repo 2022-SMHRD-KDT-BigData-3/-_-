@@ -225,12 +225,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="blog__details__hero__text">
-						<h2>The Moment You Need To Remove Garlic From The Menu</h2>
-						<ul>
-							<li>By Michael Scofield</li>
-							<li>January 14, 2019</li>
-							<li>8 Comments</li>
-						</ul>
+						<h2>응급상황 대처법</h2>
 					</div>
 				</div>
 			</div>
@@ -244,20 +239,21 @@
 			<div class="row">
 				<div class="d-flex justify-content-center">
 					<div class="blog__details__text">
-						<img src="img/blog/details/parasite.png"
+						<img src="img/blog/vaccination-8.jpg"
 							class="rounded mx-auto d-block" alt="">
-						<h3>응급상황 대처법</h3>
+						<h3 style = "color : #7fad39">반려견이 이물질을 삼켰을 때</h3>
 						<hr>
-						<h4>반려견이 이물질을 삼켰을 때</h4>
 						<p>
 							1. 먼저 목걸이를 하고 있다면 바로 빼주도록 한다.<br> 2. 이물질이 기도에 걸려 있다면 뒷다리를 들고
 							머리를 아래로 향하게 하여 거꾸로 든다.<br> 3. 하임리히 구명법을 실시한다. 이물질이 제거 됐더라도
-							병원으로 데려가 다른 문제가 없는지 확인한다.<br> *하임리히 구명법 : 강아지를 뒤에서 안은 상태에서
+							병원으로 데려가 다른 문제가 없는지     확인한다.<br> *하임리히 구명법 : 강아지를 뒤에서 안은 상태에서
 							손은 강아지의 갈비뼈 바로 아래 놓고 잡아 당기는 구명법
 						</p>
-						<a href="https://www.youtube.com/watch?v=92EByzD_Dt4&t=368s">영상시청</a>
+						<a href="https://www.youtube.com/watch?v=92EByzD_Dt4&t=368s" style = "float : right">영상시청</a>
+						<br>
+						<br>
+						<h3 style = "color : #7fad39">강아지 CPR</h3>
 						<hr>
-						<h4>심폐소생술</h4>
 						<p>
 							1. 반응체크 -머리와 몸이 모두 바닥에 닿도록 옆으로 눕힌 후 입, 코에 손을 대 숨 쉬는지 확인한다. 들숨과
 							날숨으로 가슴이 오르내리는지 살핀다. 뒷다리 안쪽에 손을 대 맥박이 뛰는지 체크한다.<br>2. 기도 확보
@@ -268,9 +264,11 @@
 							경우 강하게 압박하면 내부 장기가 손상될 수 있어 손가락을 사용하여 문질러줘도 좋음. 1분당 100~120회 속도로
 							압박한다. 흉부압박 30회에 인공호흡 두 번씩 번갈아 가며 실시
 						</p>
-						<a href="https://www.youtube.com/watch?v=CzSy0qELgWM&t=2s">영상시청</a>
+						<a href="https://www.youtube.com/watch?v=CzSy0qELgWM&t=2s" style = "float : right">영상시청</a>
+						<br>
+						<br>
+						<h3 style = "color : #7fad39">상처로 인해 출혈이 있을 때</h3>
 						<hr>
-						<h4>상처가 나 출혈이 있을 때</h4>
 						<p>1.상처 주위가오염되었다면 식염수나 흐르는 수돗물로 살살 씻어준다. <br>2 핥을 수있는 부위라면 할지 못하도록
 							막아주고 심하다면 수건 등으르 5분 이상 압박한다. <br>3. 발톱을 깎다가 피가 난 경우라면 거즈나 솜으로 5분 이상
 							압박해준다.</p>
@@ -280,7 +278,7 @@
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog1.jsp" class="blog__btn">뒤로가기 <span class="arrow_right"></span></a>
+				<a href="blog1.jsp" class="blog__btn"><span class="arrow_left"></span> Back</a>
 			</div>
 		</div>
 	</section>
