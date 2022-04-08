@@ -42,11 +42,14 @@ create table diary(
 	diarynum number(30),
 	id varchar2(200),
 	adddate date,
+	title varchar2(2000),
 	content varchar2(2000),
 	constraint diary_num_pk primary key(diarynum),
 	constraint diary_id_fk foreign key(id) references member(id)
 )
+insert into diary values(food_num_seq.nextval, 'test', sysdate, 'titledt', 'contentdsdfsd')
 select * from diary
+drop table diary
 
 create sequence food_num_seq
 	start with 1
