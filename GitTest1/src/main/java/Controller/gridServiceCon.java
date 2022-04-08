@@ -15,8 +15,8 @@ import com.google.gson.Gson;
 import Model.DogFoodDAO;
 import Model.DogFoodDTO;
 
-@WebServlet("/testServiceCon")
-public class testServiceCon extends HttpServlet {
+@WebServlet("/gridServiceCon")
+public class gridServiceCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		  response.setContentType("text/plain; charset=UTF-8");
