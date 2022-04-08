@@ -70,7 +70,7 @@
 				</ul>
 			</div>  -->
 			<div class="header__top__right__auth">
-				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+				<a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
 			</div>
 		</div>
 		<nav class="humberger__menu__nav mobile-menu">
@@ -111,7 +111,7 @@
 					<div class="col-lg-6">
 						<div class="header__top__left">
 							<ul>
-								<!-- 시원이가 바꿔야할 세션 부분 -->
+								 <!-- 시원이가 바꿔야할 세션 부분 -->
                             <%if (info!=null){ %>
                                 <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
                                 <%} %>
@@ -128,15 +128,6 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
 							<div class="header__top__right__auth">
 								<!-- 시원이가 바꿔야할 세션 부분 -->
 								<% if(info==null){ %>
@@ -150,40 +141,33 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
-							<!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
-	</header>
-	<!-- Header Section End -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
+                        <ul>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
 	<section class="hero hero-normal">
@@ -269,7 +253,7 @@
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2.html" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog2.jsp" class="blog__btn">Back <span class="arrow_right"></span></a>
 			</div>
 		</div>
 	</section>

@@ -156,8 +156,8 @@
                         <ul>
                             <li><a href="./main.jsp">Home</a></li>
                             <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <li><a href="./product.html">Health Products</a></li>
-                            <li class="active"><a href="./blog.html">Health Q&A</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
                         </ul>
                     </nav>
@@ -254,10 +254,10 @@
 							<h4>Categories</h4>
 							<ul>
 								<li><a href="#"><h5 style="color:green"><b>주의가 필요한 식재료</b></h5></a></li>
-								<li><a href="blog2.html">예방접종</a></li>
-								<li><a href="blog-details_emergency.html">응급상황 대처법</a></li>
-								<li><a href="blog-details_disease.html">가장 흔하게 발생하는 반려견 질병</a></li>
-								<li><a href="blog-details_care.html">일반적인 피부질환 관리 및 치료법</a></li>
+								<li><a href="blog2.jsp">예방접종</a></li>
+								<li><a href="blog-details_emergency.jsp">응급상황 대처법</a></li>
+								<li><a href="blog-details_disease.jsp">가장 흔하게 발생하는 반려견 질병</a></li>
+								<li><a href="blog-details_care.jsp">일반적인 피부질환 관리 및 치료법</a></li>
 							</ul>
 						</div>
 					</div>
@@ -292,7 +292,7 @@
 						</div>
 						<div class="col-lg-12">
 							<div class="product__pagination blog__pagination">
-								<a href="blog1.html">1</a> <a href="blog1_2page.html">2</a> <a href="blog1_3page.html">3</a> 
+								<a href="blog1.jsp">1</a> <a href="blog1_2page.jsp">2</a> <a href="blog1_3page.jsp">3</a> 
 							</div> 
 						</div>
 					</div>

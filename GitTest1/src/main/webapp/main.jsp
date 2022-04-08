@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
     <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
@@ -152,8 +151,8 @@
                         <ul>
                             <li class="active"><a href="./main.jsp">Home</a></li>
                             <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <li><a href="./product.html">Health Products</a></li>
-                            <li><a href="./blog.html">Health Q&A</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
                         </ul>
                     </nav>
@@ -190,7 +189,7 @@
                             <li><a href="#">HomeAndDog</a></li>
                             <li><a href="#">Iskhan</a></li>
                             <li><a href="#">NowFresh</a></li>
-                            <a href = "shop-grid.html">More...</a>
+                            <a href = "shop-grid.jsp">More...</a>
                             <!--<li><a href="#">Orijen</a></li>
                             <li><a href="#">ProBest</a></li>
                             <li><a href="#">RoyalCanin</a></li>
