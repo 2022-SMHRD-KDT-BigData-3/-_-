@@ -1,3 +1,6 @@
+<%@page import="Model.DiaryDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.DiaryDAO_jy"%>
 <%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -33,19 +36,22 @@
 width:60%;
 margin: 0 auto;
 border: solid 1px #7fad39;
+border-collapse: collapse;
+border:0;
 }
 
 .inner .number{
 width:6%;
-text-align:left;
+text-align:center;
 }
 
 .inner .title{
+width:60%;
 text-align:left;
 }
 
-.inner .fdName{
-width:9%;
+.inner .id{
+width:20%;
 text-align:center;
 }
 .col-lg-12{
@@ -56,7 +62,7 @@ margin: 0 auto;
 float : right;
 }
 .inner .date{
-width:10%;
+width:20%;
 text-align:center;
 }
 .write{
@@ -70,6 +76,7 @@ text-align:right;
 <body>	
 <% 
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
+	ArrayList<DiaryDTO> list= null;
 	%>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -216,15 +223,36 @@ text-align:right;
             </div>
         </div>
 		<div>
+			
+			<% if(info == null){ %>
+				<li> 로그인을 하세요 </li>
+			<% }else{
+				DiaryDAO_jy dao = new DiaryDAO_jy();
+				list = dao.selectDiary(info.getId());
+			}
+			%>
+			
+			
 			<table border="1"  class="inner">
 				<tbody>
 					<tr>
 					<td class = "number"><b>글번호</b></td>
 					<td class = "title"><b>제목</b></td>
-					<td class = "fdName"><b>강아지이름</b></td>
+					<td class = "name"><b>아이디</b></td>
 					<td class = "date"><b>작성일</b></td>
 					</tr>
 				</tbody>
+				<% for (int i = 0; i < list.size(); i++) { %>
+					<tr>
+					<td><%= i+1 %> </td>
+					<td><%= list.get(i).getTitle() %></td>
+					<td><%= list.get(i).getName() %></td>
+					<td><%= list.get(i).getDate() %></td>
+					</tr>
+					
+				<%}%>
+				
+					
 			</table>
 		</div>
 		<br>
