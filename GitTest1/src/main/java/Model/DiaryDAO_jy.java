@@ -62,31 +62,7 @@ public class DiaryDAO_jy {
 		}
 	}
 	
-	// 다이어리 쓰는 메소드
-//	public int write(DiaryDTO dto) {
-//		int cnt = 0;
-//		try {
-//			db_conn();
-//			
-//			String sql = "insert into diary values (?,?,?,?,?)"
-//					
-//			psmt = conn.prepareStatement(sql); 
-//			
-//			psmt.setString(1, dto.getTitle());
-//	        psmt.setString(2, dto.getContent());
-//	        
-//	        cnt = psmt.executeUpdate();
-//			
-//		}
-//		catch(SQLException e) {
-//			e.printStackTrace();
-//		}
-//		finally {
-//			db_close();
-//		}
-//		return cnt;
-//	}
-	
+
 	// 다이어리 조회 메소드
 	public ArrayList<DiaryDTO> selectDiary(String id){
 		ArrayList<DiaryDTO> list = new ArrayList();
@@ -124,3 +100,4 @@ public class DiaryDAO_jy {
 	
 	
 }
+
