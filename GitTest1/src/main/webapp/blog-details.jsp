@@ -69,7 +69,7 @@
 				</ul>
 			</div>-->
 			<div class="header__top__right__auth">
-				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
+				<a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
 			</div>
 		</div>
 		<nav class="humberger__menu__nav mobile-menu">
@@ -127,15 +127,6 @@
 									class="fa fa-linkedin"></i></a> <a href="#"><i
 									class="fa fa-pinterest-p"></i></a>
 							</div>
-							<!--<div class="header__top__right__language">
-								<img src="img/language.png" alt="">
-								<div>English</div>
-								<span class="arrow_carrot-down"></span>
-								<ul>
-									<li><a href="#">Spanis</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>  -->
 							<div class="header__top__right__auth">
 								<!-- 시원이가 바꿔야할 세션 부분 -->
 								<% if(info==null){ %>
@@ -149,40 +140,33 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.jsp">Home</a></li>
-							<li><a href="./shop-grid.jsp">DogFood</a></li>
-							<!--<li><a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li class="active"><a href="./blog1.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
-	</header>
-	<!-- Header Section End -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
+                        <ul>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 
 	<!-- Hero Section Begin -->
 	<section class="hero hero-normal">
@@ -266,7 +250,7 @@
 							생후 45일부터 최소 3회 이상은 접종을 실시해야 한다.<br> 이는 가능한 한 바른 시간에 면역력을 활성화시키기 위한
 							것이다. 동물 병원이나 보호자가 추가로 선택하기도 하지만<br> 가장 보편적인 백신은 다음의 5가지를 6희에 나누어서
 							진행한다. (종합백신, 코로나 장염, 켄넬코프기관지염, 개 인플루엔자, 광견병)</p><br><hr>
-						<h3>종합백신 : 5종 또는 4종</h3>
+						<h3>종합백신</h3>
 						<p>국내에서는 쥐로 인해 전염되는 렙토스피로시스를 포함한 5종백신보다는 4종백신을 많이 진행.<br> 해외로 출국해야
 							하는 경우 나라에 따라서 립토스피로시스 백신 예방을 요구한다.</p><br><hr>
 						<p><h4>홍역</h4> - 홍역은 구토와 설사, 콧물, 재채기, 호흡곤란, 점액 화농성 눈물 등이 나타난다, 때로는
@@ -286,7 +270,7 @@
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2.html" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog2.jsp" class="blog__btn">Back <span class="arrow_right"></span></a>
 			</div>
 		</div>
 	</section>
