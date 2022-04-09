@@ -129,7 +129,7 @@
 							<ul>
 								<a><li><button value="앱솔루트" class="btnNavi">Absolute</button></li></a>
 								<li><button value="Anf" class="btnNavi">Anf</button></li>
-								<li><button value="벨포아" class="btnNavi">BeliFor</button></li>
+								<li><button value="벨포아" class="btnNavi">BellFor</button></li>
 								<li><button value="도그라인" class="btnNavi">DogLine</button></li>
 								<li><button value="이글벳" class="btnNavi">EagleVet</button></li>
 								<li><button value="파미나" class="btnNavi">Famina</button></li>
@@ -209,75 +209,7 @@
 							</div>
 						</div>
 						<div id="pagingView" class="row">
-
-						<% 
-						int cnt = 0;
-                        if(data.equals("1")){
-                        	cnt = 0;
-                        	for(int i =cnt;i<cnt+15;i++){%>
-								<div class="col-lg-4 col-md-6 col-sm-6">
-									<div class="product__item">
-										<div class="product__item__pic set-bg"
-											data-setbg="<%=list.get(i).getImgUrl()%>">
-											<ul class="product__item__pic__hover">
-												<li><a href="#"><i class="fa fa-heart"></i></a></li>
-												<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-												<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-											</ul>
-										</div>
-										<div class="product__item__text">
-											<h6>
-												<a href="#"><%= list.get(i).getFdName() %></a>
-											</h6>
-										</div>
-									</div>
-								</div>
-							<%}}%>
-                        <% if(data.equals("2")){
-                        	cnt = 14;
-                        	for(int i =cnt;i<list.size();i++){%>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="<%=list.get(i).getImgUrl()%>">
-										<ul class="product__item__pic__hover">
-											<li><a href="#"><i class="fa fa-heart"></i></a></li>
-											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-										</ul>
-									</div>
-									<div class="product__item__text">
-										<h6>
-											<a href="#"><%= list.get(i).getFdName() %></a>
-										</h6>
-									</div>
-								</div>
-							</div>
-						<%}
-                        }
-                        else if(data.equals("2")){
-                        	cnt = 14;
-						for(int i =cnt;i<list.size();i++){%>
-							<div class="col-lg-4 col-md-6 col-sm-6">
-								<div class="product__item">
-									<div class="product__item__pic set-bg"
-										data-setbg="<%=list.get(i).getImgUrl()%>">
-										<ul class="product__item__pic__hover">
-											<li><a href="#"><i class="fa fa-heart"></i></a></li>
-											<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-											<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-										</ul>
-									</div>
-									<div class="product__item__text">
-										<h6>
-											<a href="#"><%= list.get(i).getFdName() %></a>
-										</h6>
-									</div>
-								</div>
-							</div>
-							
-						<%}
-                        }%>
+						
 						</div>
 					</div>
 					
