@@ -2495,7 +2495,7 @@ ol {
 -----------------------*/
 
 .blog-details-hero {
-	height: 190px;
+	height: 140px;
 	display: flex;
 	align-items: center;
 }
@@ -3495,4 +3495,7 @@ ol {
 	.blog__details__hero__text h2 {
 		font-size: 24px;
 	}
+
+
+	
 }
