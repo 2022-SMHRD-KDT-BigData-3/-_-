@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class DiaryDAO_sy {
 
@@ -13,6 +14,7 @@ public class DiaryDAO_sy {
    ResultSet rs = null;
    int cnt = 0;
    DogFoodDTO dto = null;
+   ArrayList<DogFoodDTO> list = new ArrayList<DogFoodDTO>();
 
    // conn
    public void db_conn() {
@@ -114,5 +116,36 @@ public class DiaryDAO_sy {
 	   } finally {
 	      db_close();
 	   } return dto;
+	   }
+   
+   public ArrayList<DogFoodDTO> shopDetailList(int fdnum) {
+	   	
+	      db_conn();
+	   try {
+	      String sql = "select * from dogfood where fdcom=(select fdcom from dogfood where fdnum=?)";
+	      
+	      psmt = conn.prepareStatement(sql);
+	      
+	      psmt.setInt(1, fdnum);
+	      
+	     rs = psmt.executeQuery();
+	      
+	      while(rs.next()) {
+	            String fdnum2 = Integer.toString(rs.getInt(1));
+	            String fdcom = rs.getString(2);
+	            String fdname = rs.getString(3);
+	            String material = rs.getString(4);
+	            String imgurl = rs.getString(5);
+	            String ingredient = rs.getString(6);
+	            
+	            dto = new DogFoodDTO(fdnum2, fdcom, fdname, material, imgurl, ingredient);
+	            list.add(dto);
+	         }
+	      
+	   } catch(Exception e) {
+	      e.printStackTrace();
+	   } finally {
+	      db_close();
+	   } return list;
 	   }
 }

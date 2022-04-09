@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="Model.DogFoodDTO"%>
 <%@page import="Model.DiaryDAO_sy"%>
 <%@page import="Controller.ShopdetailServiceCon"%>
@@ -43,6 +44,8 @@
 	DogFoodDTO dto = new DogFoodDTO();
 	dto = dao.shopDetail(fdnum);
 	
+	ArrayList<DogFoodDTO> list = new ArrayList<>();
+	list = dao.shopDetailList(fdnum);
 %>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -110,75 +113,6 @@
     </header>
     <!-- Header Section End -->
 
-    <!-- Hero Section Begin -->
-   <!-- 
-  
-  <section class="hero hero-normal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span> 사료 회사 </span>
-                        </div>
-                        <ul>
-                            <li><a href="#"> absolute </a></li>
-                            <li><a href="#"> anf </a></li>
-                            <li><a href="#"> Belifor </a></li>
-                            <li><a href="#"> dogline </a></li>
-                            <li><a href="#"> FaminaAncestralGrain </a></li>
-                            <li><a href="#"> FaminaOcean </a></li>
-                            <li><a href="#"> FaminaPrime </a></li>
-                            <li><a href="#"> FaminaQuinoa </a></li>
-                            <li><a href="#"> FaminaVetLife </a></li>
-                            <li><a href="#"> homeanddog </a></li>
-                            <li><a href="#"> iskhan </a></li>
-                            <li><a href="#"> nowfresh </a></li>
-                            <li><a href="#"> orjien </a></li>
-                            <li><a href="#"> probest </a></li>
-                            <li><a href="#"> royalAdult </a></li>
-                            <li><a href="#"> royalMature </a></li>
-                            <li><a href="#"> royalPuppy </a></li>
-                            <li><a href="#"> wealtz </a></li>
-                            <li><a href="#"> 내츄럴밸런스 </a></li>
-                            <li><a href="#"> 네츄럴코어 </a></li>
-                            <li><a href="#"> 아카나 </a></li>
-                            <li><a href="#"> 이글벳 </a></li>
-                            <li><a href="#"> 지위펫 </a></li>
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                   <!--  <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
-                                <span>support 24/7 time</span>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </section>  
- 
-
     <!-- Hero Section End -->
 
     <!-- Breadcrumb Section Begin -->
@@ -222,24 +156,6 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
                         <h3> <%=dto.getFdName() %> </h3>
-                   <!--      <div class="product__details__rating"> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i> -->
-                        
-                        <!-- 
-                        <div class="product__details__quantity">
-                            <div class="quantity">
-                                <div class="pro-qty">
-                                    <input type="text" value="1">
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="primary-btn">ADD TO CARD</a>
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                         -->
                         <ul>
                             <li><b>material(성분)</b> <br><span> <%=dto.getMaterial() %> </span></li>
                             <li><b>ingredients(원료)</b><br> <span> <%= dto.getIngredient() %> </span><span></span></li>
@@ -247,48 +163,7 @@
                     </div>
                 </div>
                 
-               
-<!--                 <div class="col-lg-12">
-                    <div class="product__details__tab">
-                        <ul class="nav nav-tabs" role="tablist">
-                        
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                    aria-selected="true">삭제 예정 -태완</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
-                                    aria-selected="false">삭제 예정2 -태완</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
-                                    aria-selected="false">삭제 예정3 -태완 <span>(1)</span></a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>삭제 예정 -태완</h6>
-                                    <p>삭제 예정 -태완</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>삭제 예정2 -태완</h6>
-                                    <p>삭제 예정2 -태완</p>
-                                    <p>삭제 예정2 -태완</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-3" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>삭제 예정3 -태완</h6>
-                                    <p>삭제 예정3 -태완</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
- -->            </div>
+            </div>
         </div>
     </section>
     <!-- Product Details Section End -->
@@ -299,14 +174,18 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title related__product__title">
-                        <h2> 회사 이름 넣기 </h2>
+                        <h2> Others </h2>
                     </div>
                 </div>
             </div>
             <div class="row">
+            <%
+            if(list.size()>=4){
+            
+            for(int i = 0;i<4;i++){ %>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="<%= list.get(i).getImgUrl()%>">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -314,14 +193,15 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">해당 회사 사료 사진</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
+                            <a href="shop-details.jsp?fdnum=<%= list.get(i).getFdNum()%>"><h5><%=list.get(i).getFdName() %></h5></a>
                         </div>
                     </div>
                 </div>
+                <% }}else{
+            for(int i = 0;i<3;i++){ %>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="<%= list.get(i).getImgUrl()%>">
                             <ul class="product__item__pic__hover">
                                 <li><a href="#"><i class="fa fa-heart"></i></a></li>
                                 <li><a href="#"><i class="fa fa-retweet"></i></a></li>
@@ -329,41 +209,13 @@
                             </ul>
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">해당 회사 사료 사진</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
+                            <a href="shop-details.jsp?fdnum=<%= list.get(i).getFdNum()%>"><h5><%=list.get(i).getFdName() %></h5></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">해당 회사 사료 사진y</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">해당회사 사료 사진</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
-                        </div>
-                    </div>
-                </div>
+                </div>                
+                
+                
+                <%}}%>
             </div>
         </div>
     </section>
