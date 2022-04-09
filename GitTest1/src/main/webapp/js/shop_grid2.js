@@ -38,7 +38,7 @@
 										
 										<div class="product__item__text">
 											<h6>
-												<a href="product-details.jsp">${data[i].fdName}</a>
+												<a href="shop-details.jsp?fdnum=${data[i].fdNum}">${data[i].fdName}</a>
 											</h6>
 										</div>
 									</div>

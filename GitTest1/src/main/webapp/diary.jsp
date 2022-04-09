@@ -170,7 +170,7 @@ text-align:right;
 					<% list = dao.selectDiary(); %>
 			
 				
-			<table  class="inner">
+			<table class="inner">
 				<tbody>
 					<tr>
 					<td class = "number"><b>글번호</b></td>
@@ -179,7 +179,7 @@ text-align:right;
 					<td class = "date"><b>작성일</b></td>
 					</tr>
 						<tr height="1" bgcolor="#7fad39"><td colspan="4" width="1200"></td>
-	</tr>
+					</tr>
 				</tbody>
 				
 				<% for (int i = 0; i < list.size(); i++) { %>
