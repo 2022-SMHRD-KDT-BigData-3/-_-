@@ -1,3 +1,4 @@
+<%@page import="Model.MemberDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.DogFoodDAO"%>
 <%@page import="Model.DogFoodDTO"%>
@@ -44,136 +45,77 @@
 	list = dao.viewAllFood("Anf");
 	String data = request.getParameter("data");
 	System.out.print(data);
+	
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
+	if (info != null) {
+		String id = info.getId();
+	}
 	%>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
 
-	<!-- Humberger Begin -->
-	<div class="humberger__menu__overlay"></div>
-	<div class="humberger__menu__wrapper">
-		<div class="humberger__menu__logo">
-			<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-		</div>
-		<div class="humberger__menu__cart">
-			<ul>
-				<li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-				<li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-			</ul>
-			<div class="header__cart__price">
-				item: <span>$150.00</span>
-			</div>
-		</div>
-		<div class="humberger__menu__widget">
-			<div class="header__top__right__language">
-				<img src="img/language.png" alt="">
-				<div>English</div>
-				<span class="arrow_carrot-down"></span>
-				<ul>
-					<li><a href="#">Spanis</a></li>
-					<li><a href="#">English</a></li>
-				</ul>
-			</div>
-			<div class="header__top__right__auth">
-				<a href="Login.html"><i class="fa fa-user"></i> Login</a>
-			</div>
-		</div>
-		<nav class="humberger__menu__nav mobile-menu">
-			<ul>
-				<li class="active"><a href="./main.html">Home</a></li>
-				<li><a href="./shop-grid.html">Shop</a></li>
-				<li><a href="#">Pages</a>
-					<ul class="header__menu__dropdown">
-						<li><a href="./shop-details.html">Shop Details</a></li>
-						<li><a href="./shoping-cart.html">Shoping Cart</a></li>
-						<li><a href="./checkout.html">Check Out</a></li>
-						<li><a href="./blog-details.html">Blog Details</a></li>
-					</ul></li>
-				<li><a href="./blog.html">Blog</a></li>
-				<li><a href="./contact.html">Contact</a></li>
-			</ul>
-		</nav>
-		<div id="mobile-menu-wrap"></div>
-		<div class="header__top__right__social">
-			<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
-				class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a>
-			<a href="#"><i class="fa fa-pinterest-p"></i></a>
-		</div>
-		<div class="humberger__menu__contact">
-			<ul>
-				<li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-				<li>Free Shipping for all Order of $99</li>
-			</ul>
-		</div>
-	</div>
-	<!-- Humberger End -->
 
 	<!-- Header Section Begin -->
-	<header class="header">
-		<div class="header__top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="header__top__left">
-							<ul>
-								<li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-								<li>Free Shipping for all Order of $99</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="header__top__right">
-							<div class="header__top__right__social">
-								<a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i
-									class="fa fa-twitter"></i></a> <a href="#"><i
-									class="fa fa-linkedin"></i></a> <a href="#"><i
-									class="fa fa-pinterest-p"></i></a>
-							</div>
-							<div class="header__top__right__auth">
-								<a href="Login.html"><i class="fa fa-user"></i> Login</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-md-2 container"
-					style="display: inline-block; text-align: center;">
-					<div class="header__logo">
-						<a href="./main.html"><img src="img/logo5.png" alt=""></a>
-					</div>
-				</div>
-				<div class="container"
-					style="display: inline-block; text-align: center;">
-					<nav class="header__menu">
-						<ul>
-							<li><a href="./main.html">Home</a></li>
-							<li class="active"><a href="./shop-grid.html">DogFood</a></li>
-							<!--<li><a href="#">아라라라라</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>  -->
-							<li><a href="./product.html">Health Products</a></li>
-							<li><a href="./blog.html">Health Q&A</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
-				</div>
-			</div>
-			<div class="humberger__open">
-				<i class="fa fa-bars"></i>
-			</div>
-		</div>
-	</header>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header__top__left">
+                            <ul>
+                            	<%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                            <div class="header__top__right__auth">
+                                <% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu" style="width:120%">
+                        <ul>
+                            <li class="active"><a href="./main.jsp">Home</a></li>
+                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                <!-- 장바구니, 찜목록 있던 자리 -->
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
 	<!-- Header Section End -->
 
 	<!-- Product Section Begin -->
@@ -185,7 +127,7 @@
 						<div class="sidebar__item">
 							<h4>Company</h4>
 							<ul>
-								<li><button value="앱솔루트" class="btnNavi">Absolute</button></li>
+								<a><li><button value="앱솔루트" class="btnNavi">Absolute</button></li></a>
 								<li><button value="Anf" class="btnNavi">Anf</button></li>
 								<li><button value="벨포아" class="btnNavi">BeliFor</button></li>
 								<li><button value="도그라인" class="btnNavi">DogLine</button></li>
