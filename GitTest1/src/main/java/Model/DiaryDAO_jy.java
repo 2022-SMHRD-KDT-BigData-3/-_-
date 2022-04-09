@@ -69,7 +69,7 @@ public class DiaryDAO_jy {
 		
 		db_conn();
 		
-		String sql = "select * from diary";
+		String sql = "select * from diary order by adddate desc";
 		
 		try {
 			psmt = conn.prepareStatement(sql);

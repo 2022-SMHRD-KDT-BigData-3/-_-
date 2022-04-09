@@ -348,7 +348,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="blog__item">
                                 <div class="blog__item__pic">
-                                    <img src="img/product/product8.jpg" alt="">
+                                    <img src="img/product/product8.jpg" alt=""  style="padding-top : 50px">
                                 </div>
                                 <div class="blog__item__text">
                                     <ul>
@@ -363,7 +363,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="blog__item">
                                 <div class="blog__item__pic">
-                                    <img src="img/product/product9.jpg" alt="">
+                                    <img src="img/product/product9.jpg" alt="" style="padding-top : 50px">
                                 </div>
                                 <div class="blog__item__text">
                                     <ul>
@@ -378,7 +378,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="blog__item">
                                 <div class="blog__item__pic">
-                                    <img src="img/product/product10.jpg" alt="">
+                                    <img src="img/product/product10.jpg" alt="" style="padding-top : 50px">
                                 </div>
                                 <div class="blog__item__text">
                                     <ul>

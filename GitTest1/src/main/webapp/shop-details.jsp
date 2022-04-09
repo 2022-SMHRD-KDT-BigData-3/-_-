@@ -1,3 +1,6 @@
+<%@page import="Model.DogFoodDTO"%>
+<%@page import="Model.DiaryDAO_sy"%>
+<%@page import="Controller.ShopdetailServiceCon"%>
 <%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -32,7 +35,15 @@
 	if (info != null) {
 		String id = info.getId();
 	}
-	%>
+	int fdnum = Integer.parseInt(request.getParameter("fdnum"));
+	
+	System.out.println("사료번호:"+fdnum);
+	
+	DiaryDAO_sy dao = new DiaryDAO_sy();
+	DogFoodDTO dto = new DogFoodDTO();
+	dto = dao.shopDetail(fdnum);
+	
+%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -176,11 +187,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2> 품종별 사료 회사 뜨게 수정 -태완-</h2>
+                        <h2><%= dto.getFdCom() %></h2>
                         <div class="breadcrumb__option">
-                            <a href="./main.html"> 회사명 수정-태완- </a>
-                            <a href="./main.html"> 제품명 수정-태완- </a>
-                            <span> 이름 수정-태완- </span>
                         </div>
                     </div>
                 </div>
@@ -197,7 +205,7 @@
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
                             <img class="product__details__pic__item--large"
-                                src="img/product/details/product-details-1.jpg" alt="">
+                                src="<%=dto.getImgUrl() %>" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
                      <!--        <img data-imgbigurl="img/product/details/product-details-2.jpg"
@@ -213,17 +221,13 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                        <h3> 사료 정보 </h3>
+                        <h3> <%=dto.getFdName() %> </h3>
                    <!--      <div class="product__details__rating"> 
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half-o"></i> -->
-                            <span>(리뷰 점수)삭제 예정 -태완-</span>
-                        </div>
-                        <div class="product__details__price">(가격)삭제 예정 -태완-</div>
-                        <p>(정보)삭제 예정 -태완-</p>
                         
                         <!-- 
                         <div class="product__details__quantity">
@@ -237,17 +241,8 @@
                         <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                          -->
                         <ul>
-                            <li><b>material(성분)</b> <span> 성분적기 </span></li>
-                            <li><b>ingredients(원료)</b> <span> 원료적기 <samp>삭제 예정 -태완</samp></span></li>
-                            <li><b>삭제 예정 -태완</b> <span>삭제 예정 -태완</span></li>
-                            <li><b>삭제 예정 -태완</b>
-                                <div class="share">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </li>
+                            <li><b>material(성분)</b> <br><span> <%=dto.getMaterial() %> </span></li>
+                            <li><b>ingredients(원료)</b><br> <span> <%= dto.getIngredient() %> </span><span></span></li>
                         </ul>
                     </div>
                 </div>

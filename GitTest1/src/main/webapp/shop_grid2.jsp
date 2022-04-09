@@ -127,7 +127,7 @@
 						<div class="sidebar__item">
 							<h4>Company</h4>
 							<ul>
-								<a><li><button value="앱솔루트" class="btnNavi">Absolute</button></li></a>
+								<li><button value="앱솔루트" class="btnNavi">Absolute</button></li>
 								<li><button value="Anf" class="btnNavi">Anf</button></li>
 								<li><button value="벨포아" class="btnNavi">BellFor</button></li>
 								<li><button value="도그라인" class="btnNavi">DogLine</button></li>
