@@ -267,7 +267,7 @@
 								<li><a href="blog2.jsp">예방접종</a></li>
 								<li><a href="blog-details_emergency.jsp">응급상황 대처법</a></li>
 								<li><a href="blog-details_disease.jsp">가장 흔하게 발생하는 반려견 질병</a></li>
-								<li><a href="blog-details_care.jsp">일반적인 피부질환 관리 및 치료법</a></li>
+								<li><a href="blog-details_care.jsp">강아지 피부병 예방·치료를 위한 수칙</a></li>
 							</ul>
 						</div>
 					</div>

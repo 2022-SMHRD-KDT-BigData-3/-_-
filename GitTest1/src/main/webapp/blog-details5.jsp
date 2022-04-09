@@ -229,7 +229,7 @@
 				<div class="col-lg-12">
 					<div class="blog__details__hero__text">
 						<br>
-						<h2>Health Q&A</h2>
+						<h2>광견병</h2>
 					</div>
 				</div>
 			</div>
@@ -243,18 +243,38 @@
 			<div class="row">
 				<div class="d-flex justify-content-center">
 					<div class="blog__details__text">
-						<img src="img/blog/details/vaccination.png"
+						<img src="img/blog/vaccination-5.jpg"
 							class="rounded mx-auto d-block" alt="">
-						<h3>광견병</h3>
-						<p>인수공통감염병으로 국가에서 관리하는 질병. 우리나라는 광견병 발생 국가로 해외 출입국 시 광견병 항체검사는
-							필수. 광견병 바이러스는 증상이 나타난 숙주의 타액에 많이 존재하며, 감염된 동물의 증상은 크게 침울형(또는
-							마비형)과 광폭형으로 나눌 수 있으며 두 가지 증상 모두가 나타나기도 한다.</p>
+						<h3 style = "color : #7fad39">질병정의</h3>
+						<hr>
+						<p>광견병은 사람을 포함한 모든 포유류에 감염 될 위험성이 있는 질병입니다.
+						광견병 바이러스를 보유하고 있는 동물에게 물림으로써 감염되는 경우가 많습니다.
+						발병해 버리면 치명적인 뇌염으로 인한 100%에 가까운 확률로 사망에 이르게 됩니다.
+						현재는 법적으로 의무화 되어 있어 광견병 예방 접종은 1년에 2번, 매년 필수로 강아지 광견병 예방접종을 해주어야 합니다.</p>
+						<br>
+						<h3 style = "color : #7fad39">질병증상</h3>
+						<hr>
+						<p>강아지가 광견병에 감염된 후 잠복기는 일반적으로 1~2개월로 알려져 있습니다.
+						초기증상으로는 비정상적인 행동, 과민해지는 등 행동의 이상을 확인할 수 있습니다.
+						그후의 증상은 유형에 따라 다르지만 극도의 흥분상태로 공격적인 행동과 전신마비, 또는 혼수상태 등이 있습니다.
+						일단 증상이 나타나게 되면 치료가 불가능해 거의 사망에 이르게 됩니다.</p>
+						<br>
+						<h3 style = "color : #7fad39">질병예방</h3>
+						<hr>
+						<p>생후 3개월 이상의 강아지는 30일 이내에 광견병 예방 주사를 맞도록 해야합니다.
+						그 이후에는 매년 1회 정기적으로 접종이 필수입니다.
+						매년 봄, 가을에 지자체에서 강아지 무료 광견병 접종을 실시하고 있습니다.
+						동물등록을 하지 않은 반려견은 무료 백신 접종 지원이 제한된다고 합니다.</p>
+						<br>
+						<h3 style = "color : #7fad39">질병치료</h3>
+						<hr>
+						<p>광견병은 치료가 불가능합니다. 광견병 진단을 받는 즉시 안락사가 원칙입니다.</p>
 					</div>
 
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2_2page.html" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog1.jsp" class="blog__btn"><span class="arrow_left"></span> Back</a>
 			</div>
 		</div>
 	</section>

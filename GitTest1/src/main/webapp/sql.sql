@@ -49,7 +49,7 @@ create table diary(
 )
 insert into diary values(food_num_seq.nextval, 'test', sysdate, 'titledt', 'contentdsdfsd')
 select * from diary
-drop table diary
+	drop table diary
 
 create sequence food_num_seq
 	start with 1

@@ -3,7 +3,7 @@
 		 $(".btnNavi").click(function(){
 		
 		 $.ajax({
-	         url : 'testServiceCon'
+	         url : 'gridServiceCon'
 	         ,type : 'GET'
 	         ,data : {test : $(this).val()}
 	         ,dataType : 'json'
@@ -38,7 +38,7 @@
 										
 										<div class="product__item__text">
 											<h6>
-												<a href="#">${data[i].fdName}</a>
+												<a href="product-details.jsp">${data[i].fdName}</a>
 											</h6>
 										</div>
 									</div>

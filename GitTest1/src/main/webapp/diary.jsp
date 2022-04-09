@@ -224,15 +224,18 @@ text-align:right;
         </div>
 		<div>
 			
-			<% if(info == null){ %>
+			<%-- <% if(info == null){ %>
 				<li> 로그인을 하세요 </li>
 			<% }else{
 				DiaryDAO_jy dao = new DiaryDAO_jy();
 				list = dao.selectDiary(info.getId());
 			}
-			%>
+			%> --%>
 			
+					<% DiaryDAO_jy dao = new DiaryDAO_jy();%>
+					<% list = dao.selectDiary(); %>
 			
+				
 			<table border="1"  class="inner">
 				<tbody>
 					<tr>
@@ -242,6 +245,7 @@ text-align:right;
 					<td class = "date"><b>작성일</b></td>
 					</tr>
 				</tbody>
+				
 				<% for (int i = 0; i < list.size(); i++) { %>
 					<tr>
 					<td><%= i+1 %> </td>

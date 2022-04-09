@@ -229,7 +229,7 @@
 				<div class="col-lg-12">
 					<div class="blog__details__hero__text">
 						<br>
-						<h2>Health Q&A</h2>
+						<h2>켄넬코프기관지염</h2>
 					</div>
 				</div>
 			</div>
@@ -243,17 +243,38 @@
 			<div class="row">
 				<div class="d-flex justify-content-center">
 					<div class="blog__details__text">
-						<img src="img/blog/details/vaccination.png"
+						<img src="img/blog/vaccination-3.jpg"
 							class="rounded mx-auto d-block" alt="">
-						<h3>켄넬코프기관지염</h3>
-						<p>다양한 원인으로 호흡기 증상을 일으키는 '전염성 기관지염'은 발열과 기침 등 사람의 같기와 비슷한 증상이
-							오랫동안 유지되는 특성이 있으며 특히 건조한 겨울철에 발생 확률이 높다.</p>
+						<br>
+						<h3 style = "color : #7fad39">질병정의</h3>
+						<hr>
+						<p>켄넬코프 기관지염은 소위 개가 걸리는 감기로, '전염성 기관지염'이라 불리는 호흡기 증후군<br>입니다. 
+						켄넬(Kennel)의 뜻은 '사육장'이란 뜻으로, 켄넬코프 기관지염은 주로 강아지들이 집단 사육되는 곳이나 농장에서 자주 발병해서 붙여진 이름입니다.
+						 또한, 사육장 뿐만 아니라 애견<br> 호텔, 박람회, 도그쇼 등 개들이 많이 모이는 장소에서 걸리기 쉽습니다.</p>
+						<br>
+						<h3 style = "color : #7fad39">질병증상</h3>
+						<hr>
+						<p>심한 발작성 기침, 눈 주위의 진물, 구토, 무기력, 식욕부진, 고열, 콧물 등의 증상이 나타나며,<br> 증상은 대개 가벼운 편이지만 심할 경우 폐렴으로 
+						진행되거나 2차 세균 감염으로 인해 합병증이 생길 수 있습니다.
+						 켄넬코프의 대표적인 증상으로는 강아지 목에 뭐가 걸린 것 처럼 켁켁<br> 거리거나 맑은 콧물 또는 노란 콧물이 나타나는 등의 증상이 있습니다.</p>
+						<br>
+						<h3 style = "color : #7fad39">질병예방</h3>
+						<hr>
+						<p>강아지 켄넬코프 기과지염은 백신을 통해 쉽게 예방이 가능합니다. 주로 3차, 4차 백신을 예방할 때 접종하게 되며 기초 접종 후에는 1년에 한 번씩 추가접종을 하면 됩니다. 
+						접종이 완료되지 않은 어린 강아지의 경우에는 항체 형성이 덜 되었기 때문에 강아지들이 많이 드나드는 미용실, 호텔 등은 데리고 가지 않는 것이 좋습니다. 
+						또한 켄넬코프 기관지염을 예방하기 위해 강아지가 생활하는 곳을 늘 청결하게 유지하도록 하며 정기적인 환기와 실내 습도를 50%정도로 항상 적절히 유지하는 것이 좋습니다.</p>
+						<br>
+						<h3 style = "color : #7fad39">질병치료</h3>
+						<hr>
+						<p>강아지가 만약 켄넬코프 기관지염에 걸렸다면, 병원에 데려가서 적절한 검사 및 치료를 받도록 해야 한답니다. 
+						치료를 하면 대부분 3~4일 만에 증상이 호전되지만, 면역력이 약한 강아지나 노견의 경우 치료가 더 길어질 수 있습니다.</p>
+				
 					</div>
 
 				</div>
 			</div>
 			<div class="blog__item__text">
-				<a href="blog2.jsp" class="blog__btn">Back <span class="arrow_right"></span></a>
+				<a href="blog1.jsp" class="blog__btn"><span class="arrow_left"></span> Back</a>
 			</div>
 		</div>
 	</section>
