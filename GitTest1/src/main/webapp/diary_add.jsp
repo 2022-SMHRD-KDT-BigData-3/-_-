@@ -151,8 +151,8 @@
 	</tr> 
 	
 	<tr> 
-		<td width="0">&nbsp;</td> 
-		<td align="center" width="30%">닉네임</td> 
+		<td width="17%" rowspan="5" height="17%">강아지 사진</td> 
+		<td width="30%">강아지 이름</td> 
 		<td width="70%">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getId() %><%} %></td> 
 		<td width="0">&nbsp;</td> 
 	</tr> 
@@ -161,8 +161,7 @@
 	</tr> 
 	
 	<tr> 
-	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">건강 상태</td> 
+	<td width="76">건강 상태</td> 
 	<td width="319"><%if(info!=null){%><%=info.getHealth() %><%} %></td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
@@ -172,8 +171,7 @@
 	</tr> 
 	
 	<tr> 
-	<td width="0">&nbsp;</td> 
-	<td align="center" width="76">질병 상태</td> 
+	<td width="76">질병 상태</td> 
 	<td width="319"><%if(info!=null){%><%=info.getDisease() %><%} %></td> 
 	<td width="0">&nbsp;</td> 
 	</tr> 
@@ -182,8 +180,7 @@
 		<td colspan="4" width="407"></td>
 	</tr> 
 	<tr> 
-	<td width="0">&nbsp;</td> 
-	<td width="399" colspan="2" height="200"> <textarea class="form-control" rows="17" id="content"
+	<td width="399" colspan="4" height="200"> <textarea class="form-control" rows="17" id="content"
     name="content" placeholder="내용을 작성해주세요"></textarea> </td> 
 <!-- 	</tr> 
 	<tr height="1" bgcolor="#7fad39">
@@ -193,8 +190,7 @@
 		<td colspan="4" width="407"></td>
 	</tr>  -->
 	<tr align="center"> 
-		<td width="0">&nbsp;</td> 
-		<td colspan="2" width="399">
+		<td colspan="4" width="399">
 			<button type="submit" id="submit"  value="확인"class="btn_type btn_primary">
 							<span>작성하기</span>
 						</button>	

@@ -29,6 +29,7 @@ create table dogfood(
 )
 drop table dogfood
 select * from dogfood
+select * from dogfood where fdnum="1"
 
 
 create table protein(
