@@ -29,7 +29,8 @@ create table dogfood(
 )
 drop table dogfood
 select * from dogfood
-select * from dogfood where fdnum="1"
+select * from dogfood where fdnum=1
+select * from dogfood where fdcom=(select fdcom from dogfood where fdnum=1)
 
 
 create table protein(
