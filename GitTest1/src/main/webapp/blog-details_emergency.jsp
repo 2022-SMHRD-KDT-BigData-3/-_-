@@ -191,27 +191,6 @@
 					</div>
 				</div>
 				<div class="col-lg-9">
-					<!-- <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>+65 11.188.888</h5>
-                                <span>support 24/7 time</span>
-                            </div>
-                        </div>
-                    </div> -->
 				</div>
 			</div>
 		</div>
@@ -249,9 +228,10 @@
 							병원으로 데려가 다른 문제가 없는지     확인한다.<br> *하임리히 구명법 : 강아지를 뒤에서 안은 상태에서
 							손은 강아지의 갈비뼈 바로 아래 놓고 잡아 당기는 구명법
 						</p>
-						<a href="https://www.youtube.com/watch?v=92EByzD_Dt4&t=368s" style = "float : right">영상시청</a>
+						<iframe align="center" width="740" height="420" src="https://www.youtube.com/embed/92EByzD_Dt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<br>
 						<br>
+						<h3 style = "color : #7fad39"></h3>
 						<h3 style = "color : #7fad39">강아지 CPR</h3>
 						<hr>
 						<p>
@@ -264,9 +244,10 @@
 							경우 강하게 압박하면 내부 장기가 손상될 수 있어 손가락을 사용하여 문질러줘도 좋음. 1분당 100~120회 속도로
 							압박한다. 흉부압박 30회에 인공호흡 두 번씩 번갈아 가며 실시
 						</p>
-						<a href="https://www.youtube.com/watch?v=CzSy0qELgWM&t=2s" style = "float : right">영상시청</a>
+						<iframe width="740" height="420" src="https://www.youtube.com/embed/CzSy0qELgWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<br>
 						<br>
+						<h3 style = "color : #7fad39">h3>
 						<h3 style = "color : #7fad39">상처로 인해 출혈이 있을 때</h3>
 						<hr>
 						<p>1.상처 주위가오염되었다면 식염수나 흐르는 수돗물로 살살 씻어준다. <br>2 핥을 수있는 부위라면 할지 못하도록
