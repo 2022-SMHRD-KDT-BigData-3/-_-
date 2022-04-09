@@ -1,7 +1,8 @@
 (function(){
 	
 		 $(".btnNavi").click(function(){
-		
+			$(this).css("color","#7fad39");
+
 		 $.ajax({
 	         url : 'gridServiceCon'
 	         ,type : 'GET'

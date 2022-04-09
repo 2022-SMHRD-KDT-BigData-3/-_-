@@ -13,7 +13,7 @@
 <meta name="keywords" content="Ogani, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Ogani | Template</title>
+<title>건강하개 지켜줄게</title>
 
 <!-- Google Font -->
 <link
@@ -99,8 +99,8 @@
                 <div class="col-lg-6">
                     <nav class="header__menu" style="width:120%">
                         <ul>
-                            <li class="active"><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li class="active"><a href="./shop-grid.jsp">DogFood</a></li>
                             <li><a href="./product.jsp">Health Products</a></li>
                             <li><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
@@ -150,27 +150,27 @@
 						<div class="sidebar__item sidebar__item__color--option">
 							<h4>Materials</h4>
 							<div class="sidebar__item__color sidebar__item__color--green">
-								<label for="white"> White <input type="radio">
+								<label for="white"> 닭고기 <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--white">
-								<label for="gray"> Gray <input type="radio">
+								<label for="gray"> 양고기 <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--white">
-								<label for="red"> Red <input type="radio">
+								<label for="red"> 소고기 <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--green">
-								<label for="black"> Black <input type="radio">
+								<label for="black"> 돼지고기 <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--green">
-								<label for="blue"> Blue <input type="radio">
+								<label for="blue"> 오리고기 <input type="radio">
 								</label>
 							</div>
 							<div class="sidebar__item__color sidebar__item__color--white">
-								<label for="green"> Green <input type="radio">
+								<label for="green"> 연어 <input type="radio">
 								</label>
 							</div>
 						</div>
@@ -180,7 +180,7 @@
 				<div class="col-lg-9 col-md-7 ">
 					<div class="product__discount">
 						<div class="section-title product__discount__title">
-							<h2 id="comName">All Dog Food</h2>
+							<h2 id="comName">DOGFOOD</h2>
 						</div>
 						<div class="filter__item">
 							<div class="row">
@@ -193,7 +193,7 @@
                                     </select>
                                 </div>
                             </div>  -->
-								<div class="col-lg-4 col-md-4 ">
+								<div class="col-lg-12 col-md-4 ">
 									<div class="filter__found">
 										<h6>
 											<span id="listSize">0</span> Products found
@@ -213,11 +213,11 @@
 						</div>
 					</div>
 					
-					<div class="product__pagination">
+					<!--<div class="product__pagination">
                         <%for(int i = 0;i<(list.size()/15)+1;i++){ %>
                         <a href="shop_grid2.jsp?data=<%=i+1 %>"><%=i+1 %></a>
                         <%}%><a href="#"><i class="fa fa-long-arrow-right"></i></a>
-                     </div>
+                     </div>  -->
                      
 				</div>
 				

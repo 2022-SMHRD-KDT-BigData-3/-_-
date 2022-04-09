@@ -1124,6 +1124,9 @@ ol {
 	color: #1c1c1c;
 	line-height: 39px;
 	display: block;
+	text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 
 .sidebar__item .latest-product__text {
