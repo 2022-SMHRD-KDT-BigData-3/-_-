@@ -94,8 +94,8 @@
                 <div class="col-lg-6">
                     <nav class="header__menu" style="width:120%">
                         <ul>
-                            <li class="active"><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li class="active"><a href="./shop-grid.jsp">DogFood</a></li>
                             <li><a href="./product.jsp">Health Products</a></li>
                             <li><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
@@ -237,11 +237,6 @@
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="<%= list.get(i).getImgUrl()%>">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
                         </div>
                         <div class="product__item__text">
                             <a href="shop-details.jsp?fdnum=<%= list.get(i).getFdNum()%>"><h5><%=list.get(i).getFdName() %></h5></a>
@@ -253,11 +248,6 @@
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
                         <div class="product__item__pic set-bg" data-setbg="<%= list.get(i).getImgUrl()%>">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
                         </div>
                         <div class="product__item__text">
                             <a href="shop-details.jsp?fdnum=<%= list.get(i).getFdNum()%>"><h5><%=list.get(i).getFdName() %></h5></a>

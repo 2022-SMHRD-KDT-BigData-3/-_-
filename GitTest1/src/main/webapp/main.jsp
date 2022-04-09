@@ -201,7 +201,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">Boxer Puppy Dry Dog Food</a>
+								<a href="shop-details.jsp?fdnum=218">Boxer Puppy Dry Dog Food</a>
 							</h6>
 						</div>
 					</div>
@@ -214,7 +214,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">Golden Retriever Puppy Dry Dog Food</a>
+								<a href="shop-details.jsp?fdnum=221">Golden Retriever Puppy Dry Dog Food</a>
 							</h6>
 						</div>
 					</div>
@@ -227,7 +227,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">Cavalier King Charles Puppy Dry Dog Food</a>
+								<a href="shop-details.jsp?fdnum=280">Cavalier King Charles Puppy Dry Dog Food</a>
 							</h6>
 						</div>
 					</div>
@@ -240,7 +240,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">Large Puppy Dry Dog Food</a>
+								<a href="shop-details.jsp?fdnum=281">Large Puppy Dry Dog Food</a>
 							</h6>
 						</div>
 					</div>
@@ -253,7 +253,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">Giant Puppy Dry Dog Food</a>
+								<a href="shop-details.jsp?fdnum=282">Giant Puppy Dry Dog Food</a>
 							</h6>
 						</div>
 					</div>
@@ -266,7 +266,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">Bulldog Puppy Dry Dog Food</a>
+								<a href="shop-details.jsp?fdnum=283">Bulldog Puppy Dry Dog Food</a>
 							</h6>
 						</div>
 					</div>
@@ -279,7 +279,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">Pug Puppy Dry Dog Food</a>
+								<a href="shop-details.jsp?fdnum=284">Pug Puppy Dry Dog Food</a>
 							</h6>
 						</div>
 					</div>
@@ -292,7 +292,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">CHICKEN & POMEGRANATE PUPPY MINI</a>
+								<a href="shop-details.jsp?fdnum=92">CHICKEN & POMEGRANATE PUPPY MINI</a>
 							</h6>
 						</div>
 					</div>
@@ -305,7 +305,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">LAMB & BLUEBERRY PUPPY MINI</a>
+								<a href="shop-details.jsp?fdnum=93">LAMB & BLUEBERRY PUPPY MINI</a>
 							</h6>
 						</div>
 					</div>
@@ -318,7 +318,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">CHICKEN & POMEGRANATE PUPPY MEDIUM & MAXI</a>
+								<a href="shop-details.jsp?fdnum=94">CHICKEN & POMEGRANATE PUPPY MEDIUM & MAXI</a>
 							</h6>
 						</div>
 					</div>
@@ -331,7 +331,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">LAMB & BLUEBERRY PUPPY MEDIUM & MAXI</a>
+								<a href="shop-details.jsp?fdnum=95">LAMB & BLUEBERRY PUPPY MEDIUM & MAXI</a>
 							</h6>
 						</div>
 					</div>
@@ -344,7 +344,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">CHICKEN & POMEGRANATE ADULT MINI</a>
+								<a href="shop-details.jsp?fdnum=96">CHICKEN & POMEGRANATE ADULT MINI</a>
 							</h6>
 						</div>
 					</div>
@@ -357,7 +357,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">CHICKEN & POMEGRANATE ADULT MEDIUM & MAXI</a>
+								<a href="shop-details.jsp?fdnum=97">CHICKEN & POMEGRANATE ADULT MEDIUM & MAXI</a>
 							</h6>
 						</div>
 					</div>
@@ -370,7 +370,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">CHICKEN & POMEGRANATE LIGHT MINI</a>
+								<a href="shop-details.jsp?fdnum=98">CHICKEN & POMEGRANATE LIGHT MINI</a>
 							</h6>
 						</div>
 					</div>
@@ -383,7 +383,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">아지피아</a>
+								<a href="shop-details.jsp?fdnum=54">아지피아</a>
 							</h6>
 						</div>
 					</div>
@@ -396,7 +396,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">도그피아</a>
+								<a href="shop-details.jsp?fdnum=55">도그피아</a>
 							</h6>
 						</div>
 					</div>
@@ -409,7 +409,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">램스피아</a>
+								<a href="shop-details.jsp?fdnum=56">램스피아</a>
 							</h6>
 						</div>
 					</div>
@@ -422,7 +422,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">아지피아 스페셜</a>
+								<a href="shop-details.jsp?fdnum=57">아지피아 스페셜</a>
 							</h6>
 						</div>
 					</div>
@@ -435,7 +435,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">아지피아 플러스</a>
+								<a href="shop-details.jsp?fdnum=58">아지피아 플러스</a>
 							</h6>
 						</div>
 					</div>
@@ -448,7 +448,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">유토피아</a>
+								<a href="shop-details.jsp?fdnum=59">유토피아</a>
 							</h6>
 						</div>
 					</div>
@@ -461,7 +461,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">특수견 빅플러스</a>
+								<a href="shop-details.jsp?fdnum=60">특수견 빅플러스</a>
 							</h6>
 						</div>
 					</div>
@@ -474,7 +474,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">베네M 비프&치킨</a>
+								<a href="shop-details.jsp?fdnum=329">베네M 비프&치킨</a>
 							</h6>
 						</div>
 					</div>
@@ -487,7 +487,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">센시티브케어 베지</a>
+								<a href="shop-details.jsp?fdnum=330">센시티브케어 베지</a>
 							</h6>
 						</div>
 					</div>
@@ -500,7 +500,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">소프트델리6 사슴&연어 800g</a>
+								<a href="shop-details.jsp?fdnum=331">소프트델리6 사슴&연어 800g</a>
 							</h6>
 						</div>
 					</div>
@@ -513,7 +513,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">센시티브케어 밀웜</a>
+								<a href="shop-details.jsp?fdnum=332">센시티브케어 밀웜</a>
 							</h6>
 						</div>
 					</div>
@@ -526,7 +526,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">에코 1 램</a>
+								<a href="shop-details.jsp?fdnum=333">에코 1 램</a>
 							</h6>
 						</div>
 					</div>
@@ -539,7 +539,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">에코 2 덕</a>
+								<a href="shop-details.jsp?fdnum=334">에코 2 덕</a>
 							</h6>
 						</div>
 					</div>
@@ -552,7 +552,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">에코 3a 센시케어(램)</a>
+								<a href="shop-details.jsp?fdnum=335">에코 3a 센시케어(램)</a>
 							</h6>
 						</div>
 					</div>
@@ -565,7 +565,7 @@
 						</div>
 						<div class="featured__item__text">
 							<h6>
-								<a href="#">더보기</a>
+								<a href="shop_grid2.jsp">더보기</a>
 							</h6>
 						</div>
 					</div>
