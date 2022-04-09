@@ -25,8 +25,10 @@ create table dogfood(
 	material varchar2(2000),
 	imgUrl varchar2(2000),
 	ingredient varchar2(2000),
+	url varchar2(2000),
 	constraint food_num_pk primary key(fdNum)
 )
+
 drop table dogfood
 select * from dogfood
 select * from dogfood where fdnum=1
