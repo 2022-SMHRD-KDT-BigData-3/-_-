@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
@@ -130,7 +131,7 @@
 							<li><a href="#">Iskhan</a></li>
 							<li><a href="#">NowFresh</a></li>
 							
-							<a href="shop-grid.jsp">More...</a>
+							<a href="shop_grid2.jsp">More...</a>
 							<!--<li><a href="#">Orijen</a></li>
                             <li><a href="#">ProBest</a></li>
                             <li><a href="#">RoyalCanin</a></li>
@@ -854,11 +855,9 @@
 								alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="product.jsp">관절/구강 관리 용품</a>
 							</h5>
-							<p>Sed quia non numquam modi tempora indunt ut labore et
-								dolore magnam aliquam quaerat</p>
 						</div>
 					</div>
 				</div>
@@ -869,11 +868,9 @@
 								alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="product1.jsp">귀 관리 용품</a>
 							</h5>
-							<p>Sed quia non numquam modi tempora indunt ut labore et
-								dolore magnam aliquam quaerat</p>
 						</div>
 					</div>
 				</div>
@@ -884,11 +881,9 @@
 								alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="product2.jsp">의약품</a>
 							</h5>
-							<p>Sed quia non numquam modi tempora indunt ut labore et
-								dolore magnam aliquam quaerat</p>
 						</div>
 					</div>
 				</div>
@@ -914,7 +909,7 @@
 							<a href="blog1.jsp"><img src="img/blog/blog-2.jpg" alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="blog1.jsp">주의가 필요한 식재료</a>
 							</h5>
 							<!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
@@ -929,7 +924,7 @@
 								alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="blog2.jsp">예방접종</a>
 							</h5>
 							<!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
@@ -944,7 +939,7 @@
 								src="img/blog/vaccination-8.jpg" alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="blog-details_emergency.jsp">응급상황 대처법</a>
 							</h5>
 							<!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
@@ -960,7 +955,7 @@
 								src="img/blog/vaccination-7.jpg" alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="blog-details_disease.jsp">흔한 질병</a>
 							</h5>
 							<!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>
@@ -975,7 +970,7 @@
 								src="img/blog/vaccination-9.jpg" alt=""></a>
 						</div>
 						<div class="blog__item__text">
-							<h5>
+							<h5 style = "text-align : center">
 								<a href="blog-details_care.jsp">피부병 예방 수칙</a>
 							</h5>
 							<!-- <p>Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat </p>

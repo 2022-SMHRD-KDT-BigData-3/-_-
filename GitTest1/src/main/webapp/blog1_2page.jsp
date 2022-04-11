@@ -10,7 +10,7 @@
 <meta name="keywords" content="Ogani, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Ogani | Template</title>
+<title>건강하개 지켜줄게</title>
 
 <!-- Google Font -->
 <link
@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
@@ -172,6 +173,15 @@
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2> 강아지 건강정보 </h2>
+                    </div>
         </div>
     </header>
     <!-- Header Section End -->
@@ -321,7 +331,7 @@
 						</div>						
 						<div class="col-lg-12">
 							<div class="product__pagination blog__pagination">
-								<a href="blog1.html">1</a> <a href="blog1_2page.html">2</a> <a href="blog1_3page.html">3</a> 
+								<a href="blog1.jsp">1</a> <a href="blog1_2page.jsp">2</a> <a href="blog1_3page.jsp">3</a> 
 							</div> 
 						</div>
 					</div>
