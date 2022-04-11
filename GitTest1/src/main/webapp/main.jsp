@@ -184,7 +184,7 @@
 							<li data-filter=".Famina">Famina</li>
 							<li data-filter=".DogLine">DogLine</li>
 							<li data-filter=".NaturalCore">NaturalCore</li>
-							<li><a href="shop-grid."> More... </a></li>
+							<li><a href="shop_grid2.jsp"> More... </a></li>
 						</ul>
 
 					</div>
