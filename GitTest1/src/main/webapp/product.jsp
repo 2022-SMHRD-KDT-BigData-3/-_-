@@ -324,7 +324,7 @@
                                     <h5><b>강아지 미끄럼 방지 매트</b></h5>
                                     <p>가정에서 반려견을 키우는 사람이 많아지면서 장판이나 마루바닥의 미끄러움으로인해 강아지들이 넘어지기 쉽다. 
 강아지가 슬개골탈구가 되지 않도록 특히 주의를 기울여야 하기 때문에 미끄러움 없이 안전하게 생활할 수 있도록 필요하다. </p>
-                                    <a href="https://www.coupang.com/vp/products/1747549246?itemId=2976042352&vendorItemId=70964430227&q=%EC%9D%B4%EB%8B%88%EB%9D%A0%EC%9B%80+%EC%97%98%EB%A6%AC%EC%97%87+%ED%97%A4%EB%A7%81%EB%B3%B8+%EC%9E%90%EA%B0%80%EB%93%9C+%EC%82%AC%EC%9D%B4%EC%9E%98%EB%A3%A9+%EB%9F%AC%EA%B7%B8+%EB%84%A4%EC%9D%B4%EB%B9%84&itemsCount=6&searchId=74409c3d1bb84dabbedf43e99ca060e4&rank=1&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://www.coupang.com/vp/products/1747549246?itemId=2976042352&vendorItemId=70964430227&q=%EC%9D%B4%EB%8B%88%EB%9D%A0%EC%9B%80+%EC%97%98%EB%A6%AC%EC%97%87+%ED%97%A4%EB%A7%81%EB%B3%B8+%EC%9E%90%EA%B0%80%EB%93%9C+%EC%82%AC%EC%9D%B4%EC%9E%98%EB%A3%A9+%EB%9F%AC%EA%B7%B8+%EB%84%A4%EC%9D%B4%EB%B9%84&itemsCount=6&searchId=74409c3d1bb84dabbedf43e99ca060e4&rank=1&isAddedCart=" class="blog__btn">구매처 바로가기 <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -340,7 +340,7 @@
                                     <h5><b>강아지 발톱깎이</b></h5>
                                     <p>원래 야생에서 생활하던 개는 자라는 발톱이 거친 흙이나 바닥에서 마모되어 따로 손질이 필요하지 않았다.
 하지만 실내에서 생활하는 현대의 반려견들은 발톱을 잘라주지 않으면 끝없이 자라 걷는 것을 불편하게 한다.</p>
-                                    <a href="https://www.coupang.com/vp/products/1633638330?itemId=2786445678&vendorItemId=70776175165&q=%EB%94%A9%EB%8F%99%ED%8E%AB+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EB%B0%B0%EC%83%89+%EB%B0%9C%ED%86%B1%EA%B9%8E%EC%9D%B4&itemsCount=36&searchId=1786703069724d6e99880dcbcdc5adf3&rank=2&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://www.coupang.com/vp/products/1633638330?itemId=2786445678&vendorItemId=70776175165&q=%EB%94%A9%EB%8F%99%ED%8E%AB+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EB%B0%B0%EC%83%89+%EB%B0%9C%ED%86%B1%EA%B9%8E%EC%9D%B4&itemsCount=36&searchId=1786703069724d6e99880dcbcdc5adf3&rank=2&isAddedCart=" class="blog__btn">구매처 바로가기 <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +356,7 @@
                                     <h5><b>강아지 치약, 칫솔</b></h5>
                                     <p>강아지 양치를 시켜주지않으면 치석이 생기게 되고 잇몸질환이 된다.
 심한 경우에 이빨이 흔들리며 전문적인 치료가 아니고서는 낫기 어려워져 그 전에 관리가 필요하다. </p>
-                                    <a href="https://www.coupang.com/vp/products/286647089?itemId=908758124&vendorItemId=5274978252&pickType=COU_PICK&q=%EB%83%A5%ED%92%88%EB%A9%8D%ED%92%88+%EC%B9%98%EC%B9%B4%EC%B9%98%EC%95%BD+%EB%8B%AD%EA%B3%A0%EA%B8%B0%EB%A7%9B&itemsCount=36&searchId=03c029898bbc4407958e67555b1d8aec&rank=1&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://www.coupang.com/vp/products/286647089?itemId=908758124&vendorItemId=5274978252&pickType=COU_PICK&q=%EB%83%A5%ED%92%88%EB%A9%8D%ED%92%88+%EC%B9%98%EC%B9%B4%EC%B9%98%EC%95%BD+%EB%8B%AD%EA%B3%A0%EA%B8%B0%EB%A7%9B&itemsCount=36&searchId=03c029898bbc4407958e67555b1d8aec&rank=1&isAddedCart=" class="blog__btn">구매처 바로가기 <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>

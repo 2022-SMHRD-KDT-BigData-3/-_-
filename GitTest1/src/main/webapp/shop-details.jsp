@@ -1,3 +1,8 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.DogFoodDTO"%>
+<%@page import="Model.DiaryDAO_sy"%>
+<%@page import="Controller.ShopdetailServiceCon"%>
+<%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +14,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Ogani | Template</title>
+    <title> 건강하개 지켜줄게</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -26,80 +31,38 @@
 </head>
 
 <body>
+	<%
+	MemberDTO info = (MemberDTO) session.getAttribute("info");
+	if (info != null) {
+		String id = info.getId();
+	}
+	int fdnum = Integer.parseInt(request.getParameter("fdnum"));
+	
+	System.out.println("사료번호:"+fdnum);
+	
+	DiaryDAO_sy dao = new DiaryDAO_sy();
+	DogFoodDTO dto = new DogFoodDTO();
+	dto = dao.shopDetail(fdnum);
+	
+	ArrayList<DogFoodDTO> list = new ArrayList<>();
+	list = dao.shopDetailList(fdnum);
+%>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
 
-    <!-- Humberger Begin -->
-    <div class="humberger__menu__overlay"></div>
-    <div class="humberger__menu__wrapper">
-        <div class="humberger__menu__logo">
-            <a href="#"><img src="img/logo.png" alt=""></a>
-        </div>
-        <div class="humberger__menu__cart">
-            <ul>
-                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
-            </ul>
-            <div class="header__cart__price">item: <span>$150.00</span></div>
-        </div>
-        <div class="humberger__menu__widget">
-            <div class="header__top__right__language">
-                <img src="img/language.png" alt="">
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                    <li><a href="#">Spanis</a></li>
-                    <li><a href="#">English</a></li>
-                </ul>
-            </div>
-            <div class="header__top__right__auth">
-                <a href="Login.html"><i class="fa fa-user"></i> Login 수정 -태완- </a>
-            </div>
-        </div>
-        <nav class="humberger__menu__nav mobile-menu">
-            <ul>
-                <li class="active"><a href="./main.jsp">Home</a></li>
-                <li><a href="./shop-grid.jsp">DOG FOOD</a></li>
-               <!-- <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>-->
-                </li>
-                <li><a href="./product.html"> HEALTH PRODUCTS </a></li>
-                <li><a href="./blog.html"> Health Q&A </a></li>
-            </ul>
-        </nav>
-       <!--  <div id="mobile-menu-wrap"></div>
-        <div class="header__top__right__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p"></i></a>
-        </div>
-        <div class="humberger__menu__contact">
-            <ul>
-                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-                <li>Free Shipping for all Order of $99</li>
-            </ul>
-        </div> -->
-    </div>
-    <!-- Humberger End -->
-
     <!-- Header Section Begin -->
-    <header class="header">
+   <header class="header">
         <div class="header__top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> 입력한 이메일로 수정 -태완- </li>
-                                <li> 쓸말 없으면 삭제 -태완- </li>
+                            	<%if (info!=null){ %>
+                                <li><i class="fa fa-envelope"></i> <%=info.getId()+"님, 안녕하세요" %></li>
+                                <%} %>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +75,9 @@
                                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="Login.html"><i class="fa fa-user"></i> Login 수정? -태완- </a>
+                                <% if(info==null){ %>
+                                <a href="Login.jsp"><i class="fa fa-user"></i> Login</a>
+                                <%    } %>
                             </div>
                         </div>
                     </div>
@@ -123,24 +88,17 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./main.html"><img src="img/logo5.png" alt=""></a>
+                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <nav class="header__menu">
+                    <nav class="header__menu" style="width:120%">
                         <ul>
-                           <li class="active"><a href="./main.html">Home</a></li>
-                            <li><a href="./shop-grid.html">DOG FOOD</a></li>
-               <!-- <li><a href="#">Pages</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
-                    </ul>-->
-                </li>
-                <li><a href="./product.html"> HEALTH PRODUCTS </a></li>
-                <li><a href="./blog.html"> Health Q&A </a></li>
+                            <li><a href="./main.jsp">Home</a></li>
+                            <li class="active"><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./product.jsp">Health Products</a></li>
+                            <li><a href="./blog1.jsp">Health Q&A</a></li>
+                            <li><a href="./diary.jsp">Health Diary</a></li>  
                         </ul>
                     </nav>
                 </div>
@@ -156,48 +114,31 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-   <!-- 
-  
-  <section class="hero hero-normal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span> 사료 회사 </span>
-                        </div>
-                        <ul>
-                            <li><a href="#"> absolute </a></li>
-                            <li><a href="#"> anf </a></li>
-                            <li><a href="#"> Belifor </a></li>
-                            <li><a href="#"> dogline </a></li>
-                            <li><a href="#"> FaminaAncestralGrain </a></li>
-                            <li><a href="#"> FaminaOcean </a></li>
-                            <li><a href="#"> FaminaPrime </a></li>
-                            <li><a href="#"> FaminaQuinoa </a></li>
-                            <li><a href="#"> FaminaVetLife </a></li>
-                            <li><a href="#"> homeanddog </a></li>
-                            <li><a href="#"> iskhan </a></li>
-                            <li><a href="#"> nowfresh </a></li>
-                            <li><a href="#"> orjien </a></li>
-                            <li><a href="#"> probest </a></li>
-                            <li><a href="#"> royalAdult </a></li>
-                            <li><a href="#"> royalMature </a></li>
-                            <li><a href="#"> royalPuppy </a></li>
-                            <li><a href="#"> wealtz </a></li>
-                            <li><a href="#"> 내츄럴밸런스 </a></li>
-                            <li><a href="#"> 네츄럴코어 </a></li>
-                            <li><a href="#"> 아카나 </a></li>
-                            <li><a href="#"> 이글벳 </a></li>
-                            <li><a href="#"> 지위펫 </a></li>
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                   <!--  <div class="hero__search">
+	<section class="hero hero-normal">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<!--<div class="hero__categories">
+						<div class="hero__categories__all">
+							<i class="fa fa-bars"></i> <span>All departments</span>
+						</div>
+						<ul>
+							<li><a href="#">Fresh Meat</a></li>
+							<li><a href="#">Vegetables</a></li>
+							<li><a href="#">Fruit & Nut Gifts</a></li>
+							<li><a href="#">Fresh Berries</a></li>
+							<li><a href="#">Ocean Foods</a></li>
+							<li><a href="#">Butter & Eggs</a></li>
+							<li><a href="#">Fastfood</a></li>
+							<li><a href="#">Fresh Onion</a></li>
+							<li><a href="#">Papayaya & Crisps</a></li>
+							<li><a href="#">Oatmeal</a></li>
+							<li><a href="#">Fresh Bananas</a></li>
+						</ul>
+					</div>  -->
+				</div>
+				<div class="col-lg-9">
+					<!-- <div class="hero__search">
                         <div class="hero__search__form">
                             <form action="#">
                                 <div class="hero__search__categories">
@@ -218,25 +159,20 @@
                             </div>
                         </div>
                     </div> -->
-                </div>
-            </div>
-        </div>
-    </section>  
- 
-
-    <!-- Hero Section End -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero Section End -->
 
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+    <section class="breadcrumb-section set-bg" data-setbg="img/blog/details/details-hero.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="breadcrumb__text">
-                        <h2> 품종별 사료 회사 뜨게 수정 -태완-</h2>
+                        <h2><%= dto.getFdCom() %></h2>
                         <div class="breadcrumb__option">
-                            <a href="./main.html"> 회사명 수정-태완- </a>
-                            <a href="./main.html"> 제품명 수정-태완- </a>
-                            <span> 이름 수정-태완- </span>
                         </div>
                     </div>
                 </div>
@@ -253,7 +189,7 @@
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
                             <img class="product__details__pic__item--large"
-                                src="img/product/details/product-details-1.jpg" alt="">
+                                src="<%=dto.getImgUrl() %>" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
                      <!--        <img data-imgbigurl="img/product/details/product-details-2.jpg"
@@ -269,86 +205,15 @@
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                        <h3> 사료 정보 </h3>
-                   <!--      <div class="product__details__rating"> 
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i> -->
-                            <span>(리뷰 점수)삭제 예정 -태완-</span>
-                        </div>
-                        <div class="product__details__price">(가격)삭제 예정 -태완-</div>
-                        <p>(정보)삭제 예정 -태완-</p>
                         
-                        <!-- 
-                        <div class="product__details__quantity">
-                            <div class="quantity">
-                                <div class="pro-qty">
-                                    <input type="text" value="1">
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="primary-btn">ADD TO CARD</a>
-                        <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                         -->
-                        <ul>
-                            <li><b>material(성분)</b> <span> 성분적기 </span></li>
-                            <li><b>ingredients(원료)</b> <span> 원료적기 <samp>삭제 예정 -태완</samp></span></li>
-                            <li><b>삭제 예정 -태완</b> <span>삭제 예정 -태완</span></li>
-                            <li><b>삭제 예정 -태완</b>
-                                <div class="share">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                                </div>
-                            </li>
-                        </ul>
+                        
+                           	<h3> <%=dto.getFdName() %></h3><hr>
+							<b>material(성분)</b><br><br> <span> <%=dto.getMaterial() %> </span><hr>
+                            <b>ingredients(원료)</b><br><br> <span> <%= dto.getIngredient() %> </span><span></span>
+                       
                     </div>
                 </div>
                 
-               
-                <div class="col-lg-12">
-                    <div class="product__details__tab">
-                        <ul class="nav nav-tabs" role="tablist">
-                        
-                            <li class="nav-item">
-                                <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
-                                    aria-selected="true">삭제 예정 -태완</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
-                                    aria-selected="false">삭제 예정2 -태완</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
-                                    aria-selected="false">삭제 예정3 -태완 <span>(1)</span></a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>삭제 예정 -태완</h6>
-                                    <p>삭제 예정 -태완</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-2" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>삭제 예정2 -태완</h6>
-                                    <p>삭제 예정2 -태완</p>
-                                    <p>삭제 예정2 -태완</p>
-                                </div>
-                            </div>
-                            <div class="tab-pane" id="tabs-3" role="tabpanel">
-                                <div class="product__details__tab__desc">
-                                    <h6>삭제 예정3 -태완</h6>
-                                    <p>삭제 예정3 -태완</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -360,71 +225,38 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title related__product__title">
-                        <h2> 회사 이름 넣기 </h2>
+                        <h2> Others </h2>
                     </div>
                 </div>
             </div>
             <div class="row">
+            <%
+            if(list.size()>=4){
+            
+            for(int i = 0;i<4;i++){ %>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
+                        <div class="product__item__pic set-bg" data-setbg="<%= list.get(i).getImgUrl()%>">
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">해당 회사 사료 사진</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
+                            <a href="shop-details.jsp?fdnum=<%= list.get(i).getFdNum()%>"><h5><%=list.get(i).getFdName() %></h5></a>
                         </div>
                     </div>
                 </div>
+                <% }}else{
+            for(int i = 0;i<3;i++){ %>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-2.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
+                        <div class="product__item__pic set-bg" data-setbg="<%= list.get(i).getImgUrl()%>">
                         </div>
                         <div class="product__item__text">
-                            <h6><a href="#">해당 회사 사료 사진</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
+                            <a href="shop-details.jsp?fdnum=<%= list.get(i).getFdNum()%>"><h5><%=list.get(i).getFdName() %></h5></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-3.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">해당 회사 사료 사진y</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-7.jpg">
-                            <ul class="product__item__pic__hover">
-                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">해당회사 사료 사진</a></h6>
-                            <h5>랜덤으로 돌리기</h5>
-                        </div>
-                    </div>
-                </div>
+                </div>                
+                
+                
+                <%}}%>
             </div>
         </div>
     </section>

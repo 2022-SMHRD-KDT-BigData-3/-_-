@@ -1124,6 +1124,9 @@ ol {
 	color: #1c1c1c;
 	line-height: 39px;
 	display: block;
+	text-decoration: none;
+    background-color: transparent;
+    border: none;
 }
 
 .sidebar__item .latest-product__text {
@@ -2492,7 +2495,7 @@ ol {
 -----------------------*/
 
 .blog-details-hero {
-	height: 190px;
+	height: 140px;
 	display: flex;
 	align-items: center;
 }
@@ -3492,4 +3495,7 @@ ol {
 	.blog__details__hero__text h2 {
 		font-size: 24px;
 	}
+
+
+	
 }
