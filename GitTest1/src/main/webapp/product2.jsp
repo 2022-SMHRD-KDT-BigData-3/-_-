@@ -10,7 +10,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>건강하개 지켜줄게</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
@@ -140,27 +141,24 @@
 			</div>
 		</div>
 		<div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu" style="width:120%">
-                        <ul>
-                            <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <li class="active"><a href="./product.jsp">Health Products</a></li>
-                            <li><a href="./blog1.jsp">Health Q&A</a></li>
-                            <li><a href="./diary.jsp">Health Diary</a></li>  
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                <!-- 장바구니, 찜목록 있던 자리 -->
-                </div>
-            </div>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="header__logo">
+						<a href="./main.jsp"><img src="img/logo5.png"> </a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<nav class="header__menu" style="width: 200%">
+						<ul>
+							<li><a href="./main.jsp">Home</a></li>
+							<li><a href="./shop_grid2.jsp">DogFood</a></li>
+							<li class="active"><a href="./product.jsp">Health Products</a></li>
+							<li><a href="./blog1.jsp">Health Q&A</a></li>
+							<li><a href="./diary.jsp">Health Diary</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
@@ -326,7 +324,7 @@
                                     </ul>
                                     <h5><b>심장 사상충약</b></h5>
                                     <p>심장사상충은 계절을 가리지 않고 출몰하는 모기에 의해 전염되어 호흡곤란, 사망에 이를 수 있는 큰 질병이기 때문에 예방이 필요하다. </p>
-                                    <a href="https://heartgard.com/" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://heartgard.com/" class="blog__btn">구매처 바로가기<span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -341,7 +339,7 @@
                                     </ul>
                                     <h5><b>외부 기생충약</b></h5>
                                     <p>외부 기생충들이 질병을 옮기거나 심각한 문제를 일으키기때문에 미리 구충제를 이용한 예방이 필요하다. </p>
-                                    <a href="https://www.vetsupply.com.au/advocate-for-dogs-for-extra-large-dogs-over-25-kg-blue-pack.aspx" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://www.vetsupply.com.au/advocate-for-dogs-for-extra-large-dogs-over-25-kg-blue-pack.aspx" class="blog__btn">구매처 바로가기<span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +354,7 @@
                                     </ul>
                                     <h5><b>종합 기생충약</b></h5>
                                     <p>현재, 심장사상충과 외부기생충으로 나누지 않고, 종합적으로 사용할 수 있는 의약품이기 때문에 필요하다. </p>
-                                    <a href="https://petpara.co.kr/nexgardspectra/" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://petpara.co.kr/nexgardspectra/" class="blog__btn">구매처 바로가기<span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -371,7 +369,7 @@
                                     </ul>
                                     <h5><b>지혈제</b></h5>
                                     <p>강아지가 출혈이 발생하는 경우가 있는데, 혈관은 지혈하기가 쉽지 않기 때문에 구비해둬야한다. </p>
-                                    <a href="https://www.coupang.com/vp/products/1941759?itemId=8636128&vendorItemId=3095409943&q=%ED%80%B5%EC%8A%A4%ED%83%91+%EC%A7%80%ED%98%88%EC%A0%9C&itemsCount=36&searchId=99137d71859d46e5aa00769d2709de1a&rank=1&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://www.coupang.com/vp/products/1941759?itemId=8636128&vendorItemId=3095409943&q=%ED%80%B5%EC%8A%A4%ED%83%91+%EC%A7%80%ED%98%88%EC%A0%9C&itemsCount=36&searchId=99137d71859d46e5aa00769d2709de1a&rank=1&isAddedCart=" class="blog__btn">구매처 바로가기<span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -386,7 +384,7 @@
                                     </ul>
                                     <h5><b>강아지 연고</b></h5>
                                     <p>사람에게 '마데카솔', '후시딘'과 같이 기본적인 연고 하나는 구비해둬야 할 것이다. </p>
-                                    <a href="https://hkmedi.co.kr/index.php?mid=store_animal&category=3854&document_srl=15497" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://hkmedi.co.kr/index.php?mid=store_animal&category=3854&document_srl=15497" class="blog__btn">구매처 바로가기<span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>

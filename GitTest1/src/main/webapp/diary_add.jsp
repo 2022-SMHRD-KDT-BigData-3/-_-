@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     
     <style>
     #submit{
@@ -86,30 +87,37 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu" style="width:120%">
-                        <ul>
-                            <li class="active"><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <li><a href="./product.jsp">Health Products</a></li>
-                            <li><a href="./blog1.jsp">Health Q&A</a></li>
-                            <li><a href="./diary.jsp">Health Diary</a></li>  
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                <!-- 장바구니, 찜목록 있던 자리 -->
-                </div>
-            </div>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="header__logo">
+						<a href="./main.jsp"><img src="img/logo5.png"> </a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<nav class="header__menu" style="width: 200%">
+						<ul>
+							<li><a href="./main.jsp">Home</a></li>
+							<li><a href="./shop_grid2.jsp">DogFood</a></li>
+							<li><a href="./product.jsp">Health Products</a></li>
+							<li><a href="./blog1.jsp">Health Q&A</a></li>
+							<li class="active"><a href="./diary.jsp">Health Diary</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2>건강일지 작성 </h2>
+                    </div>
         </div>
     </header>
 
@@ -121,11 +129,7 @@
     <section class="related-product">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title related__product__title">
-                        <h2> 건강일지 작성 </h2>
-                    </div>
-                </div>
+                
             </div>
             <div class="row">
             </div>
@@ -139,7 +143,7 @@
 	</tr>
 	 </table> 
 	 <form method="post" action="DiaryAddServiceCon">
-	<table width="800" align="center">
+	<table width="800" align="center" >
 	 
 		<tr> 
 	<td width="1200" colspan="4"> <div width="100%" align="center"> <input type="text" class="form-control" id="title"
@@ -152,9 +156,9 @@
 	
 	<tr> 
 		<td width="17%" rowspan="5" height="17%">강아지 사진</td> 
-		<td width="30%">강아지 이름</td> 
+		<td width="10.9%">강아지 이름</td> 
 		<td width="70%">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getId() %><%} %></td> 
-		<td width="0">&nbsp;</td> 
+		
 	</tr> 
 	<tr height="1" bgcolor="#7fad39">
 		<td colspan="4" width="407"></td>
@@ -162,8 +166,8 @@
 	
 	<tr> 
 	<td width="76">건강 상태</td> 
-	<td width="319"><%if(info!=null){%><%=info.getHealth() %><%} %></td> 
-	<td width="0">&nbsp;</td> 
+	<td width="70%"><%if(info!=null){%><%=info.getHealth() %><%} %></td> 
+	
 	</tr> 
 	
 	<tr height="0.5" bgcolor="#7fad39">
@@ -172,8 +176,8 @@
 	
 	<tr> 
 	<td width="76">질병 상태</td> 
-	<td width="319"><%if(info!=null){%><%=info.getDisease() %><%} %></td> 
-	<td width="0">&nbsp;</td> 
+	<td width="70%"><%if(info!=null){%><%=info.getDisease() %><%} %></td> 
+	
 	</tr> 
 	
 	<tr height="1" bgcolor="#7fad39">
@@ -194,7 +198,7 @@
 			<button type="submit" id="submit"  value="확인"class="btn_type btn_primary">
 							<span>작성하기</span>
 						</button>	
-		<td width="0">&nbsp;</td> 
+
 	</tr> 
 </table> 
 <!-- 테이블 태그 시작-->

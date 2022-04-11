@@ -416,11 +416,12 @@ ol {
 .header__logo img {
 	display: inline-block;
 	width : 400px;
+	margin-left: 5.5px;
 	/*padding-left: 80px;padding-right: 80px;  */
 }
 
 .header__menu {
-	padding: 24px 0;
+	padding: 20px 0;
 
 }
 
@@ -496,6 +497,7 @@ ol {
 	transition: all, 0.3s;
 	padding: 5px 0;
 	display: block;
+	font-size: 19px;
 }
 
 .header__cart {

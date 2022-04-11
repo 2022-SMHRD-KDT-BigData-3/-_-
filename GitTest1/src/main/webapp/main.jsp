@@ -89,7 +89,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<nav class="header__menu" style="width: 120%">
+					<nav class="header__menu" style="width: 200%">
 						<ul>
 							<li class="active"><a href="./main.jsp">Home</a></li>
 							<li><a href="./shop_grid2.jsp">DogFood</a></li>
@@ -98,9 +98,6 @@
 							<li><a href="./diary.jsp">Health Diary</a></li>
 						</ul>
 					</nav>
-				</div>
-				<div class="col-lg-3">
-					<!-- 장바구니, 찜목록 있던 자리 -->
 				</div>
 			</div>
 			<div class="humberger__open">

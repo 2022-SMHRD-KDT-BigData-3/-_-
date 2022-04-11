@@ -70,6 +70,7 @@ text-align:center;
 text-align:right;
 
 }
+
 </style>
 
 </head>
@@ -117,42 +118,48 @@ text-align:right;
 			</div>
 		</div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu" style="width:120%">
-                        <ul>
-                            <li class="active"><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
-                            <li><a href="./product.jsp">Health Products</a></li>
-                            <li><a href="./blog1.jsp">Health Q&A</a></li>
-                            <li><a href="./diary.jsp">Health Diary</a></li>  
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                <!-- 장바구니, 찜목록 있던 자리 -->
-                </div>
-            </div>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="header__logo">
+						<a href="./main.jsp"><img src="img/logo5.png"> </a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<nav class="header__menu" style="width: 200%">
+						<ul>
+							<li><a href="./main.jsp">Home</a></li>
+							<li><a href="./shop_grid2.jsp">DogFood</a></li>
+							<li><a href="./product.jsp">Health Products</a></li>
+							<li><a href="./blog1.jsp">Health Q&A</a></li>
+							<li class="active"><a href="./diary.jsp">Health Diary</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2>건강일지 목록 </h2>
+                    </div>
+        </div>
 	</header>
-
 	<!-- Blog Section Begin -->
 	<section class="blog spad">
 		<div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <!--<div class="col-lg-12">
                     <div class="section-title related__product__title">
                         <h2 style="margin-top: 25px"> 건강일지 목록 </h2>
                     </div>
-                </div>
+                </div>  -->
             </div>
             <div class="row">
             </div>
@@ -185,9 +192,10 @@ text-align:right;
 				
 				<% for (int i = 0; i < list.size(); i++) { %>
 					<tr>
-					<td><%= i+1 %> </td>
-					<td><a href = "./diary_view.jsp?number=<%=list.get(i).getNum() %>"><%= list.get(i).getTitile() %></a></td>
+					<td style = "text-align: center"><%= i+1 %> </td>
+					<td><a href = "./diary_view.jsp?number=<%=list.get(i).getNum()%>" style = "color: black;"><%= list.get(i).getTitile() %></a></td>
 					<td><%= list.get(i).getName() %></td>
+					<td style = "text-align: center"><%= list.get(i).getDate() %></td>
 					</tr>
 					
 				<%}%>
