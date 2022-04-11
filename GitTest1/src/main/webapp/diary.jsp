@@ -184,10 +184,9 @@ text-align:right;
 				
 				<% for (int i = 0; i < list.size(); i++) { %>
 					<tr>
-					<td align="center"><%= i+1 %> </td>
-					<td ><%= list.get(i).getTitle() %></td>
+					<td><%= i+1 %> </td>
+					<td><a href = "./diary_view.jsp?number=<%=list.get(i).getNum() %>"><%= list.get(i).getTitile() %></a></td>
 					<td><%= list.get(i).getName() %></td>
-					<td align="center"><%= list.get(i).getDate() %></td>
 					</tr>
 					
 				<%}%>

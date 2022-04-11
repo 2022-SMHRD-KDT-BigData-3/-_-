@@ -1,3 +1,4 @@
+<%@page import="Model.DiaryDAO_jy"%>
 <%@page import="Model.DiaryDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.DiaryDAO_tw"%>
@@ -50,12 +51,22 @@
       String id = info.getId();
    }
    
+  // if(info != null){ // i네nfo가 null이 아닐때가 true 36번째 줄에 session info값이 들어왔을때 조건문 실행
+  // list = mDia.diary_load("id"); // 여기는 왜 에러가 날까요?
+  // }
+   //out.print(list.size()); // 이부분 코드는 갑자기 넣어진게 어색함 맨마지막에 들어가야할듯 
+   
+   int diarynum = Integer.parseInt(request.getParameter("number")) ;
+   System.out.println("선택한 글의 번호는 >> "+ diarynum);
+   
    DiaryDAO_tw mDia = new DiaryDAO_tw(); // DiaryDAO_tw 객체 생성하는부분
-   ArrayList<DiaryDTO> mlist = new ArrayList<DiaryDTO>(); // DiaryDto 타입 어레이리스트 생성
-   if(info != null){ // i네nfo가 null이 아닐때가 true 36번째 줄에 session info값이 들어왔을때 조건문 실행
-   out.print(mlist.size()); // 이부분 코드는 갑자기 넣어진게 어색함 맨마지막에 들어가야할듯 
-   mlist = mDia.diary_load("id"); // 여기는 왜 에러가 날까요?
-   }
+   DiaryDTO dto = mDia.diary_load(diarynum);
+   
+   String id = request.getParameter("id");
+   
+   
+   DiaryDAO_tw mmDia = new DiaryDAO_tw();
+   MemberDTO mdto = mmDia.member_load(id);
 %>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -186,9 +197,11 @@
             </tr>
          </thead>
          <tbody>
+     
+				
             <tr>
-               <td style="width: 20%;">글 제목</td>
-               <td colspan="2"><!-- 여기에 출력 --></td>
+          
+               <td style="width: 20%;">글 제목 <%= dto.getTitile() %></td>
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
@@ -196,34 +209,35 @@
             <tr>
                <td rowspan="7">강아지사진</td>
                <td style="width: 20%;">사용자 ID</td>
-               <td colspan="2"><!-- 여기에 출력 --></td>
+               <td colspan="2"><%= dto.getName() %></td>
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
             </tr>            
             <tr>
                <td style="width: 20%;">강아지 이름</td>
-               <td colspan="2"><!-- 여기에 출력 --></td>
+               <td colspan="2"> </td>
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
             </tr>            
             <tr>
                <td style="width: 20%;">건강상태</td>
-               <td colspan="2"><!-- 여기에 출력 --></td>
+               <td colspan="2"><%= mdto.getHealth() %></td>
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
             </tr>            
             <tr>
                <td style="width: 20%;">질병</td>
-               <td colspan="2"><!-- 여기에 출력 --></td>
+               <td colspan="2"><%= mdto.getDisease() %></td>
             </tr>
+           
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
             </tr>            
             <tr>
-               <td colspan="4" style="height: 400px; text-align: left;"><!-- 여기에 content 출력 --></td>
+               <td colspan="4" style="height: 400px; text-align: left;"><%= dto.getContent() %></td>
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>

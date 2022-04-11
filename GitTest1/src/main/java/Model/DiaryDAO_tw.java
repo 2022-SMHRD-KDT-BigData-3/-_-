@@ -13,7 +13,8 @@ public class DiaryDAO_tw {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	int cnt = 0;
-	DogFoodDTO dto = null;
+	DiaryDTO dto = null;
+	MemberDTO mdto = null;
 
 	// conn
 	public void db_conn() {
@@ -69,7 +70,7 @@ public class DiaryDAO_tw {
 		// 4. 바인드 변수에 값 채우기
 		// join메소드 매개변수로 dto(입력받은 값들의 묶음 = 가방) 받아오기
 		psmt.setString(1, id);
-		psmt.setString(2, dto.getTitle());
+		psmt.setString(2, dto.getTitile());
 		psmt.setString(3, dto.getContent());
 		
 		cnt = psmt.executeUpdate();
@@ -81,13 +82,47 @@ public class DiaryDAO_tw {
 	} return cnt;
 	}
 
-	public ArrayList<DiaryDTO> diary_load(String id) {
+	public DiaryDTO diary_load(int diarynum) {
 		db_conn();
-		ArrayList<DiaryDTO> mlist = new ArrayList<DiaryDTO>();
 		try {
 			// 2. DB에서 무엇을 할지 결정
 			// 회원가입 기능 = 입력받은 데이터들을 회원 Table에 추가하기
-			String sql = "select diary.title , diary.id , diary.content from diary where diary.id=? ";
+			String sql = "select * from diary where diarynum=? ";
+			
+			// 3. sql문을 DB에 전달 -> 성공시 psmt객체로 반환
+			psmt = conn.prepareStatement(sql);
+			
+			// 4. 바인드 변수에 값 채우기
+			// join메소드 매개변수로 dto(입력받은 값들의 묶음 = 가방) 받아오기
+			psmt.setInt(1, diarynum);
+			
+			
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				diarynum = rs.getInt(1);
+				String id  = rs.getString(2);
+				String adddate = rs.getString(3);
+				String title = rs.getString(4);
+				String content = rs.getString(5);
+				
+				dto = new DiaryDTO(diarynum, title, id, content);
+							
+			}
+		} catch(Exception e) {
+			
+		} finally {
+			db_close();
+		} return dto;
+		}
+		
+	public MemberDTO member_load(String id) {
+		db_conn();
+	
+		try {
+			// 2. DB에서 무엇을 할지 결정
+			// 회원가입 기능 = 입력받은 데이터들을 회원 Table에 추가하기
+			String sql = "select dogimg,dogname,health,disease from member where id=? ";
 			
 			// 3. sql문을 DB에 전달 -> 성공시 psmt객체로 반환
 			psmt = conn.prepareStatement(sql);
@@ -97,22 +132,24 @@ public class DiaryDAO_tw {
 			psmt.setString(1, id);
 			
 			
+			
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
-				String title = rs.getString(1);
-				String id1  = rs.getString(2);
-				String cotent = rs.getString(3);
+				String dogimg  = rs.getString(1);
+				String dogname = rs.getString(2);
+				String health = rs.getString(3);
+				String disease = rs.getString(4);
 				
-				DiaryDTO dto = new DiaryDTO(cnt, title, id1, cotent);
-				
-				mlist.add(dto);				
+				mdto = new MemberDTO(id, dogimg, dogname, health, disease);
+							
 			}
 		} catch(Exception e) {
 			
 		} finally {
 			db_close();
-		} return mlist;
-		}
+		} return mdto;
 		
+		
+	}
 	} 

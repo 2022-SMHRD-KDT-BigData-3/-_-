@@ -70,7 +70,7 @@ public class DiaryDAO_sy {
       // 4. 바인드 변수에 값 채우기
       // join메소드 매개변수로 dto(입력받은 값들의 묶음 = 가방) 받아오기
       psmt.setString(1, id);
-      psmt.setString(2, dto.getTitle());
+      psmt.setString(2, dto.getTitile()); 
       psmt.setString(3, dto.getContent());
       
       cnt = psmt.executeUpdate();
