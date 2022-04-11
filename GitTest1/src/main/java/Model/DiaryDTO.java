@@ -9,7 +9,6 @@ public class DiaryDTO {
 	private int num;
 	private String date;
 	
-	
 	public DiaryDTO(String title, String content) {
 		super();
 		this.title = title;
@@ -26,7 +25,9 @@ public class DiaryDTO {
 		
 	}
 
-	public String getTitle() {
+	
+
+	public String getTitile() {
 		return title;
 	}
 

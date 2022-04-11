@@ -25,6 +25,18 @@ public class MemberDTO {
 		this.health = health;
 		this.disease = disease;
 	}
+	
+	
+	public MemberDTO(String id, String dogimg, String name, String health, String disease) {
+		super();
+		this.id = id;
+		this.dogimg = dogimg;
+		this.name = name;
+		this.health = health;
+		this.disease = disease;
+	}
+
+
 	public MemberDTO(String id, String pw) {
 	      this.id = id;
 	      this.pw = pw;
