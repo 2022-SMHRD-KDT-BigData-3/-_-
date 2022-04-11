@@ -12,25 +12,10 @@
 				$("#pagingView").text("");
 				$("#comName").text(data[0].fdCom);
 				$("#listSize").text(data.length);
+				let url = `<a href="${data[0].url}"><button style="margin-top: 8px" id="url">구매처 바로가기</button></a>`;
+				$("#shopping").append(url);
 				for (let i = 0; i < data.length; i++) {
 
-					/*let tag = `<div class="col-lg-4 col-md-6 col-sm-6">
-									<div class="product__item">
-										<div class="product__item__pic set-bg"
-											data-setbg="${data[i].imgUrl}">
-											<ul class="product__item__pic__hover">
-												<li><a href="#"><i class="fa fa-heart"></i></a></li>
-												<li><a href="#"><i class="fa fa-retweet"></i></a></li>
-												<li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-											</ul>
-										</div>
-										<div class="product__item__text">
-											<h6>
-												<a href="#">${data[i].fdName}</a>
-											</h6>
-										</div>
-									</div>
-								</div>`;*/
 					let tag = `<div class="col-lg-4 col-md-6 col-sm-6">
 									<div class="product__item">
 										<img class="product__item__pic set-bg" src="${data[i].imgUrl}">

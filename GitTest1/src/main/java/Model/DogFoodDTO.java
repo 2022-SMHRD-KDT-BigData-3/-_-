@@ -7,9 +7,25 @@ public class DogFoodDTO {
 	private String material;
 	private String imgUrl;
 	private String ingredient;
+	private String url;
 	public DogFoodDTO() {
 
 	}
+	
+	
+	public DogFoodDTO(String fdNum, String fdCom, String fdName, String material, String imgUrl, String ingredient,
+			String url) {
+		super();
+		this.fdNum = fdNum;
+		this.fdCom = fdCom;
+		this.fdName = fdName;
+		this.material = material;
+		this.imgUrl = imgUrl;
+		this.ingredient = ingredient;
+		this.url = url;
+	}
+
+
 	public DogFoodDTO(String fdNum, String fdCom, String fdName, String material, String imgUrl, String ingredient) {
 		super();
 		this.fdNum = fdNum;

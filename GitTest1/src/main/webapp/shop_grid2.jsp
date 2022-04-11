@@ -30,6 +30,18 @@
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
 <script src="js/jquery-3.3.1.min.js"></script>
+<style>
+#url{
+display: inline-block;
+    font-size: 14px;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid #b2b2b2;
+    padding: 14px 20px 12px;
+    border-radius: 25px;
+    float: right;}
+</style>
 </head>
 
 <body>
@@ -179,8 +191,9 @@
 				</div>
 				<div class="col-lg-9 col-md-7 ">
 					<div class="product__discount">
-						<div class="section-title product__discount__title">
+						<div class="section-title product__discount__title" id="shopping">
 							<h2 id="comName">DOGFOOD</h2>
+							
 						</div>
 						<div class="filter__item">
 							<div class="row">
@@ -199,6 +212,7 @@
 											<span id="listSize">0</span> Products found
 										</h6>
 									</div>
+									
 								</div>
 								<!--<div class="col-lg-4 col-md-3">
                                 <div class="filter__option">
@@ -209,7 +223,6 @@
 							</div>
 						</div>
 						<div id="pagingView" class="row">
-						
 						</div>
 					</div>
 					
