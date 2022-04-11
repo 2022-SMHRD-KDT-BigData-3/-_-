@@ -192,9 +192,9 @@ display: inline-block;
 				</div>
 				<div class="col-lg-9 col-md-7 ">
 					<div class="product__discount">
-						<div class="section-title product__discount__title" id="shopping">
+						<div class="section-title product__discount__title">
 							<h2 id="comName">DOGFOOD</h2>
-							
+							<a id="shopping"><button style="margin-top: 8px" id="url">구매처 바로가기</button></a>
 						</div>
 						<div class="filter__item">
 							<div class="row">
