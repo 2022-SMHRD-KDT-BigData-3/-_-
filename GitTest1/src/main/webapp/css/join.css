@@ -78,7 +78,10 @@ h3 {
 }
 
 input {
-    font-family: Dotum,'돋움',Helvetica,sans-serif;    
+    font-family: Dotum,'돋움',Helvetica,sans-serif;
+}
+#input-file{
+	display: none;
 }
 
 .box.int_id {
