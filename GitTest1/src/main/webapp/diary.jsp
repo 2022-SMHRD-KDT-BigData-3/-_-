@@ -222,9 +222,9 @@ text-align:right;
 				<button style="float:right">작성자 검색</button>
 				<input type="text" placeholder="id 입력" style="float:right" name="id">
 				</form>
-				
-				
+				<%if(info!=null){ %>
 				<a href="diary_add.jsp" id="test10" style ="width : 5%">글쓰기</a>
+				<%} %>
 			</div>	
 			
 		</div>
