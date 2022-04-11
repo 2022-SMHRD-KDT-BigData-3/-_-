@@ -86,27 +86,24 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu" style="width:120%">
-                        <ul>
-                            <li><a href="./main.jsp">Home</a></li>
-                            <li class="active"><a href="./shop-grid.jsp">DogFood</a></li>
-                            <li><a href="./product.jsp">Health Products</a></li>
-                            <li><a href="./blog1.jsp">Health Q&A</a></li>
-                            <li><a href="./diary.jsp">Health Diary</a></li>  
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                <!-- 장바구니, 찜목록 있던 자리 -->
-                </div>
-            </div>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="header__logo">
+						<a href="./main.jsp"><img src="img/logo5.png"> </a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<nav class="header__menu" style="width: 200%">
+						<ul>
+							<li><a href="./main.jsp">Home</a></li>
+							<li class="active"><a href="./shop_grid2.jsp">DogFood</a></li>
+							<li><a href="./product.jsp">Health Products</a></li>
+							<li><a href="./blog1.jsp">Health Q&A</a></li>
+							<li><a href="./diary.jsp">Health Diary</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
@@ -209,8 +206,8 @@
                         
                         
                            	<h3> <%=dto.getFdName() %></h3><hr>
-							<b>material(성분)</b><br><br> <span> <%=dto.getMaterial() %> </span><hr>
-                            <b>ingredients(원료)</b><br><br> <span> <%= dto.getIngredient() %> </span><span></span>
+							<h4 style = "color : #7fad39"><b>Materials(성분)</b></h4><span> <%=dto.getMaterial() %> </span><hr>
+                            <h4 style = "color : #7fad39"><b>Ingredients(원료)</b></h4><span> <%= dto.getIngredient() %> </span><span></span>
                        
                     </div>
                 </div>

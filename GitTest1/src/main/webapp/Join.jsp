@@ -42,7 +42,8 @@
 								id="idMsg" style="display: none" aria-live="assertive"></span>
 								
 							<!-- 아이디 체크 -->
-							<button type="button" id="btn_id">아이디체크</button>
+							<br>
+							<button type="button" id="btn_id">아이디 체크</button>
 	<p id="idcheck"></p>
 	
 	<script type="text/javascript">
@@ -102,6 +103,7 @@
 							</span> <span class="error_next_box" id="pswd2Msg" style="display: none"
 								aria-live="assertive"></span>
 						</div>
+							<br>
 							<button type="button" id="btn_pw">비밀번호 체크</button>
 	<p id="pwcheck"></p>
 		<script type="text/javascript">
@@ -150,7 +152,11 @@
 						<!-- lang = ko_KR -->
 						<div class="join_row">
 			 				 <div class="form-group">
-			 				 <h3> 강아지 사진 </h3><input type="file" name="dogImg" class="form-control-file" multiple="multiple">
+			 				 <h3> 강아지 사진 </h3>
+			 				 <label class="input-file-button" for="input-file">
+  							업로드
+							</label>
+			 				<input type="file" id="input-file" style="display:none">
                             </div>
 							<h3 class="join_title">
 								<label for="name">강아지 이름</label>
@@ -164,11 +170,11 @@
 
 						<div class="join_row join_size">
 							<h3 class="join_title">
-								<label for="dogSize">강아지크기</label>
+								<label for="dogSize">강아지 크기</label>
 							</h3>
 							<div class="ps_box gender_code">
 								<select id="size" name="dogSize" class="sel" aria-label="크기">
-									<option value="" selected="">강아지크기</option>
+									<option value="" selected="">강아지 크기</option>
 									<option value="small">소형견 (10kg 미만)</option>
 									<option value="middle">중형견 (10kg 이상, 25kg 미만)</option>
 									<option value="big">대형견 (25kg 이상)</option>
@@ -178,7 +184,7 @@
 
 						<div class="join_row join_birthday">
 							<h3 class="join_title">
-								<label for="yy">생년월일</label>
+								<label for="yy">강아지 생년월일</label>
 							</h3>
 							<div class="bir_wrap">
 								<div class="bir_yy">
@@ -217,7 +223,7 @@
 
 						<div class="join_row join_sex">
 							<h3 class="join_title">
-								<label for="gender">강아지성별</label>
+								<label for="gender">강아지 성별</label>
 							</h3>
 							<div class="ps_box gender_code">
 								<select id="gender" name="gender" class="sel" aria-label="성별">
@@ -229,7 +235,7 @@
 						</div>
 						<div class="join_row join_neutering">
 							<h3 class="join_title">
-								<label for="gender">중성화 여부</label>
+								<label for="gender">강아지 중성화 여부</label>
 							</h3>
 							<div class="ps_box gender_code">
 								<select id="neutering" name="neutering" class="sel" aria-label="중성화">
@@ -241,7 +247,7 @@
 						</div>
 						<div>
 							<h3>
-								<label>건강상태</label>
+								<label>강아지 건강 상태</label>
 							</h3>
 							없음<input type="checkbox" name="health" value="없음" checked>
 							비만<input type="checkbox" name="health" value="비만"> 임신<input
@@ -250,7 +256,7 @@
 						</div>
 						<div>
 							<h3>
-								<label>건강고민</label>
+								<label>강아지 건강 고민</label>
 							</h3>
 							없음<input type="checkbox" name="disease" value="없음" checked>
 							관절질환<input type="checkbox" name="disease" value="관절질환"> 눈병<input

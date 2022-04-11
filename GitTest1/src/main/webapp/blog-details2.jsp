@@ -141,27 +141,25 @@
 			</div>
 		</div>
 		<div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="header__logo">
-                        <a href="./main.jsp"><img src="img/logo5.png" > </a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <nav class="header__menu" style="width:120%">
-                        <ul>
-                            <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop_grid2.jsp">DogFood</a></li>
-                            <li><a href="./product.jsp">Health Products</a></li>
-                            <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
-                            <li><a href="./diary.jsp">Health Diary</a></li>  
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                <!-- 장바구니, 찜목록 있던 자리 -->
-                </div>
-            </div>
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="header__logo">
+						<a href="./main.jsp"><img src="img/logo5.png"> </a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<nav class="header__menu" style="width: 200%">
+						<ul>
+							<li><a href="./main.jsp">Home</a></li>
+							<li><a href="./shop_grid2.jsp">DogFood</a></li>
+							<li><a href="./product.jsp">Health Products</a></li>
+							<li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
+							<li><a href="./diary.jsp">Health Diary</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>

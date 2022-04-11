@@ -158,10 +158,10 @@
 				<div class="col-lg-6">
 					<nav class="header__menu" style="width: 200%">
 						<ul>
-							<li class="active"><a href="./main.jsp">Home</a></li>
+							<li><a href="./main.jsp">Home</a></li>
 							<li><a href="./shop_grid2.jsp">DogFood</a></li>
 							<li><a href="./product.jsp">Health Products</a></li>
-							<li><a href="./blog1.jsp">Health Q&A</a></li>
+							<li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
 							<li><a href="./diary.jsp">Health Diary</a></li>
 						</ul>
 					</nav>
