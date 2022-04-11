@@ -74,8 +74,9 @@ public class DogFoodDAO {
 				String material = rs.getString(4);
 				String imgUrl = rs.getString(5);
 				String ingredient = rs.getString(6);
+				String url = rs.getString(7);
 				
-				DogFoodDTO dto = new DogFoodDTO(fdNum, fdCom, fdName, material, imgUrl, ingredient);
+				DogFoodDTO dto = new DogFoodDTO(fdNum, fdCom, fdName, material, imgUrl, ingredient, url);
 				list.add(dto);
 			}
 		} catch (Exception e) {
