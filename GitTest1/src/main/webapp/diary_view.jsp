@@ -59,14 +59,11 @@
    int diarynum = Integer.parseInt(request.getParameter("number")) ;
    System.out.println("선택한 글의 번호는 >> "+ diarynum);
    
-   DiaryDAO_tw mDia = new DiaryDAO_tw(); // DiaryDAO_tw 객체 생성하는부분
-   DiaryDTO dto = mDia.diary_load(diarynum);
+   DiaryDAO_tw dao = new DiaryDAO_tw(); // DiaryDAO_tw 객체 생성하는부분
+   DiaryDTO dto = dao.diary_load(diarynum);
    
-   String id = request.getParameter("id");
-   
-   
-   DiaryDAO_tw mmDia = new DiaryDAO_tw();
-   MemberDTO mdto = mmDia.member_load(id);
+   String id = dto.getName();
+   MemberDTO mdto = dao.member_load(id);
 %>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -201,13 +198,13 @@
 				
             <tr>
           
-               <td style="width: 20%;">글 제목 <%= dto.getTitile() %></td>
+               <td colspan="3"><h4 style="text-align:center"><%= dto.getTitile() %></h4></td>
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
             </tr>            
             <tr>
-               <td rowspan="7">강아지사진</td>
+               <td rowspan="7" style="width: 20%;">강아지사진</td>
                <td style="width: 20%;">사용자 ID</td>
                <td colspan="2"><%= dto.getName() %></td>
             </tr>
@@ -216,7 +213,7 @@
             </tr>            
             <tr>
                <td style="width: 20%;">강아지 이름</td>
-               <td colspan="2"> </td>
+               <td colspan="2"><%= mdto.getName()%></td>
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
