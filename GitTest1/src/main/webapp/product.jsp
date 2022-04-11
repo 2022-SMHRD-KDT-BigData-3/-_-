@@ -10,7 +10,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>건강하개 지켜줄게</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
@@ -147,7 +148,7 @@
                     <nav class="header__menu" style="width:120%">
                         <ul>
                             <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./shop_grid2.jsp">DogFood</a></li>
                             <li class="active"><a href="./product.jsp">Health Products</a></li>
                             <li><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  

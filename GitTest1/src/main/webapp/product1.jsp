@@ -10,7 +10,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ogani | Template</title>
+    <title>건강하개 지켜줄게</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>
@@ -152,7 +153,7 @@
                     <nav class="header__menu" style="width:120%">
                         <ul>
                             <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./shop_grid2.jsp">DogFood</a></li>
                             <li class="active"><a href="./product.jsp">Health Products</a></li>
                             <li><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
@@ -329,7 +330,7 @@
                                     <h5><b>강아지 귀 세정제</b></h5>
                                     <p>강아지 귀의 구조는 사람과 다르게 'ㄴ'자로 되어 있어 귓속에 통풍이 잘 안되는 경우가 많다.
 또한 사람처럼 귀안에 먼지, 노폐물이 쌓여 귀지가 생기기때문에 청소를 꼭 해줘야 한다. </p>
-                                    <a href="https://www.coupang.com/vp/products/1251708598?itemId=2251159979&vendorItemId=70248536180&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=0aa54c85-758d-46fd-be46-f4d8da63117c&korePlacement=15&koreSubPlacement=1&q=%EB%B8%8C%EB%A6%AC%EC%A7%80%ED%85%8C%EC%9D%BC+%ED%8E%98%ED%86%A0%EC%84%B8%EB%9D%BC+%ED%81%B4%EC%9D%B4%EC%96%B4+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EA%B7%80%EC%84%B8%EC%A0%95%EC%A0%9C&itemsCount=36&searchId=1f84e92d2fe04af895f19196e91ae428&rank=0&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://www.coupang.com/vp/products/1251708598?itemId=2251159979&vendorItemId=70248536180&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=0aa54c85-758d-46fd-be46-f4d8da63117c&korePlacement=15&koreSubPlacement=1&q=%EB%B8%8C%EB%A6%AC%EC%A7%80%ED%85%8C%EC%9D%BC+%ED%8E%98%ED%86%A0%EC%84%B8%EB%9D%BC+%ED%81%B4%EC%9D%B4%EC%96%B4+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EA%B7%80%EC%84%B8%EC%A0%95%EC%A0%9C&itemsCount=36&searchId=1f84e92d2fe04af895f19196e91ae428&rank=0&isAddedCart=" class="blog__btn">구매처 바로가기 <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>    
@@ -345,7 +346,7 @@
                                     <h5><b>강아지 눈물제거</b></h5>
                                     <p>강아지들은 눈물 속 '포르피린'이라는 성분 때문에 눈 주변에 붉은 자국이 쉽게 생긴다.
 이를 방치하면 질병으로 이어질 수 있기 때문에 평소에 관리를 잘 해주어야 한다. </p>
-                                    <a href="https://www.coupang.com/vp/products/1624448080?itemId=12964905933&vendorItemId=80228999586&q=%EB%B2%84%EC%B8%A0%EB%B9%84+%ED%8B%B0%EC%96%B4+%EC%8A%A4%ED%85%8C%EC%9D%B8+%EA%B0%95%EC%95%84%EC%A7%80+%EB%A6%AC%EB%AC%B4%EB%B2%84&itemsCount=28&searchId=e17ef9e50e2e453f85c7666539a2f67b&rank=2&isAddedCart=" class="blog__btn">More Details <span class="arrow_right"></span></a>
+                                    <a href="https://www.coupang.com/vp/products/1624448080?itemId=12964905933&vendorItemId=80228999586&q=%EB%B2%84%EC%B8%A0%EB%B9%84+%ED%8B%B0%EC%96%B4+%EC%8A%A4%ED%85%8C%EC%9D%B8+%EA%B0%95%EC%95%84%EC%A7%80+%EB%A6%AC%EB%AC%B4%EB%B2%84&itemsCount=28&searchId=e17ef9e50e2e453f85c7666539a2f67b&rank=2&isAddedCart=" class="blog__btn">구매처 바로가기 <span class="arrow_right"></span></a>
                                 </div>
                             </div>
                         </div>

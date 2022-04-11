@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 
 <body>

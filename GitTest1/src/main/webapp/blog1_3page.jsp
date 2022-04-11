@@ -156,7 +156,7 @@
                     <nav class="header__menu" style="width:120%">
                         <ul>
                             <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./shop_grid2.jsp">DogFood</a></li>
                             <li><a href="./product.jsp">Health Products</a></li>
                             <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
@@ -170,6 +170,15 @@
             <div class="humberger__open">
                 <i class="fa fa-bars"></i>
             </div>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="col-lg-12">
+                    <div class="section-title related__product__title">
+                        <h2> 강아지 건강정보 </h2>
+                    </div>
         </div>
     </header>
     <!-- Header Section End -->

@@ -10,7 +10,7 @@
 <meta name="keywords" content="Ogani, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Ogani | Template</title>
+<title>건강하개 지켜줄게</title>
 
 <!-- Google Font -->
 <link
@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <script type="text/javascript">
 </script>
@@ -151,7 +152,7 @@
                     <nav class="header__menu" style="width:120%">
                         <ul>
                             <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./shop_grid2.jsp">DogFood</a></li>
                             <li><a href="./product.jsp">Health Products</a></li>
                             <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
@@ -247,7 +248,7 @@
 						<iframe width="740" height="420" src="https://www.youtube.com/embed/CzSy0qELgWM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<br>
 						<br>
-						<h3 style = "color : #7fad39">h3>
+						<h3 style = "color : #7fad39">
 						<h3 style = "color : #7fad39">상처로 인해 출혈이 있을 때</h3>
 						<hr>
 						<p>1.상처 주위가오염되었다면 식염수나 흐르는 수돗물로 살살 씻어준다. <br>2 핥을 수있는 부위라면 할지 못하도록

@@ -19,7 +19,14 @@ body {
     padding-top: 62px;
     padding-bottom: 20px;
     text-align: center;
-    background-image: url("../img/logo5.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+#header2 {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    text-align: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200px;

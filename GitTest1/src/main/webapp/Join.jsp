@@ -4,13 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>건강하개 지켜줄게</title>
 <script src="jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="css/join.css" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
-<div id="header" class="join_membership" role="banner">
-    <h1><a href="../img/logo5.png" class="h_logo"><span class="blind"></span></a></h1>
+<div class="col-lg-3">
+                    <div id="header">
+                        <a href="./main.jsp"><img src="img/logo5.png" style="width:15%; height:15%;"> </a>
+                    </div>
 </div>
 	<form id="join_form" method="post" action="JoinServiceCon"  enctype="multipart/form-data" target="repacatFrame">
 		<input type="hidden" id="token_sjoin" name="token_sjoin" value="D16IbzcI0GuKvWy2"> 

@@ -10,7 +10,7 @@
 <meta name="keywords" content="Ogani, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Ogani | Template</title>
+<title>건강하개 지켜줄게</title>
 
 <!-- Google Font -->
 <link
@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
 <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
 <link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <script type="text/javascript">
 </script>
@@ -151,7 +152,7 @@
                     <nav class="header__menu" style="width:120%">
                         <ul>
                             <li><a href="./main.jsp">Home</a></li>
-                            <li><a href="./shop-grid.jsp">DogFood</a></li>
+                            <li><a href="./shop_grid2.jsp">DogFood</a></li>
                             <li><a href="./product.jsp">Health Products</a></li>
                             <li class="active"><a href="./blog1.jsp">Health Q&A</a></li>
                             <li><a href="./diary.jsp">Health Diary</a></li>  
@@ -249,7 +250,7 @@
 						<hr>
 						<p>개 인플루엔자(canine influenza, dog flu)는 개과동물에서 발생하는 인플루엔자입니다.<br> 개 인플루엔자는 말인플루엔자 바이러스인 H3N8 같은 
 						influenza virus A의 변종에 의해<br> 발생하며 개에서 질병을 유발한다는 것을 2004년에 밝혀냈습니다. 
-						이 바이러스에 노출된적이 없기때문에 개에서 자연적 면역력은 없습니다. 따라서 개에서 빠르게 이 질환이 전파되었습니다. 
+						이 바이러스에 노출된적이 없기때문에 개에서 자연적 면역력은 없습니다.<br> 따라서 개에서 빠르게 이 질환이 전파되었습니다. 
 						<br>개 인플루엔자는 미국에서 지역적으로 개가 있는 곳에서 풍토병 양상을 보였습니다.<br> 이 질환은 높은 이환율을 보이지만, 치사율은 낮습니다.</p>
 						<br>
 						<h3 style = "color : #7fad39">질병증상</h3>
