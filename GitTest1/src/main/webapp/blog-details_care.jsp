@@ -224,7 +224,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="blog__details__hero__text">
-						<h2>강아지 피부병 예방를 위한 수칙</h2>
+						<h2>강아지 피부병 예방을 위한 수칙</h2>
 					</div>
 				</div>
 			</div>
