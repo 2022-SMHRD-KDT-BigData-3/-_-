@@ -866,7 +866,7 @@
 						</div>
 						<div class="blog__item__text">
 							<h5 style = "text-align : center">
-								<a href="product1.jsp">귀 관리 용품</a>
+								<a href="product1.jsp">귀/눈 관리 용품</a>
 							</h5>
 						</div>
 					</div>
