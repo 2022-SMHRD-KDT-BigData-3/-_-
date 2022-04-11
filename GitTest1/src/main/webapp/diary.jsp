@@ -212,7 +212,9 @@ text-align:right;
 			<div class="product__pagination blog__pagination">
 				<a href="#">1</a> <a href="#">2</a>
 				<form action="SearchMeServiceCon" method="post">
+				<%if(info!=null){ %>
 				<button style="float:right" name="searchid" value="<%=info.getId()%>">내 글만 보기</button>
+				<%} %>
 				</form>
 				
 				
