@@ -79,6 +79,9 @@ text-align:right;
 <% 
 	MemberDTO info = (MemberDTO)session.getAttribute("info");
 	ArrayList<DiaryDTO> list= null;
+	
+	String searchid ="";
+	searchid = request.getParameter("searchid");
 	%>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -153,13 +156,8 @@ text-align:right;
 	</header>
 	<!-- Blog Section Begin -->
 	<section class="blog spad">
-		<div class="container">
+		<div class="container" width="800px">
             <div class="row">
-                <!--<div class="col-lg-12">
-                    <div class="section-title related__product__title">
-                        <h2 style="margin-top: 25px"> 건강일지 목록 </h2>
-                    </div>
-                </div>  -->
             </div>
             <div class="row">
             </div>
@@ -179,7 +177,8 @@ text-align:right;
 			
 				
 			<table class="inner">
-				<tbody>
+				<tbody>				
+				
 					<tr>
 					<td class = "number"><b>글번호</b></td>
 					<td class = "title"><b>제목</b></td>
@@ -190,7 +189,10 @@ text-align:right;
 					</tr>
 				</tbody>
 				
-				<% for (int i = 0; i < list.size(); i++) { %>
+				
+				
+				<% if(searchid==null){
+				for (int i = 0; i < list.size(); i++) { %>
 					<tr>
 					<td style = "text-align: center"><%= i+1 %> </td>
 					<td><a href = "./diary_view.jsp?number=<%=list.get(i).getNum()%>" style = "color: black;"><%= list.get(i).getTitile() %></a></td>
@@ -198,7 +200,7 @@ text-align:right;
 					<td style = "text-align: center"><%= list.get(i).getDate() %></td>
 					</tr>
 					
-				<%}%>
+				<%}}%>
 				
 						<tr height="1" bgcolor="#7fad39"><td colspan="4" width="1200"></td>
 	</tr>
@@ -209,6 +211,17 @@ text-align:right;
 		<div class="col-lg-12">
 			<div class="product__pagination blog__pagination">
 				<a href="#">1</a> <a href="#">2</a>
+				<form action="SearchMeServiceCon" method="post">
+				<button style="float:right" name="searchid" value="<%=info.getId()%>">내 글만 보기</button>
+				</form>
+				
+				
+				<form action="SearchServiceCon" method="post">
+				<button style="float:right">작성자 검색</button>
+				<input type="text" placeholder="id 입력" style="float:right" name="id">
+				</form>
+				
+				
 				<a href="diary_add.jsp" id="test10" style ="width : 5%">글쓰기</a>
 			</div>	
 			

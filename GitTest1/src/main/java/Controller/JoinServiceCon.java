@@ -34,7 +34,8 @@ public class JoinServiceCon extends HttpServlet {
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		String pw2 = request.getParameter("pw2");
-		String dogImg = fileList.get(0).getName();
+		//String dogImg = fileList.get(0).getName();
+		Part dogImg = request.getPart("dogImg");
 		String dogName = request.getParameter("dogName");
 		String dogSize = request.getParameter("dogSize");
 		String birth = request.getParameter("yy")+"/"+request.getParameter("mm")+"/"+request.getParameter("dd");
@@ -43,11 +44,13 @@ public class JoinServiceCon extends HttpServlet {
 		String[] health = request.getParameterValues("health");
 		String[] disease = request.getParameterValues("disease");
 		
+		
+		
 	
 		System.out.println("id : " + id);
 		System.out.println("pw : " + pw);
 		System.out.println("pw2 : " + pw2);
-		//System.out.println("dogImg : " + dogImg);
+		System.out.println("dogImg : " + dogImg.getSubmittedFileName());
 		System.out.println("dogName : " + dogName);
 		System.out.println("dogSize : " + dogSize);
 		System.out.println("birth : " + birth);
@@ -76,7 +79,7 @@ public class JoinServiceCon extends HttpServlet {
 		System.out.println(disease2);
 		
 		// 3. DTO 가방으로 데이터 묶기
-		MemberDTO dto = new MemberDTO(id, pw, dogImg, dogName, dogSize, birth, gender, neutering, health2, disease2);
+		MemberDTO dto = new MemberDTO(id, pw, dogImg.getSubmittedFileName(), dogName, dogSize, birth, gender, neutering, health2, disease2);
 		
 		// 4. join 메소드 호출하기
 		MemberDAO dao = new MemberDAO();
@@ -91,6 +94,9 @@ public class JoinServiceCon extends HttpServlet {
 			response.sendRedirect("./Join.jsp?join=fail");
 			
 		}
+		
+		uploadUtil.saveFiles(dogImg);
+		
 	
 	}
 

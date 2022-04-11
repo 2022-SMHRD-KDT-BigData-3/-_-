@@ -1,3 +1,4 @@
+<%@page import="util.UploadUtil"%>
 <%@page import="Model.DiaryDAO_jy"%>
 <%@page import="Model.DiaryDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -55,8 +56,7 @@
   // if(info != null){ // i네nfo가 null이 아닐때가 true 36번째 줄에 session info값이 들어왔을때 조건문 실행
   // list = mDia.diary_load("id"); // 여기는 왜 에러가 날까요?
   // }
-   //out.print(list.size()); // 이부분 코드는 갑자기 넣어진게 어색함 맨마지막에 들어가야할듯 
-   
+   //out.print(list.size()); // 이부분 코드는 갑자기 넣어진게 어색함 맨마지막에 들어가야할듯  
    int diarynum = Integer.parseInt(request.getParameter("number")) ;
    System.out.println("선택한 글의 번호는 >> "+ diarynum);
    
@@ -65,6 +65,12 @@
    
    String id = dto.getName();
    MemberDTO mdto = dao.member_load(id);
+   
+   String serverPath = request.getSession().getServletContext().getRealPath("/");
+   UploadUtil uploadUtil = new UploadUtil(serverPath, mdto.getId());
+   
+   String dogImg = uploadUtil.getImgFiles();
+   
 %>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -206,7 +212,7 @@
                <td colspan="4" width="1200"></td>
             </tr>            
             <tr>
-               <td rowspan="7" style="width: 20%;">강아지사진</td>
+               <td rowspan="7" style="width: 20%;"><img src=<%=dogImg%>></td>
                <td style="width: 20%;">사용자 ID</td>
                <td colspan="2"><%= dto.getName() %></td>
             </tr>

@@ -156,7 +156,7 @@
 			 				 <label class="input-file-button" for="input-file">
   							업로드
 							</label>
-			 				<input type="file" id="input-file" style="display:none">
+			 				<input type="file" id="input-file" name="dogImg">
                             </div>
 							<h3 class="join_title">
 								<label for="name">강아지 이름</label>
