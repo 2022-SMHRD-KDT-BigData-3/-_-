@@ -12,8 +12,7 @@
 				$("#pagingView").text("");
 				$("#comName").text(data[0].fdCom);
 				$("#listSize").text(data.length);
-				let url = `<a href="${data[0].url}"><button style="margin-top: 8px" id="url">구매처 바로가기</button></a>`;
-				$("#shopping").append(url);
+				$("#shopping").attr("href",data[0].url);
 				for (let i = 0; i < data.length; i++) {
 
 					let tag = `<div class="col-lg-4 col-md-6 col-sm-6">
