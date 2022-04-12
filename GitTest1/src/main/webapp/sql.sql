@@ -18,6 +18,8 @@ select * from dogfood where fdcom = 'Absolute' order by fdnum;
 drop table member
 select * from member;
 
+delete member where id='test5@naver.com@'
+
 create table dogfood(
 	fdNum number(30),
 	fdCom varchar2(500),
@@ -51,6 +53,11 @@ create table diary(
 	constraint diary_num_pk primary key(diarynum),
 	constraint diary_id_fk foreign key(id) references member(id)
 )
+
+update diary set adddate = sysdate-14 where diarynum=24
+select * from diary
+delete diary where id='test55'
+
 insert into diary values(food_num_seq.nextval, 'test', sysdate, 'titledt', 'contentdsdfsd')
 select * from diary
 	drop table diary

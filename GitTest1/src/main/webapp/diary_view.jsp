@@ -69,7 +69,9 @@
    String serverPath = request.getSession().getServletContext().getRealPath("/");
    UploadUtil uploadUtil = new UploadUtil(serverPath, mdto.getId());
    
-   String dogImg = uploadUtil.getImgFiles();
+   String dogImg = uploadUtil.getImgFiles()+".jpg";
+   
+   System.out.println(dogImg);
    
 %>
     <!-- Page Preloder -->
@@ -212,6 +214,7 @@
                <td colspan="4" width="1200"></td>
             </tr>            
             <tr>
+            <!-- 강아지 사진 -->
                <td rowspan="7" style="width: 20%;"><img src=<%=dogImg%>></td>
                <td style="width: 20%;">사용자 ID</td>
                <td colspan="2"><%= dto.getName() %></td>
@@ -225,7 +228,7 @@
             </tr>
             <tr height="1" bgcolor="#7fad39">
                <td colspan="4" width="1200"></td>
-            </tr>            
+            </tr>
             <tr>
                <td style="width: 20%;">건강상태</td>
                <td colspan="2"><%= mdto.getHealth() %></td>

@@ -83,8 +83,12 @@ text-align:right;
 	String searchid ="";
 	searchid = request.getParameter("searchid");
 	
+	DiaryDAO_jy dao = new DiaryDAO_jy();
+	if(searchid==null) list = dao.selectDiary();
+	else list=dao.searchidme(searchid);
 	
-	%>
+	System.out.println();%>
+	
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
@@ -166,19 +170,6 @@ text-align:right;
         </div>
 		<div>
 			
-			<%-- <% if(info == null){ %>
-				<li> 로그인을 하세요 </li>
-			<% }else{
-				DiaryDAO_jy dao = new DiaryDAO_jy();
-				list = dao.selectDiary(info.getId());
-			}
-			%> --%>
-			
-					<% DiaryDAO_jy dao = new DiaryDAO_jy();%>
-					<% if(searchid==null) list = dao.selectDiary();
-					else list=dao.searchidme(searchid);%>
-			
-				
 			<table class="inner">
 				<tbody>				
 				
@@ -192,14 +183,12 @@ text-align:right;
 					</tr>
 				</tbody>
 				
-				
-				
 				<%for (int i = 0; i < list.size(); i++) { %>
 					<tr>
 					<td style = "text-align: center"><%= i+1 %> </td>
 					<td><a href = "./diary_view.jsp?number=<%=list.get(i).getNum()%>" style = "color: black;"><%= list.get(i).getTitile() %></a></td>
 					<td><%= list.get(i).getName() %></td>
-					<td style = "text-align: center"><%= list.get(i).getDate() %></td>
+					<td style = "text-align: center"><%= list.get(i).getContent()%></td>
 					</tr>
 					
 				<%}%>
@@ -235,8 +224,6 @@ text-align:right;
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/main.js"></script>
-
-
 
 </body>
 

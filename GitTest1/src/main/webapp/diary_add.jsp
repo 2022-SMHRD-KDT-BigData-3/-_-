@@ -1,3 +1,4 @@
+<%@page import="util.UploadUtil"%>
 <%@page import="Model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -48,6 +49,14 @@
 	if (info != null) {
 		String id = info.getId();
 	}
+	
+	String id = info.getId();
+	
+	   String serverPath = request.getSession().getServletContext().getRealPath("/");
+	   UploadUtil uploadUtil = new UploadUtil(serverPath, id);
+	   
+	   String dogImg = uploadUtil.getImgFiles()+".jpg";
+	
 	%>
 	<!-- Page Preloder -->
     <div id="preloder">
@@ -155,9 +164,9 @@
 	</tr> 
 	
 	<tr> 
-		<td width="17%" rowspan="5" height="17%">강아지 사진</td> 
+		<td width="17%" rowspan="5" height="17%"><img src=<%=dogImg%>></td> 
 		<td width="10.9%">강아지 이름</td> 
-		<td width="70%">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getId() %><%} %></td> 
+		<td width="70%">   <%if(info==null){ %>로그인을 해주세요<%}else{%><%=info.getName() %><%} %></td> 
 		
 	</tr> 
 	<tr height="1" bgcolor="#7fad39">
