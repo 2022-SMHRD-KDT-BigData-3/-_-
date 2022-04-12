@@ -82,6 +82,8 @@ text-align:right;
 	
 	String searchid ="";
 	searchid = request.getParameter("searchid");
+	
+	
 	%>
 	<!-- Page Preloder -->
 	<div id="preloder">
@@ -173,7 +175,8 @@ text-align:right;
 			%> --%>
 			
 					<% DiaryDAO_jy dao = new DiaryDAO_jy();%>
-					<% list = dao.selectDiary(); %>
+					<% if(searchid==null) list = dao.selectDiary();
+					else list=dao.searchidme(searchid);%>
 			
 				
 			<table class="inner">
@@ -191,8 +194,7 @@ text-align:right;
 				
 				
 				
-				<% if(searchid==null){
-				for (int i = 0; i < list.size(); i++) { %>
+				<%for (int i = 0; i < list.size(); i++) { %>
 					<tr>
 					<td style = "text-align: center"><%= i+1 %> </td>
 					<td><a href = "./diary_view.jsp?number=<%=list.get(i).getNum()%>" style = "color: black;"><%= list.get(i).getTitile() %></a></td>
@@ -200,7 +202,7 @@ text-align:right;
 					<td style = "text-align: center"><%= list.get(i).getDate() %></td>
 					</tr>
 					
-				<%}}%>
+				<%}%>
 				
 						<tr height="1" bgcolor="#7fad39"><td colspan="4" width="1200"></td>
 	</tr>
@@ -217,11 +219,6 @@ text-align:right;
 				<%} %>
 				</form>
 				
-				
-				<form action="SearchServiceCon" method="post">
-				<button style="float:right">작성자 검색</button>
-				<input type="text" placeholder="id 입력" style="float:right" name="id">
-				</form>
 				<%if(info!=null){ %>
 				<a href="diary_add.jsp" id="test10" style ="width : 5%">글쓰기</a>
 				<%} %>

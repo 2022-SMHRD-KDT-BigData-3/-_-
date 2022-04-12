@@ -22,22 +22,7 @@ public class SearchMeServiceCon extends HttpServlet {
 		
 		System.out.println("searchid : " + searchid);
 		
-		//login 메소드 호출
-		MemberDAO dao = new MemberDAO();
-		
-		if(searchid != null) {
-			
-			// 로그인 유지하기 => session
-			HttpSession session = request.getSession();
-			
-			response.sendRedirect("./diary.jsp?id="+searchid);
-		}
-		else {
-			System.out.println("로그인 실패!!!");
-			response.sendRedirect("./Login.jsp?login=fail");
-			// PrintWriter out = new PrintWriter();
+		response.sendRedirect("./diary.jsp?searchid="+searchid);
 		}
 	
 	}
-
-}

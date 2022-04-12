@@ -6,6 +6,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import Model.MemberDAO;
+import Model.MemberDTO;
 
 @WebServlet("/SearchServiceCon")
 public class SearchServiceCon extends HttpServlet {
@@ -13,7 +17,13 @@ public class SearchServiceCon extends HttpServlet {
 		
 		System.out.println("[SearchServiceCon]");
 		
+		request.setCharacterEncoding("UTF-8");
 		
+		String searchid = request.getParameter("searchid");
+		
+		System.out.println("searchid : " + searchid);
+
+		response.sendRedirect("./diary.jsp?searchid="+searchid);
 		
 	}
 

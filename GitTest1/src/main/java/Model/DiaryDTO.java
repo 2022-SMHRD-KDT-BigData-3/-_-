@@ -16,12 +16,12 @@ public class DiaryDTO {
 		
 	}
 	
-	public DiaryDTO(int num, String title, String name, String date) {
+	public DiaryDTO(int num, String title, String name, String content) {
 		
 		this.num = num;
 		this.title = title;
 		this.name = name;
-		this.date = date;
+		this.content = content;
 		
 	}
 

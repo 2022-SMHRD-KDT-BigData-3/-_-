@@ -94,6 +94,39 @@ public class DiaryDAO_jy {
 		return list;
 	}
 	
+	public ArrayList<DiaryDTO> searchidme(String searchid){
+		ArrayList<DiaryDTO> list = new ArrayList();
+		
+		db_conn();
+		
+		String sql = "select * from diary where id=? order by adddate desc";
+		
+		try {
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, searchid);
+			
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				int num = rs.getInt(1);
+				String title = rs.getString(4);
+				String name = rs.getString(2);
+				String date = rs.getString(3);
+				
+				DiaryDTO dto = new DiaryDTO(num, title, name, date);
+				list.add(dto);
+				}
+				
+			}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			db_close();
+		}
+		return list;
+	}
+	
 	
 	
 	
